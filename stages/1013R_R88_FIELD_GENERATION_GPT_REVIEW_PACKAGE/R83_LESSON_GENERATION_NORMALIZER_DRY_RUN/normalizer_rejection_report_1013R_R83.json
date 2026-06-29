@@ -1,0 +1,47 @@
+{
+  "cases": [
+    {
+      "case_id": "markdown_code_fence",
+      "accepted": false,
+      "reason": "markdown_code_fence",
+      "detail": "Model output must be raw JSON, not fenced markdown."
+    },
+    {
+      "case_id": "missing_schema_key",
+      "accepted": false,
+      "reason": "missing_candidate_keys",
+      "detail": {
+        "index": 0,
+        "missing": [
+          "schema_key"
+        ]
+      }
+    },
+    {
+      "case_id": "unknown_target_section",
+      "accepted": false,
+      "reason": "unknown_target_section",
+      "detail": {
+        "index": 0,
+        "target_section": "教学过程"
+      }
+    },
+    {
+      "case_id": "standalone_blue_card",
+      "accepted": false,
+      "reason": "standalone_or_unknown_destination",
+      "detail": {
+        "index": 0,
+        "target_destination": "standalone_blue_card"
+      }
+    },
+    {
+      "case_id": "formal_apply_true",
+      "accepted": false,
+      "reason": "formal_apply_allowed_must_be_false",
+      "detail": {
+        "index": 0
+      }
+    }
+  ]
+}

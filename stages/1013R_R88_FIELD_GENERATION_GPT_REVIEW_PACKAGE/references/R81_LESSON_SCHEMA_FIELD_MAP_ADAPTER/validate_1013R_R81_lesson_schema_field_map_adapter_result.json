@@ -1,0 +1,179 @@
+{
+  "stage": "1013R_R81_LESSON_SCHEMA_FIELD_MAP_ADAPTER",
+  "status": "PASS",
+  "summary": {
+    "lesson_schema_field_count": 14,
+    "step_contract_field_count": 17,
+    "minimum_step_contract_count": 7,
+    "r79b_old_field_map_is_active": false,
+    "r21_modified_by_r81": false,
+    "formal_apply_allowed": false
+  },
+  "checks": [
+    {
+      "name": "covers_14_lesson_schema_fields",
+      "pass": true,
+      "details": "['lesson_identity', 'inherited_unit_context', 'textbook_anchor', 'lesson_concept_slice', 'lesson_focus_question', 'lesson_objectives', 'student_starting_point', 'key_difficult_points', 'lesson_task_evidence', 'classroom_flow', 'courseware_plan', 'handout_plan', 'assessment_plan', 'material_requests']"
+    },
+    {
+      "name": "all_candidates_preview_only",
+      "pass": true,
+      "details": "formal_apply_allowed false for all"
+    },
+    {
+      "name": "maps_to_existing_sections",
+      "pass": true,
+      "details": "['analysis', 'assessment', 'basis', 'courseware_plan', 'goals', 'handout_plan', 'keypoints', 'lesson_header', 'material_requests', 'teaching_process']"
+    },
+    {
+      "name": "classroom_flow_routes_to_teaching_process",
+      "pass": true,
+      "details": "classroom_flow target"
+    },
+    {
+      "name": "courseware_routes_right_rail",
+      "pass": true,
+      "details": "courseware route"
+    },
+    {
+      "name": "material_requests_action_prompt_only",
+      "pass": true,
+      "details": "material policy"
+    },
+    {
+      "name": "step_contract_fields_present",
+      "pass": true,
+      "details": "['step_id', 'step_order', 'step_name', 'duration', 'step_goal', 'teacher_talk', 'student_task', 'material_requirements', 'tech_support', 'success_criteria', 'guiding_questions', 'feedback_points', 'ppt_page_note', 'design_intent', 'evidence_capture', 'source_refs', 'generation_slot']"
+    },
+    {
+      "name": "minimum_step_contract_exact",
+      "pass": true,
+      "details": "['step_goal', 'teacher_talk', 'student_task', 'success_criteria', 'guiding_questions', 'source_refs', 'generation_slot']"
+    },
+    {
+      "name": "no_standalone_blue_card",
+      "pass": true,
+      "details": "{'target_destination': 'existing_edit_card_before_after_suggestion_panel', 'standalone_blue_card_allowed': False, 'inline_body_write_allowed': False, 'preview_only': True, 'formal_apply_allowed': False, 'applied': False}"
+    },
+    {
+      "name": "no_inline_body_write",
+      "pass": true,
+      "details": "{'target_destination': 'existing_edit_card_before_after_suggestion_panel', 'standalone_blue_card_allowed': False, 'inline_body_write_allowed': False, 'preview_only': True, 'formal_apply_allowed': False, 'applied': False}"
+    },
+    {
+      "name": "legacy_learning_progression_migrates_to_classroom_flow",
+      "pass": true,
+      "details": "['classroom_flow']"
+    },
+    {
+      "name": "legacy_assessment_migrates",
+      "pass": true,
+      "details": "['lesson_task_evidence', 'assessment_plan']"
+    },
+    {
+      "name": "visual_language_hidden_distribution",
+      "pass": true,
+      "details": "['lesson_concept_slice', 'lesson_objectives', 'classroom_flow', 'assessment_plan']"
+    },
+    {
+      "name": "candidate_envelope_requires_schema_key",
+      "pass": true,
+      "details": "{'schema_key', 'target_line_contract_id', 'canonical_field_key', 'after_candidate', 'preview_only', 'before_summary', 'target_destination', 'target_field_key', 'applied', 'formal_apply_allowed', 'field_patch_id', 'target_step_id', 'xiaojiao_suggestion', 'target_section', 'impact_scope', 'source_refs', 'teacher_review_required'}"
+    },
+    {
+      "name": "candidate_envelope_requires_canonical_field_key",
+      "pass": true,
+      "details": "{'schema_key', 'target_line_contract_id', 'canonical_field_key', 'after_candidate', 'preview_only', 'before_summary', 'target_destination', 'target_field_key', 'applied', 'formal_apply_allowed', 'field_patch_id', 'target_step_id', 'xiaojiao_suggestion', 'target_section', 'impact_scope', 'source_refs', 'teacher_review_required'}"
+    },
+    {
+      "name": "candidate_envelope_requires_target_field_key",
+      "pass": true,
+      "details": "{'schema_key', 'target_line_contract_id', 'canonical_field_key', 'after_candidate', 'preview_only', 'before_summary', 'target_destination', 'target_field_key', 'applied', 'formal_apply_allowed', 'field_patch_id', 'target_step_id', 'xiaojiao_suggestion', 'target_section', 'impact_scope', 'source_refs', 'teacher_review_required'}"
+    },
+    {
+      "name": "candidate_envelope_requires_target_line_contract_id",
+      "pass": true,
+      "details": "{'schema_key', 'target_line_contract_id', 'canonical_field_key', 'after_candidate', 'preview_only', 'before_summary', 'target_destination', 'target_field_key', 'applied', 'formal_apply_allowed', 'field_patch_id', 'target_step_id', 'xiaojiao_suggestion', 'target_section', 'impact_scope', 'source_refs', 'teacher_review_required'}"
+    },
+    {
+      "name": "candidate_envelope_requires_target_destination",
+      "pass": true,
+      "details": "{'schema_key', 'target_line_contract_id', 'canonical_field_key', 'after_candidate', 'preview_only', 'before_summary', 'target_destination', 'target_field_key', 'applied', 'formal_apply_allowed', 'field_patch_id', 'target_step_id', 'xiaojiao_suggestion', 'target_section', 'impact_scope', 'source_refs', 'teacher_review_required'}"
+    },
+    {
+      "name": "candidate_envelope_requires_formal_apply_allowed",
+      "pass": true,
+      "details": "{'schema_key', 'target_line_contract_id', 'canonical_field_key', 'after_candidate', 'preview_only', 'before_summary', 'target_destination', 'target_field_key', 'applied', 'formal_apply_allowed', 'field_patch_id', 'target_step_id', 'xiaojiao_suggestion', 'target_section', 'impact_scope', 'source_refs', 'teacher_review_required'}"
+    },
+    {
+      "name": "candidate_envelope_requires_applied",
+      "pass": true,
+      "details": "{'schema_key', 'target_line_contract_id', 'canonical_field_key', 'after_candidate', 'preview_only', 'before_summary', 'target_destination', 'target_field_key', 'applied', 'formal_apply_allowed', 'field_patch_id', 'target_step_id', 'xiaojiao_suggestion', 'target_section', 'impact_scope', 'source_refs', 'teacher_review_required'}"
+    },
+    {
+      "name": "candidate_defaults_preview_only",
+      "pass": true,
+      "details": "{'target_destination': 'existing_edit_card_before_after_suggestion_panel', 'teacher_review_required': True, 'preview_only': True, 'formal_apply_allowed': False, 'applied': False}"
+    },
+    {
+      "name": "flow_contains_不做页面重写",
+      "pass": true,
+      "details": "不做页面重写"
+    },
+    {
+      "name": "flow_contains_读取大单元主线",
+      "pass": true,
+      "details": "读取大单元主线"
+    },
+    {
+      "name": "flow_contains_映射到现有正文段",
+      "pass": true,
+      "details": "映射到现有正文段"
+    },
+    {
+      "name": "flow_contains_拆教学过程行级契约",
+      "pass": true,
+      "details": "拆教学过程行级契约"
+    },
+    {
+      "name": "flow_contains_候选进入旧编辑卡",
+      "pass": true,
+      "details": "候选进入旧编辑卡"
+    },
+    {
+      "name": "foundation_contains_R21 页面承载",
+      "pass": true,
+      "details": "R21 页面承载"
+    },
+    {
+      "name": "foundation_contains_R6P section edit data",
+      "pass": true,
+      "details": "R6P section edit data"
+    },
+    {
+      "name": "foundation_contains_R45-R47",
+      "pass": true,
+      "details": "R45-R47"
+    },
+    {
+      "name": "foundation_contains_R50-R60",
+      "pass": true,
+      "details": "R50-R60"
+    },
+    {
+      "name": "foundation_contains_不改 R21 HTML",
+      "pass": true,
+      "details": "不改 R21 HTML"
+    },
+    {
+      "name": "boundary_flags_no_side_effects",
+      "pass": true,
+      "details": "{'r21_page_modified': False, 'new_static_page_created': False, 'model_provider_runtime_connected': False, 'database_write': False, 'feishu_write': False, 'memory_write': False, 'formal_apply_allowed': False, 'r79b_old_field_map_is_active': False}"
+    },
+    {
+      "name": "r21_not_modified_by_R81_marker",
+      "pass": true,
+      "details": "r21_contains_r81=False"
+    }
+  ]
+}

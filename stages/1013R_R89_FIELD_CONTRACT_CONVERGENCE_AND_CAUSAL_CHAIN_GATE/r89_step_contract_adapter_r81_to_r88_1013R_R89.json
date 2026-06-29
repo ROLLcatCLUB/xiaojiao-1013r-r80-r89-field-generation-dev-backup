@@ -1,0 +1,387 @@
+{
+  "schema_id": "r89_step_contract_adapter_r81_to_r88_1013R_R89",
+  "stage": "1013R_R89_FIELD_CONTRACT_CONVERGENCE_AND_CAUSAL_CHAIN_GATE",
+  "source_refs": {
+    "r81_step": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R81_LESSON_SCHEMA_FIELD_MAP_ADAPTER\\lesson_step_line_contract_mapping_1013R_R81.json",
+    "r88_ledger": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R88_FIELD_GENERATION_QUALITY_STATIC_LAB\\field_generation_quality_static_lab_ledger_1013R_R88.json"
+  },
+  "step_type_activation_registry": [
+    {
+      "step_type": "lead_in",
+      "activated_r88_fields": [
+        "context_scaffold",
+        "teacher_core_question",
+        "visual_object",
+        "student_observation",
+        "common_misconception",
+        "prior_connection",
+        "next_connection",
+        "time_risk"
+      ],
+      "field_count": 8,
+      "missing_r88_fields": [],
+      "valid": true
+    },
+    {
+      "step_type": "observation_inquiry",
+      "activated_r88_fields": [
+        "student_observation",
+        "teacher_probe_question",
+        "visual_language_focus",
+        "positive_negative_example",
+        "process_evidence",
+        "language_scaffold",
+        "teacher_feedback_move",
+        "success_criteria"
+      ],
+      "field_count": 8,
+      "missing_r88_fields": [],
+      "valid": true
+    },
+    {
+      "step_type": "method_exploration",
+      "activated_r88_fields": [
+        "student_try",
+        "technique_focus",
+        "material_use",
+        "teacher_instruction",
+        "task_scaffold",
+        "process_evidence",
+        "fallback_strategy",
+        "success_criteria"
+      ],
+      "field_count": 8,
+      "missing_r88_fields": [],
+      "valid": true
+    },
+    {
+      "step_type": "teacher_demo",
+      "activated_r88_fields": [
+        "teacher_demo",
+        "teacher_modeling_language",
+        "technique_focus",
+        "material_use",
+        "visual_object",
+        "success_criteria",
+        "student_recording",
+        "time_risk"
+      ],
+      "field_count": 8,
+      "missing_r88_fields": [],
+      "valid": true
+    },
+    {
+      "step_type": "student_try",
+      "activated_r88_fields": [
+        "student_try",
+        "task_scaffold",
+        "material_scaffold",
+        "teacher_patrol_observation",
+        "common_misconception",
+        "process_evidence",
+        "teacher_feedback_move",
+        "alternative_plan"
+      ],
+      "field_count": 8,
+      "missing_r88_fields": [],
+      "valid": true
+    },
+    {
+      "step_type": "student_creation",
+      "activated_r88_fields": [
+        "student_creation",
+        "material_use",
+        "differentiation_scaffold",
+        "teacher_patrol_observation",
+        "work_evidence",
+        "time_risk",
+        "material_risk",
+        "fallback_strategy"
+      ],
+      "field_count": 8,
+      "missing_r88_fields": [],
+      "valid": true
+    },
+    {
+      "step_type": "display_exchange",
+      "activated_r88_fields": [
+        "student_display",
+        "expression_evidence",
+        "peer_assessment",
+        "teacher_feedback_move",
+        "success_criteria",
+        "evidence_storage",
+        "language_scaffold",
+        "next_connection"
+      ],
+      "field_count": 8,
+      "missing_r88_fields": [],
+      "valid": true
+    },
+    {
+      "step_type": "assessment_revision",
+      "activated_r88_fields": [
+        "student_revision",
+        "work_evidence",
+        "expression_evidence",
+        "teacher_observation_point",
+        "success_criteria",
+        "peer_assessment",
+        "fallback_strategy",
+        "evidence_storage"
+      ],
+      "field_count": 8,
+      "missing_r88_fields": [],
+      "valid": true
+    },
+    {
+      "step_type": "summary_transfer",
+      "activated_r88_fields": [
+        "next_connection",
+        "student_recording",
+        "expression_evidence",
+        "evidence_storage",
+        "alternative_plan",
+        "teacher_feedback_move",
+        "phase_role",
+        "student_display"
+      ],
+      "field_count": 8,
+      "missing_r88_fields": [],
+      "valid": true
+    }
+  ],
+  "adapter_rows": [
+    {
+      "r81_field": "step_id",
+      "mapping_status": "exact",
+      "r88_target_fields": [
+        "step_id"
+      ],
+      "activation_rule": "active_all_steps",
+      "loss_risk": "low",
+      "runtime_policy": "keep_as_locator",
+      "missing_r88_targets": [],
+      "mapped": true
+    },
+    {
+      "r81_field": "step_order",
+      "mapping_status": "exact",
+      "r88_target_fields": [
+        "step_order"
+      ],
+      "activation_rule": "active_all_steps",
+      "loss_risk": "low",
+      "runtime_policy": "keep_as_locator",
+      "missing_r88_targets": [],
+      "mapped": true
+    },
+    {
+      "r81_field": "step_name",
+      "mapping_status": "exact",
+      "r88_target_fields": [
+        "step_name"
+      ],
+      "activation_rule": "active_all_steps",
+      "loss_risk": "low",
+      "runtime_policy": "keep_as_label",
+      "missing_r88_targets": [],
+      "mapped": true
+    },
+    {
+      "r81_field": "duration",
+      "mapping_status": "exact",
+      "r88_target_fields": [
+        "duration"
+      ],
+      "activation_rule": "active_all_steps",
+      "loss_risk": "low",
+      "runtime_policy": "keep_as_timing_control",
+      "missing_r88_targets": [],
+      "mapped": true
+    },
+    {
+      "r81_field": "step_goal",
+      "mapping_status": "split",
+      "r88_target_fields": [
+        "phase_role",
+        "success_criteria",
+        "next_connection"
+      ],
+      "activation_rule": "active_all_steps",
+      "loss_risk": "broad legacy field requires step_type context",
+      "runtime_policy": "do_not_write_step_goal_directly_after_r89",
+      "missing_r88_targets": [],
+      "mapped": true
+    },
+    {
+      "r81_field": "teacher_talk",
+      "mapping_status": "split",
+      "r88_target_fields": [
+        "teacher_instruction",
+        "teacher_core_question",
+        "teacher_modeling_language"
+      ],
+      "activation_rule": "active_when step_type in ['lead_in','observation_inquiry','teacher_demo','student_creation','display_exchange']",
+      "loss_risk": "broad legacy field requires step_type context",
+      "runtime_policy": "do_not_write_teacher_talk_directly_after_r89",
+      "missing_r88_targets": [],
+      "mapped": true
+    },
+    {
+      "r81_field": "student_task",
+      "mapping_status": "split",
+      "r88_target_fields": [
+        "student_observation",
+        "student_try",
+        "student_creation",
+        "student_display",
+        "student_revision"
+      ],
+      "activation_rule": "active_by_step_type",
+      "loss_risk": "broad legacy field requires step_type context",
+      "runtime_policy": "route_to_specific_student_move",
+      "missing_r88_targets": [],
+      "mapped": true
+    },
+    {
+      "r81_field": "material_requirements",
+      "mapping_status": "split",
+      "r88_target_fields": [
+        "material_use",
+        "material_scaffold",
+        "visual_object"
+      ],
+      "activation_rule": "active_when materials_or_visuals_are_used",
+      "loss_risk": "broad legacy field requires step_type context",
+      "runtime_policy": "do_not_write_material_requirements_directly",
+      "missing_r88_targets": [],
+      "mapped": true
+    },
+    {
+      "r81_field": "tech_support",
+      "mapping_status": "derived",
+      "r88_target_fields": [
+        "material_use"
+      ],
+      "activation_rule": "active_when screen_or_device_supports_step",
+      "loss_risk": "low",
+      "runtime_policy": "derive_to_lesson.courseware_plan",
+      "missing_r88_targets": [],
+      "mapped": true
+    },
+    {
+      "r81_field": "success_criteria",
+      "mapping_status": "exact",
+      "r88_target_fields": [
+        "success_criteria"
+      ],
+      "activation_rule": "active_all_steps",
+      "loss_risk": "low",
+      "runtime_policy": "keep_as_assessment_anchor",
+      "missing_r88_targets": [],
+      "mapped": true
+    },
+    {
+      "r81_field": "guiding_questions",
+      "mapping_status": "split",
+      "r88_target_fields": [
+        "teacher_core_question",
+        "teacher_probe_question"
+      ],
+      "activation_rule": "active_when questioning_drives_learning",
+      "loss_risk": "broad legacy field requires step_type context",
+      "runtime_policy": "do_not_write_guiding_questions_directly",
+      "missing_r88_targets": [],
+      "mapped": true
+    },
+    {
+      "r81_field": "feedback_points",
+      "mapping_status": "split",
+      "r88_target_fields": [
+        "teacher_feedback_move",
+        "peer_assessment"
+      ],
+      "activation_rule": "active_when review_or_revision_exists",
+      "loss_risk": "broad legacy field requires step_type context",
+      "runtime_policy": "route_to_feedback_or_peer_assessment",
+      "missing_r88_targets": [],
+      "mapped": true
+    },
+    {
+      "r81_field": "ppt_page_note",
+      "mapping_status": "derived",
+      "r88_target_fields": [
+        "visual_object",
+        "artwork_or_life_example"
+      ],
+      "activation_rule": "active_when screen_support_needed",
+      "loss_risk": "low",
+      "runtime_policy": "derive_to_lesson.courseware_plan",
+      "missing_r88_targets": [],
+      "mapped": true
+    },
+    {
+      "r81_field": "design_intent",
+      "mapping_status": "split",
+      "r88_target_fields": [
+        "phase_role",
+        "prior_connection",
+        "next_connection"
+      ],
+      "activation_rule": "active_all_steps",
+      "loss_risk": "broad legacy field requires step_type context",
+      "runtime_policy": "do_not_write_design_intent_as_visible_body",
+      "missing_r88_targets": [],
+      "mapped": true
+    },
+    {
+      "r81_field": "evidence_capture",
+      "mapping_status": "split",
+      "r88_target_fields": [
+        "process_evidence",
+        "work_evidence",
+        "expression_evidence",
+        "evidence_storage"
+      ],
+      "activation_rule": "active_when learning_evidence_needed",
+      "loss_risk": "broad legacy field requires step_type context",
+      "runtime_policy": "route_to_evidence_fields",
+      "missing_r88_targets": [],
+      "mapped": true
+    },
+    {
+      "r81_field": "source_refs",
+      "mapping_status": "embedded",
+      "r88_target_fields": [
+        "source_refs"
+      ],
+      "activation_rule": "active_all_generated_fields",
+      "loss_risk": "low",
+      "runtime_policy": "each_r88_step_candidate_must_carry_source_refs",
+      "missing_r88_targets": [],
+      "mapped": true
+    },
+    {
+      "r81_field": "generation_slot",
+      "mapping_status": "replaced",
+      "r88_target_fields": [
+        "generation_slot_id"
+      ],
+      "activation_rule": "active_all_generated_fields",
+      "loss_risk": "low",
+      "runtime_policy": "use_R88_generation_slot_id",
+      "missing_r88_targets": [],
+      "mapped": true
+    }
+  ],
+  "summary": {
+    "r81_step_field_count": 17,
+    "r88_step_field_count": 47,
+    "mapped_count": 17,
+    "unmapped_count": 0,
+    "activation_step_type_count": 9,
+    "invalid_activation_field_count": 0,
+    "invalid_activation_fields": []
+  }
+}

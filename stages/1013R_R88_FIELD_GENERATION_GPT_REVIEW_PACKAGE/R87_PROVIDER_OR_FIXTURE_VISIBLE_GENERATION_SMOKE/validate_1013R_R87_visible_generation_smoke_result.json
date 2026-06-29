@@ -1,0 +1,23 @@
+{
+  "stage": "1013R_R87_PROVIDER_OR_FIXTURE_VISIBLE_GENERATION_SMOKE",
+  "result": "PASS",
+  "html": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R87_PROVIDER_OR_FIXTURE_VISIBLE_GENERATION_SMOKE\\prep_room_r87_provider_or_fixture_visible_generation_smoke_1013R_R87.html",
+  "source_r21_html": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R21_page_copy_binds_unified_package\\prep_room_page_copy_binds_unified_package_1013R_R21.html",
+  "r21_page_modified": false,
+  "copied_page_created": true,
+  "provider_success": false,
+  "fallback_used": true,
+  "visible_candidate_count": 2,
+  "formal_apply_allowed": false,
+  "standalone_blue_card_created": false,
+  "html_checks": {
+    "html_exists": true,
+    "copied_from_r21": true,
+    "r21_source_unmodified_by_r87_marker": true,
+    "contains_r87_marker": true,
+    "contains_existing_modal_selector": true,
+    "contains_right_tool_entry_selector": true,
+    "contains_existing_edit_card_destination": true,
+    "contains_no_standalone_blue_card_marker": true
+  }
+}

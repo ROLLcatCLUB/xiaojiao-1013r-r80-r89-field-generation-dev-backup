@@ -1,0 +1,14 @@
+{
+  "stage": "1013R_R83_LESSON_GENERATION_NORMALIZER_DRY_RUN",
+  "result": "PASS",
+  "source_fixture": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R82_LESSON_GENERATION_REQUEST_RESPONSE_CONTRACT\\lesson_generation_smoke_fixtures_1013R_R82.json",
+  "normalized_candidate_count": 2,
+  "allowed_schema_key_count": 14,
+  "required_candidate_key_count": 17,
+  "invalid_response_case_count": 5,
+  "invalid_response_rejected_count": 5,
+  "all_invalid_responses_rejected": true,
+  "formal_apply_allowed": false,
+  "r21_page_modified": false,
+  "standalone_blue_card_created": false
+}

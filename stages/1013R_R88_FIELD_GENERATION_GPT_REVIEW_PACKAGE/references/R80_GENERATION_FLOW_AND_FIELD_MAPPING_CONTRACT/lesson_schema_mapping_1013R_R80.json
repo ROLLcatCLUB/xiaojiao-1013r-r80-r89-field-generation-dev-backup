@@ -1,0 +1,193 @@
+{
+  "schema_id": "lesson_schema_mapping_1013R_R80",
+  "stage": "1013R_R80_GENERATION_FLOW_AND_FIELD_MAPPING_CONTRACT",
+  "source_schema": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R79A_TEACHING_DESIGN_STRUCTURE_SOURCE_COMPARISON\\lesson_design_schema_v2_1013R_R79A.json",
+  "decision": "Do not continue the old R79B lesson field standard. Build the next lesson schema mapping from R79A through this R80 adapter.",
+  "structured_reasoning_not_sequential_field_fill": true,
+  "lesson_fields": [
+    {
+      "order": 1,
+      "schema_key": "lesson_identity",
+      "label": "课时身份",
+      "adapter_target": "lesson.identity",
+      "landing_surface": "single_lesson_field_map_to_be_built_after_R80",
+      "generation_role": "name grade, unit, lesson, page, period, and material scope"
+    },
+    {
+      "order": 2,
+      "schema_key": "inherited_unit_context",
+      "label": "继承单元主线",
+      "adapter_target": "lesson.inherited_unit_context",
+      "landing_surface": "must_read_big_unit_spine_before_lesson_generation",
+      "generation_role": "inherit unit_theme, big_idea, essential_question, performance_task"
+    },
+    {
+      "order": 3,
+      "schema_key": "textbook_anchor",
+      "label": "教材锚点",
+      "adapter_target": "lesson.textbook_anchor",
+      "landing_surface": "source_anchor_or_material_requests_when_missing",
+      "generation_role": "locate textbook pages, images, exercises, and source gaps"
+    },
+    {
+      "order": 4,
+      "schema_key": "lesson_concept_slice",
+      "label": "本课概念切片",
+      "adapter_target": "lesson.lesson_concept_slice",
+      "landing_surface": "lesson_core_field",
+      "generation_role": "select this lesson's slice of the unit concept"
+    },
+    {
+      "order": 5,
+      "schema_key": "lesson_focus_question",
+      "label": "本课驱动问题",
+      "adapter_target": "lesson.lesson_focus_question",
+      "landing_surface": "lesson_core_field",
+      "generation_role": "convert unit essential question into a teachable lesson question"
+    },
+    {
+      "order": 6,
+      "schema_key": "lesson_objectives",
+      "label": "课时目标",
+      "adapter_target": "lesson.lesson_objectives",
+      "landing_surface": "lesson_objective_field",
+      "generation_role": "make lesson outcomes observable and assessable"
+    },
+    {
+      "order": 7,
+      "schema_key": "student_starting_point",
+      "label": "学生起点",
+      "adapter_target": "lesson.student_starting_point",
+      "landing_surface": "lesson_student_context_field",
+      "generation_role": "state what students can already notice or do and what blocks them"
+    },
+    {
+      "order": 8,
+      "schema_key": "key_difficult_points",
+      "label": "重难点",
+      "adapter_target": "lesson.key_difficult_points",
+      "landing_surface": "lesson_key_difficult_points_field",
+      "generation_role": "separate teaching focus and difficulty at lesson scale"
+    },
+    {
+      "order": 9,
+      "schema_key": "lesson_task_evidence",
+      "label": "本课任务与证据",
+      "adapter_target": "lesson.lesson_task_evidence",
+      "landing_surface": "lesson_task_evidence_field",
+      "generation_role": "define what students make, say, compare, revise, or submit"
+    },
+    {
+      "order": 10,
+      "schema_key": "classroom_flow",
+      "label": "教学过程",
+      "adapter_target": "lesson.classroom_flow",
+      "landing_surface": "line_level_step_contracts",
+      "generation_role": "generate step contracts before line-level edits"
+    },
+    {
+      "order": 11,
+      "schema_key": "courseware_plan",
+      "label": "课件/大屏计划",
+      "adapter_target": "lesson.courseware_plan",
+      "landing_surface": "right_rail_courseware_preview_or_task_list",
+      "generation_role": "derive screen/page plan from classroom_flow"
+    },
+    {
+      "order": 12,
+      "schema_key": "handout_plan",
+      "label": "学习单/学生任务单计划",
+      "adapter_target": "lesson.handout_plan",
+      "landing_surface": "handout_or_learning_sheet_candidate",
+      "generation_role": "derive student-facing sheet from activity and evidence"
+    },
+    {
+      "order": 13,
+      "schema_key": "assessment_plan",
+      "label": "评价计划",
+      "adapter_target": "lesson.assessment_plan",
+      "landing_surface": "lesson_assessment_field_or_assessment_card",
+      "generation_role": "match evidence, criteria, and feedback moments"
+    },
+    {
+      "order": 14,
+      "schema_key": "material_requests",
+      "label": "资料补充",
+      "adapter_target": "lesson.material_requests",
+      "landing_surface": "material_gap_prompt_only",
+      "generation_role": "ask for missing textbook, image, student work, or schedule evidence"
+    }
+  ],
+  "inheritance_rule": "single_lesson_must_inherit_unit_big_idea_and_essential_question_before_generation",
+  "reuse_foundations": [
+    {
+      "id": "R21",
+      "name": "current page carrier",
+      "reuse": true,
+      "rule": "do not rewire or replace the page shell"
+    },
+    {
+      "id": "R50_R60",
+      "name": "field-aware edit card and smoke behavior",
+      "reuse": true,
+      "rule": "reuse edit card visibility and no-cross-field checks"
+    },
+    {
+      "id": "R6P",
+      "name": "r6p-section-edit-data",
+      "reuse": true,
+      "rule": "reuse section edit data where still compatible"
+    },
+    {
+      "id": "R45_R47",
+      "name": "candidate to existing edit-card bridge",
+      "reuse": true,
+      "rule": "keep candidate normalize into before/after/suggestion panel"
+    },
+    {
+      "id": "existing_css",
+      "name": "current visual system",
+      "reuse": true,
+      "rule": "do not reset layout or repaint the page foundation"
+    },
+    {
+      "id": "right_rail",
+      "name": "right tool/preview rail",
+      "reuse": true,
+      "rule": "route previews and prompts without creating a new product page"
+    },
+    {
+      "id": "bottom_xiaojiao_composer",
+      "name": "bottom 小教 input",
+      "reuse": true,
+      "rule": "teacher intent enters generation flow from the existing composer"
+    },
+    {
+      "id": "preview_undo_teacher_gate",
+      "name": "preview, undo, and teacher confirmation gates",
+      "reuse": true,
+      "rule": "formal apply stays blocked until teacher confirmation"
+    }
+  ],
+  "deprecated_r79b_assets": [
+    "old_field_map",
+    "old_visual_map_data",
+    "old_contract_visual_script",
+    "old_generation_slot_ids"
+  ],
+  "replace_only": [
+    "R79B old field map",
+    "R79B visual map data",
+    "R79B contract visual script",
+    "generation flow contract"
+  ],
+  "do_not_replace": [
+    "R21 page carrier",
+    "R50-R60 edit card foundation",
+    "R6P section edit data foundation",
+    "R45-R47 edit-card candidate bridge",
+    "existing CSS layout",
+    "right rail",
+    "bottom 小教 input"
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "stage": "1013R_R82_LESSON_GENERATION_REQUEST_RESPONSE_CONTRACT",
+  "status": "PASS",
+  "summary": {
+    "allowed_schema_key_count": 14,
+    "response_top_level_key_count": 13,
+    "required_candidate_key_count": 17,
+    "valid_smoke_response_accepted": true,
+    "invalid_smoke_responses_rejected": true,
+    "r21_modified_by_r82": false,
+    "model_provider_runtime_connected": false,
+    "formal_apply_allowed": false
+  },
+  "invalid_results": [
+    {
+      "case_id": "markdown_code_fence",
+      "rejected": true,
+      "reasons": [
+        "markdown_code_fence"
+      ]
+    },
+    {
+      "case_id": "missing_schema_key",
+      "rejected": true,
+      "reasons": [
+        "missing_candidate_key:schema_key",
+        "unknown_schema_key"
+      ]
+    },
+    {
+      "case_id": "unknown_target_section",
+      "rejected": true,
+      "reasons": [
+        "unknown_target_section"
+      ]
+    },
+    {
+      "case_id": "standalone_blue_card",
+      "rejected": true,
+      "reasons": [
+        "standalone_blue_card_destination"
+      ]
+    },
+    {
+      "case_id": "formal_apply_true",
+      "rejected": true,
+      "reasons": [
+        "formal_apply_allowed_true"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "name": "request_allows_14_schema_keys",
+      "pass": true,
+      "details": "['lesson_identity', 'inherited_unit_context', 'textbook_anchor', 'lesson_concept_slice', 'lesson_focus_question', 'lesson_objectives', 'student_starting_point', 'key_difficult_points', 'lesson_task_evidence', 'classroom_flow', 'courseware_plan', 'handout_plan', 'assessment_plan', 'material_requests']"
+    },
+    {
+      "name": "response_top_level_keys_exact",
+      "pass": true,
+      "details": "['response_stage', 'request_id', 'lesson_design_mode', 'intent_summary', 'lesson_logic_brief', 'target_resolution', 'step_reasoning_updates', 'field_patch_candidates', 'quality_gate_update', 'material_requests', 'teacher_questions', 'ui_binding_hint', 'boundary_flags']"
+    },
+    {
+      "name": "candidate_required_keys_include_r81",
+      "pass": true,
+      "details": "['field_patch_id', 'schema_key', 'canonical_field_key', 'target_field_key', 'target_section', 'target_step_id', 'target_line_contract_id', 'target_destination', 'before_summary', 'after_candidate', 'xiaojiao_suggestion', 'impact_scope', 'source_refs', 'teacher_review_required', 'preview_only', 'formal_apply_allowed', 'applied', 'patch_type', 'reasoning_basis']"
+    },
+    {
+      "name": "normalizer_allowed_schema_keys",
+      "pass": true,
+      "details": "['lesson_identity', 'inherited_unit_context', 'textbook_anchor', 'lesson_concept_slice', 'lesson_focus_question', 'lesson_objectives', 'student_starting_point', 'key_difficult_points', 'lesson_task_evidence', 'classroom_flow', 'courseware_plan', 'handout_plan', 'assessment_plan', 'material_requests']"
+    },
+    {
+      "name": "prompt_contains_只输出 JSON 对象",
+      "pass": true,
+      "details": "只输出 JSON 对象"
+    },
+    {
+      "name": "prompt_contains_不要 markdown",
+      "pass": true,
+      "details": "不要 markdown"
+    },
+    {
+      "name": "prompt_contains_不要输出完整正式教案",
+      "pass": true,
+      "details": "不要输出完整正式教案"
+    },
+    {
+      "name": "prompt_contains_schema_key",
+      "pass": true,
+      "details": "schema_key"
+    },
+    {
+      "name": "prompt_contains_existing_edit_card_before_after_suggestion_panel",
+      "pass": true,
+      "details": "existing_edit_card_before_after_suggestion_panel"
+    },
+    {
+      "name": "prompt_contains_禁止 `standalone_blue_card`",
+      "pass": true,
+      "details": "禁止 `standalone_blue_card`"
+    },
+    {
+      "name": "prompt_contains_visual_language",
+      "pass": true,
+      "details": "visual_language"
+    },
+    {
+      "name": "prompt_contains_缺教材",
+      "pass": true,
+      "details": "缺教材"
+    },
+    {
+      "name": "quality_gate_source_gap_check",
+      "pass": true,
+      "details": "{'target_section_check', 'source_gap_check', 'side_effect_check', 'visual_language_hidden_check', 'r81_schema_key_check', 'teacher_gate_check', 'unit_spine_consistency_check', 'line_contract_check'}"
+    },
+    {
+      "name": "quality_gate_unit_spine_consistency_check",
+      "pass": true,
+      "details": "{'target_section_check', 'source_gap_check', 'side_effect_check', 'visual_language_hidden_check', 'r81_schema_key_check', 'teacher_gate_check', 'unit_spine_consistency_check', 'line_contract_check'}"
+    },
+    {
+      "name": "quality_gate_r81_schema_key_check",
+      "pass": true,
+      "details": "{'target_section_check', 'source_gap_check', 'side_effect_check', 'visual_language_hidden_check', 'r81_schema_key_check', 'teacher_gate_check', 'unit_spine_consistency_check', 'line_contract_check'}"
+    },
+    {
+      "name": "quality_gate_target_section_check",
+      "pass": true,
+      "details": "{'target_section_check', 'source_gap_check', 'side_effect_check', 'visual_language_hidden_check', 'r81_schema_key_check', 'teacher_gate_check', 'unit_spine_consistency_check', 'line_contract_check'}"
+    },
+    {
+      "name": "quality_gate_line_contract_check",
+      "pass": true,
+      "details": "{'target_section_check', 'source_gap_check', 'side_effect_check', 'visual_language_hidden_check', 'r81_schema_key_check', 'teacher_gate_check', 'unit_spine_consistency_check', 'line_contract_check'}"
+    },
+    {
+      "name": "quality_gate_visual_language_hidden_check",
+      "pass": true,
+      "details": "{'target_section_check', 'source_gap_check', 'side_effect_check', 'visual_language_hidden_check', 'r81_schema_key_check', 'teacher_gate_check', 'unit_spine_consistency_check', 'line_contract_check'}"
+    },
+    {
+      "name": "quality_gate_teacher_gate_check",
+      "pass": true,
+      "details": "{'target_section_check', 'source_gap_check', 'side_effect_check', 'visual_language_hidden_check', 'r81_schema_key_check', 'teacher_gate_check', 'unit_spine_consistency_check', 'line_contract_check'}"
+    },
+    {
+      "name": "quality_gate_side_effect_check",
+      "pass": true,
+      "details": "{'target_section_check', 'source_gap_check', 'side_effect_check', 'visual_language_hidden_check', 'r81_schema_key_check', 'teacher_gate_check', 'unit_spine_consistency_check', 'line_contract_check'}"
+    },
+    {
+      "name": "valid_smoke_response_accepted",
+      "pass": true,
+      "details": "[]"
+    },
+    {
+      "name": "invalid_smoke_responses_rejected",
+      "pass": true,
+      "details": "[{'case_id': 'markdown_code_fence', 'rejected': True, 'reasons': ['markdown_code_fence']}, {'case_id': 'missing_schema_key', 'rejected': True, 'reasons': ['missing_candidate_key:schema_key', 'unknown_schema_key']}, {'case_id': 'unknown_target_section', 'rejected': True, 'reasons': ['unknown_target_section']}, {'case_id': 'standalone_blue_card', 'rejected': True, 'reasons': ['standalone_blue_card_destination']}, {'case_id': 'formal_apply_true', 'rejected': True, 'reasons': ['formal_apply_allowed_true']}]"
+    },
+    {
+      "name": "r21_not_modified_by_R82_marker",
+      "pass": true,
+      "details": "r21_contains_r82=False"
+    }
+  ]
+}

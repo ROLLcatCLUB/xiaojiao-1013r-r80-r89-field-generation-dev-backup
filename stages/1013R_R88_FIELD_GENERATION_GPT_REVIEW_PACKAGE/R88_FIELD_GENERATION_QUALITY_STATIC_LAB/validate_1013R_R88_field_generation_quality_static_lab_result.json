@@ -1,0 +1,19 @@
+{
+  "stage": "1013R_R88_FIELD_GENERATION_QUALITY_STATIC_LAB",
+  "result": "PASS",
+  "html": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R88_FIELD_GENERATION_QUALITY_STATIC_LAB\\field_generation_quality_static_lab_1013R_R88.html",
+  "ledger": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R88_FIELD_GENERATION_QUALITY_STATIC_LAB\\field_generation_quality_static_lab_ledger_1013R_R88.json",
+  "big_unit_field_count": 22,
+  "lesson_field_count": 14,
+  "step_contract_group_count": 7,
+  "step_contract_field_count": 47,
+  "all_big_unit_fields_have_visible_engineering_and_placeholder": true,
+  "all_lesson_fields_have_visible_engineering_and_placeholder": true,
+  "all_step_fields_have_visible_engineering_and_placeholder": true,
+  "all_step_groups_have_fields": true,
+  "step_contract_depth_sufficient": true,
+  "prompt_text_visible": false,
+  "model_provider_runtime_connected": false,
+  "r21_page_modified": false,
+  "formal_apply_allowed": false
+}

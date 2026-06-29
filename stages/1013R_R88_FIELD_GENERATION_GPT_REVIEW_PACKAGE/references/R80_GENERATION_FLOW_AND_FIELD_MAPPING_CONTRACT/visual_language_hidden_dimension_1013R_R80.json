@@ -1,0 +1,69 @@
+{
+  "schema_id": "visual_language_hidden_dimension_1013R_R80",
+  "stage": "1013R_R80_GENERATION_FLOW_AND_FIELD_MAPPING_CONTRACT",
+  "visible_top_level_field": false,
+  "hidden_dimension_key": "visual_language",
+  "decision": "美术语言不显性放在一级页面字段中；它是生成推演维度，分布落到相关字段和行级契约。",
+  "example_topic": "三年级美术《色彩的渐变》",
+  "example_dimension_atoms": [
+    "色相渐变",
+    "明度渐变",
+    "纯度变化",
+    "冷暖变化",
+    "色阶排序",
+    "过渡控制"
+  ],
+  "hidden_landing_fields": [
+    {
+      "page_field_key": "big_idea",
+      "label": "大观念",
+      "reason": "turn color change into transferable visual understanding"
+    },
+    {
+      "page_field_key": "content_analysis",
+      "label": "单元内容分析",
+      "reason": "read textbook content through visual-language structure"
+    },
+    {
+      "page_field_key": "unit_learning_goals",
+      "label": "单元学习目标",
+      "reason": "make perception, comparison, expression, and reflection observable"
+    },
+    {
+      "page_field_key": "key_difficult_points",
+      "label": "学习重难点",
+      "reason": "identify the hardest visual operation, not generic appreciation"
+    },
+    {
+      "page_field_key": "learning_activity",
+      "label": "学习活动",
+      "reason": "guide observation, sorting, mixing, trial, display, and revision"
+    },
+    {
+      "page_field_key": "task_assessment_points",
+      "label": "任务评估要点",
+      "reason": "assess whether color transition evidence is visible"
+    },
+    {
+      "page_field_key": "learning_assessment",
+      "label": "学习评价",
+      "reason": "connect process checks to visual-language evidence"
+    },
+    {
+      "page_field_key": "resource_scaffold",
+      "label": "资源支架",
+      "reason": "request needed images, cards, gradients, samples, or demonstrations"
+    },
+    {
+      "page_field_key": "assessment_scaffold",
+      "label": "评价支架",
+      "reason": "give teacher/student language for visible evidence"
+    }
+  ],
+  "forbidden": [
+    "do_not_render_visual_language_as_visible_top_level_page_field",
+    "do_not_create_an_independent_blue_or_orange_model_card_for_visual_language",
+    "do_not_treat_visual_language_as_a_formal_content_source_without_textbook_or_teacher_confirmation",
+    "do_not_formal_apply_without_teacher_confirmation"
+  ]
+}

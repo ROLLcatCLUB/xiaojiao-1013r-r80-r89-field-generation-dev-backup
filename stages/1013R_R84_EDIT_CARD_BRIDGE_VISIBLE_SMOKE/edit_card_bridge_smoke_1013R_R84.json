@@ -1,0 +1,61 @@
+{
+  "schema_id": "edit_card_bridge_smoke_1013R_R84",
+  "stage": "1013R_R84_EDIT_CARD_BRIDGE_VISIBLE_SMOKE",
+  "source": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R83_LESSON_GENERATION_NORMALIZER_DRY_RUN\\normalized_lesson_candidates_1013R_R83.json",
+  "bridge_rule": "normalized field_patch_candidates open the existing R21/R6P before-after-suggestion modal; they do not create body blue cards.",
+  "uses_existing_edit_card": true,
+  "standalone_blue_card_created": false,
+  "formal_apply_allowed": false,
+  "r21_page_modified": false,
+  "bridges": [
+    {
+      "bridge_id": "r84_bridge_r83_norm_01_classroom_flow",
+      "field_patch_id": "r82_smoke_share_time",
+      "schema_key": "classroom_flow",
+      "canonical_field_key": "classroom_flow",
+      "target_field_key": "classroom_flow",
+      "target_section": "teaching_process",
+      "target_step_id": "share",
+      "target_line_contract_id": "lesson_step.color_feeling.05.success_criteria",
+      "target_destination": "existing_edit_card_before_after_suggestion_panel",
+      "target_selectors": [
+        "#nb-section-teaching-process",
+        "[id^='nb-step-']",
+        ".nb-readable-step"
+      ],
+      "edit_card_slots": {
+        "before_slot": "交流展示时间短，证据容易被压缩。",
+        "after_slot": "保留3分钟作品展示和一句话说明。",
+        "xiaojiao_suggestion_slot": "先压缩导入和感知，不删表达证据。"
+      },
+      "visible_smoke_action": "open_existing_r6p_modal_with_before_after_suggestion",
+      "standalone_blue_card_created": false,
+      "formal_apply_allowed": false,
+      "preview_only": true
+    },
+    {
+      "bridge_id": "r84_bridge_r83_norm_02_assessment_plan",
+      "field_patch_id": "r82_smoke_assessment_evidence",
+      "schema_key": "assessment_plan",
+      "canonical_field_key": "assessment_plan",
+      "target_field_key": "assessment_plan",
+      "target_section": "assessment",
+      "target_step_id": "share",
+      "target_line_contract_id": "lesson_field.assessment_plan.line_01",
+      "target_destination": "existing_edit_card_before_after_suggestion_panel",
+      "target_selectors": [
+        "#nb-section-assessment",
+        "[data-edit-target^='section:assessment']"
+      ],
+      "edit_card_slots": {
+        "before_slot": "评价只看作品完成度。",
+        "after_slot": "增加一句话说明作为评价证据。",
+        "xiaojiao_suggestion_slot": "评价要看学生能否说出色彩选择理由。"
+      },
+      "visible_smoke_action": "open_existing_r6p_modal_with_before_after_suggestion",
+      "standalone_blue_card_created": false,
+      "formal_apply_allowed": false,
+      "preview_only": true
+    }
+  ]
+}

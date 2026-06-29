@@ -1,0 +1,90 @@
+{
+  "schema_id": "r79b_lesson_field_migration_adapter_1013R_R81",
+  "stage": "1013R_R81_LESSON_SCHEMA_FIELD_MAP_ADAPTER",
+  "decision": "R79B visual map is deprecated as field standard. It may be used only as historical selector evidence and migration input.",
+  "legacy_to_r81_schema_key": {
+    "unit_basic_info": [
+      "lesson_identity",
+      "inherited_unit_context"
+    ],
+    "curriculum_basis": [
+      "inherited_unit_context",
+      "textbook_anchor"
+    ],
+    "core_literacy_goals": [
+      "lesson_objectives"
+    ],
+    "student_starting_point": [
+      "student_starting_point"
+    ],
+    "unit_questions": [
+      "lesson_concept_slice",
+      "lesson_focus_question"
+    ],
+    "knowledge_and_skills": [
+      "lesson_concept_slice",
+      "key_difficult_points"
+    ],
+    "performance_task": [
+      "lesson_task_evidence"
+    ],
+    "learning_progression": [
+      "classroom_flow"
+    ],
+    "lesson_task_chain": [
+      "classroom_flow",
+      "lesson_task_evidence"
+    ],
+    "assessment_evidence": [
+      "lesson_task_evidence",
+      "assessment_plan"
+    ],
+    "skills_materials_scaffolds": [
+      "courseware_plan",
+      "handout_plan",
+      "material_requests"
+    ],
+    "material_requests": [
+      "material_requests"
+    ],
+    "classroom_flow": [
+      "classroom_flow"
+    ],
+    "scaffold_pack": [
+      "courseware_plan",
+      "handout_plan",
+      "material_requests"
+    ],
+    "visual_language": [
+      "lesson_concept_slice",
+      "lesson_objectives",
+      "classroom_flow",
+      "assessment_plan"
+    ]
+  },
+  "deprecated": [
+    "R79B-L1/L2 field standard",
+    "R79B visual map data as active page schema",
+    "R79B generation slot ids",
+    "standalone body blue cards"
+  ],
+  "reuse": [
+    "R21 page shell",
+    "existing CSS",
+    "renderLessonSection section hosts",
+    "R6P section edit data foundation",
+    "R45-R47 candidate host routing and edit-card bridge",
+    "R50-R60 field-aware edit card",
+    "right rail derivative previews",
+    "bottom 小教 composer",
+    "preview / undo / teacher gate"
+  ],
+  "migration_rules": [
+    "Normalize any old R79B or R50 field key through legacy_to_r81_schema_key before routing.",
+    "Resolve final target_section_id from lesson_14_field_mapping_1013R_R81.",
+    "Create line-level step contracts before generating classroom_flow patches.",
+    "Route candidates into existing before/after/suggestion edit card only.",
+    "Keep visual_language hidden; distribute it into lesson_concept_slice, objectives, classroom_flow, and assessment_plan.",
+    "Route missing sources to material_requests only; do not fake教材或学情."
+  ]
+}

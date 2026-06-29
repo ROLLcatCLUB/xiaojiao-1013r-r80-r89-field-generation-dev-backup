@@ -1,0 +1,30 @@
+{
+  "package": "1013R_R80_R89_FIELD_GENERATION_DEV_BACKUP_GITHUB_PACKAGE",
+  "purpose": "independent GitHub development backup before R90",
+  "stage_range": {
+    "from": "1013R_R80",
+    "to": "1013R_R89"
+  },
+  "boundaries": {
+    "whole_xiaobei_core_uploaded": false,
+    "r21_modified_by_backup": false,
+    "provider_runtime_connected_by_backup": false,
+    "formal_apply_allowed": false,
+    "database_feishu_memory_writes": false
+  },
+  "included_stage_count": 12,
+  "included_script_count": 7,
+  "included_zip_count": 2,
+  "next_recommended_stage": "1013R_R90_TRUE_GENERATION_QUALITY_SMOKE",
+  "zip_hashes": [
+    {
+      "path": "zips/1013R_R88_FIELD_GENERATION_GPT_REVIEW_PACKAGE.zip",
+      "sha256": "06f686f13e61145c743d69989deb1184440a13fc45c8f1d9f5bbe4e1897b206e"
+    },
+    {
+      "path": "zips/1013R_R89_FIELD_CONTRACT_CONVERGENCE_GPT_REVIEW_PACKAGE.zip",
+      "sha256": "a500be50853a7318c311de19395613371888287bc403743da66f0710240b5da6"
+    }
+  ]
+}
+

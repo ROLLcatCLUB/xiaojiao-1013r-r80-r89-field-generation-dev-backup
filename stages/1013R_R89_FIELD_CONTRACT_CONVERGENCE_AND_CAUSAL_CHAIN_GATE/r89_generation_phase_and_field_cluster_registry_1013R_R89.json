@@ -1,0 +1,796 @@
+{
+  "schema_id": "r89_generation_phase_and_field_cluster_registry_1013R_R89",
+  "stage": "1013R_R89_FIELD_CONTRACT_CONVERGENCE_AND_CAUSAL_CHAIN_GATE",
+  "generation_phase_registry": [
+    {
+      "phase": "unit_spine",
+      "description": "大单元主线与资料边界阶段。"
+    },
+    {
+      "phase": "lesson_slice",
+      "description": "把大单元主线切到当前课时的决策阶段。"
+    },
+    {
+      "phase": "field_internal",
+      "description": "字段内部结构和教学过程行级契约阶段。"
+    },
+    {
+      "phase": "derived_objects",
+      "description": "课件、大屏、学习单、评价表等派生物阶段。"
+    }
+  ],
+  "field_cluster_registry": [
+    {
+      "cluster": "unit_spine",
+      "description": "单元身份、主题、大观念、基本问题。"
+    },
+    {
+      "cluster": "unit_goals",
+      "description": "目标、内容分析、重难点等学习方向。"
+    },
+    {
+      "cluster": "student_context",
+      "description": "学生起点、困难和进入方式。"
+    },
+    {
+      "cluster": "task_evidence",
+      "description": "表现性任务、评估要点、学习评价。"
+    },
+    {
+      "cluster": "progression",
+      "description": "学习阶段、学习任务、小问题、学习活动。"
+    },
+    {
+      "cluster": "scaffolds",
+      "description": "情境、任务、资源、策略等支架。"
+    },
+    {
+      "cluster": "derived_objects",
+      "description": "学习单、评价支架和后续派生物。"
+    },
+    {
+      "cluster": "source_gap",
+      "description": "资料补充与缺口提示。"
+    },
+    {
+      "cluster": "lesson_identity",
+      "description": "单课身份与教材锚点。"
+    },
+    {
+      "cluster": "lesson_logic",
+      "description": "继承单元主线、概念切片、驱动问题。"
+    },
+    {
+      "cluster": "lesson_goals",
+      "description": "课时目标、学生起点、重难点。"
+    },
+    {
+      "cluster": "lesson_evidence",
+      "description": "本课任务证据、评价计划与资料补充。"
+    },
+    {
+      "cluster": "lesson_derived_objects",
+      "description": "课件/大屏、学习单等单课派生物。"
+    },
+    {
+      "cluster": "classroom_flow_line_contract",
+      "description": "教学过程 47 项行级契约字段池。"
+    }
+  ],
+  "old_generation_layer_migration": [
+    {
+      "old_generation_layer": "derived_objects",
+      "new_generation_phase": "derived_objects",
+      "new_field_cluster": "derived_objects",
+      "migration_status": "split_from_mixed_layer"
+    },
+    {
+      "old_generation_layer": "progression",
+      "new_generation_phase": "unit_spine",
+      "new_field_cluster": "progression",
+      "migration_status": "split_from_mixed_layer"
+    },
+    {
+      "old_generation_layer": "scaffolds",
+      "new_generation_phase": "unit_spine",
+      "new_field_cluster": "scaffolds",
+      "migration_status": "split_from_mixed_layer"
+    },
+    {
+      "old_generation_layer": "source_gap",
+      "new_generation_phase": "unit_spine",
+      "new_field_cluster": "source_gap",
+      "migration_status": "split_from_mixed_layer"
+    },
+    {
+      "old_generation_layer": "student_context",
+      "new_generation_phase": "unit_spine",
+      "new_field_cluster": "student_context",
+      "migration_status": "split_from_mixed_layer"
+    },
+    {
+      "old_generation_layer": "task_evidence",
+      "new_generation_phase": "unit_spine",
+      "new_field_cluster": "task_evidence",
+      "migration_status": "split_from_mixed_layer"
+    },
+    {
+      "old_generation_layer": "unit_goals",
+      "new_generation_phase": "unit_spine",
+      "new_field_cluster": "unit_goals",
+      "migration_status": "split_from_mixed_layer"
+    },
+    {
+      "old_generation_layer": "unit_spine",
+      "new_generation_phase": "unit_spine",
+      "new_field_cluster": "unit_spine",
+      "migration_status": "split_from_mixed_layer"
+    }
+  ],
+  "field_phase_cluster_rows": [
+    {
+      "visible_label": "单元信息",
+      "engineering_key": "big_unit.unit_basic_info",
+      "old_generation_layer": "unit_spine",
+      "generation_phase": "unit_spine",
+      "field_cluster": "unit_spine",
+      "migration_status": "split_from_mixed_layer"
+    },
+    {
+      "visible_label": "单元主题",
+      "engineering_key": "big_unit.unit_theme",
+      "old_generation_layer": "unit_spine",
+      "generation_phase": "unit_spine",
+      "field_cluster": "unit_spine",
+      "migration_status": "split_from_mixed_layer"
+    },
+    {
+      "visible_label": "大观念",
+      "engineering_key": "big_unit.big_idea",
+      "old_generation_layer": "unit_spine",
+      "generation_phase": "unit_spine",
+      "field_cluster": "unit_spine",
+      "migration_status": "split_from_mixed_layer"
+    },
+    {
+      "visible_label": "基本问题",
+      "engineering_key": "big_unit.essential_question",
+      "old_generation_layer": "unit_spine",
+      "generation_phase": "unit_spine",
+      "field_cluster": "unit_spine",
+      "migration_status": "split_from_mixed_layer"
+    },
+    {
+      "visible_label": "单元学习目标",
+      "engineering_key": "big_unit.learning_goals",
+      "old_generation_layer": "unit_goals",
+      "generation_phase": "unit_spine",
+      "field_cluster": "unit_goals",
+      "migration_status": "split_from_mixed_layer"
+    },
+    {
+      "visible_label": "单元内容分析",
+      "engineering_key": "big_unit.content_analysis",
+      "old_generation_layer": "unit_goals",
+      "generation_phase": "unit_spine",
+      "field_cluster": "unit_goals",
+      "migration_status": "split_from_mixed_layer"
+    },
+    {
+      "visible_label": "学情分析",
+      "engineering_key": "big_unit.student_context",
+      "old_generation_layer": "student_context",
+      "generation_phase": "unit_spine",
+      "field_cluster": "student_context",
+      "migration_status": "split_from_mixed_layer"
+    },
+    {
+      "visible_label": "学习重难点",
+      "engineering_key": "big_unit.key_difficult_points",
+      "old_generation_layer": "unit_goals",
+      "generation_phase": "unit_spine",
+      "field_cluster": "unit_goals",
+      "migration_status": "split_from_mixed_layer"
+    },
+    {
+      "visible_label": "表现性任务",
+      "engineering_key": "big_unit.performance_task",
+      "old_generation_layer": "task_evidence",
+      "generation_phase": "unit_spine",
+      "field_cluster": "task_evidence",
+      "migration_status": "split_from_mixed_layer"
+    },
+    {
+      "visible_label": "任务评估要点",
+      "engineering_key": "big_unit.task_assessment_points",
+      "old_generation_layer": "task_evidence",
+      "generation_phase": "unit_spine",
+      "field_cluster": "task_evidence",
+      "migration_status": "split_from_mixed_layer"
+    },
+    {
+      "visible_label": "学习阶段",
+      "engineering_key": "big_unit.learning_stages",
+      "old_generation_layer": "progression",
+      "generation_phase": "unit_spine",
+      "field_cluster": "progression",
+      "migration_status": "split_from_mixed_layer"
+    },
+    {
+      "visible_label": "学习任务",
+      "engineering_key": "big_unit.learning_tasks",
+      "old_generation_layer": "progression",
+      "generation_phase": "unit_spine",
+      "field_cluster": "progression",
+      "migration_status": "split_from_mixed_layer"
+    },
+    {
+      "visible_label": "小问题",
+      "engineering_key": "big_unit.micro_questions",
+      "old_generation_layer": "progression",
+      "generation_phase": "unit_spine",
+      "field_cluster": "progression",
+      "migration_status": "split_from_mixed_layer"
+    },
+    {
+      "visible_label": "学习活动",
+      "engineering_key": "big_unit.learning_activities",
+      "old_generation_layer": "progression",
+      "generation_phase": "unit_spine",
+      "field_cluster": "progression",
+      "migration_status": "split_from_mixed_layer"
+    },
+    {
+      "visible_label": "学习评价",
+      "engineering_key": "big_unit.learning_assessment",
+      "old_generation_layer": "task_evidence",
+      "generation_phase": "unit_spine",
+      "field_cluster": "task_evidence",
+      "migration_status": "split_from_mixed_layer"
+    },
+    {
+      "visible_label": "情境支架",
+      "engineering_key": "big_unit.scaffold.context",
+      "old_generation_layer": "scaffolds",
+      "generation_phase": "unit_spine",
+      "field_cluster": "scaffolds",
+      "migration_status": "split_from_mixed_layer"
+    },
+    {
+      "visible_label": "任务支架",
+      "engineering_key": "big_unit.scaffold.task",
+      "old_generation_layer": "scaffolds",
+      "generation_phase": "unit_spine",
+      "field_cluster": "scaffolds",
+      "migration_status": "split_from_mixed_layer"
+    },
+    {
+      "visible_label": "资源支架",
+      "engineering_key": "big_unit.scaffold.resource",
+      "old_generation_layer": "scaffolds",
+      "generation_phase": "unit_spine",
+      "field_cluster": "scaffolds",
+      "migration_status": "split_from_mixed_layer"
+    },
+    {
+      "visible_label": "策略支架",
+      "engineering_key": "big_unit.scaffold.strategy",
+      "old_generation_layer": "scaffolds",
+      "generation_phase": "unit_spine",
+      "field_cluster": "scaffolds",
+      "migration_status": "split_from_mixed_layer"
+    },
+    {
+      "visible_label": "学习单",
+      "engineering_key": "big_unit.handout_plan",
+      "old_generation_layer": "derived_objects",
+      "generation_phase": "derived_objects",
+      "field_cluster": "derived_objects",
+      "migration_status": "split_from_mixed_layer"
+    },
+    {
+      "visible_label": "评价支架",
+      "engineering_key": "big_unit.assessment_scaffold",
+      "old_generation_layer": "derived_objects",
+      "generation_phase": "derived_objects",
+      "field_cluster": "derived_objects",
+      "migration_status": "split_from_mixed_layer"
+    },
+    {
+      "visible_label": "资料补充",
+      "engineering_key": "big_unit.material_requests",
+      "old_generation_layer": "source_gap",
+      "generation_phase": "unit_spine",
+      "field_cluster": "source_gap",
+      "migration_status": "split_from_mixed_layer"
+    },
+    {
+      "visible_label": "课时身份",
+      "engineering_key": "lesson.lesson_identity",
+      "schema_key": "lesson_identity",
+      "generation_phase": "lesson_slice",
+      "field_cluster": "lesson_identity",
+      "migration_status": "new_from_r88_lesson_field"
+    },
+    {
+      "visible_label": "继承单元主线",
+      "engineering_key": "lesson.inherited_unit_context",
+      "schema_key": "inherited_unit_context",
+      "generation_phase": "lesson_slice",
+      "field_cluster": "lesson_logic",
+      "migration_status": "new_from_r88_lesson_field"
+    },
+    {
+      "visible_label": "教材锚点",
+      "engineering_key": "lesson.textbook_anchor",
+      "schema_key": "textbook_anchor",
+      "generation_phase": "lesson_slice",
+      "field_cluster": "lesson_identity",
+      "migration_status": "new_from_r88_lesson_field"
+    },
+    {
+      "visible_label": "本课概念切片",
+      "engineering_key": "lesson.lesson_concept_slice",
+      "schema_key": "lesson_concept_slice",
+      "generation_phase": "lesson_slice",
+      "field_cluster": "lesson_logic",
+      "migration_status": "new_from_r88_lesson_field"
+    },
+    {
+      "visible_label": "本课驱动问题",
+      "engineering_key": "lesson.lesson_focus_question",
+      "schema_key": "lesson_focus_question",
+      "generation_phase": "lesson_slice",
+      "field_cluster": "lesson_logic",
+      "migration_status": "new_from_r88_lesson_field"
+    },
+    {
+      "visible_label": "课时目标",
+      "engineering_key": "lesson.lesson_objectives",
+      "schema_key": "lesson_objectives",
+      "generation_phase": "lesson_slice",
+      "field_cluster": "lesson_goals",
+      "migration_status": "new_from_r88_lesson_field"
+    },
+    {
+      "visible_label": "学生起点",
+      "engineering_key": "lesson.student_starting_point",
+      "schema_key": "student_starting_point",
+      "generation_phase": "lesson_slice",
+      "field_cluster": "lesson_goals",
+      "migration_status": "new_from_r88_lesson_field"
+    },
+    {
+      "visible_label": "重难点",
+      "engineering_key": "lesson.key_difficult_points",
+      "schema_key": "key_difficult_points",
+      "generation_phase": "lesson_slice",
+      "field_cluster": "lesson_goals",
+      "migration_status": "new_from_r88_lesson_field"
+    },
+    {
+      "visible_label": "本课任务与证据",
+      "engineering_key": "lesson.lesson_task_evidence",
+      "schema_key": "lesson_task_evidence",
+      "generation_phase": "lesson_slice",
+      "field_cluster": "lesson_evidence",
+      "migration_status": "new_from_r88_lesson_field"
+    },
+    {
+      "visible_label": "教学过程",
+      "engineering_key": "lesson.classroom_flow",
+      "schema_key": "classroom_flow",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "migration_status": "new_from_r88_lesson_field"
+    },
+    {
+      "visible_label": "课件/大屏计划",
+      "engineering_key": "lesson.courseware_plan",
+      "schema_key": "courseware_plan",
+      "generation_phase": "derived_objects",
+      "field_cluster": "lesson_derived_objects",
+      "migration_status": "new_from_r88_lesson_field"
+    },
+    {
+      "visible_label": "学习单/学生任务单计划",
+      "engineering_key": "lesson.handout_plan",
+      "schema_key": "handout_plan",
+      "generation_phase": "derived_objects",
+      "field_cluster": "lesson_derived_objects",
+      "migration_status": "new_from_r88_lesson_field"
+    },
+    {
+      "visible_label": "评价计划",
+      "engineering_key": "lesson.assessment_plan",
+      "schema_key": "assessment_plan",
+      "generation_phase": "lesson_slice",
+      "field_cluster": "lesson_evidence",
+      "migration_status": "new_from_r88_lesson_field"
+    },
+    {
+      "visible_label": "资料补充",
+      "engineering_key": "lesson.material_requests",
+      "schema_key": "material_requests",
+      "generation_phase": "lesson_slice",
+      "field_cluster": "lesson_evidence",
+      "migration_status": "new_from_r88_lesson_field"
+    },
+    {
+      "visible_label": "环节ID",
+      "engineering_key": "lesson.classroom_flow.step.step_id",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "step_frame",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "环节顺序",
+      "engineering_key": "lesson.classroom_flow.step.step_order",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "step_frame",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "环节名称",
+      "engineering_key": "lesson.classroom_flow.step.step_name",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "step_frame",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "时间分配",
+      "engineering_key": "lesson.classroom_flow.step.duration",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "step_frame",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "环节功能",
+      "engineering_key": "lesson.classroom_flow.step.phase_role",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "step_frame",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "承接上一环节",
+      "engineering_key": "lesson.classroom_flow.step.prior_connection",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "step_frame",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "引出下一环节",
+      "engineering_key": "lesson.classroom_flow.step.next_connection",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "step_frame",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "教师指令",
+      "engineering_key": "lesson.classroom_flow.step.teacher_instruction",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "teacher_moves",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "核心提问",
+      "engineering_key": "lesson.classroom_flow.step.teacher_core_question",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "teacher_moves",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "追问",
+      "engineering_key": "lesson.classroom_flow.step.teacher_probe_question",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "teacher_moves",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "教师示范",
+      "engineering_key": "lesson.classroom_flow.step.teacher_demo",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "teacher_moves",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "教师示范语言",
+      "engineering_key": "lesson.classroom_flow.step.teacher_modeling_language",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "teacher_moves",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "巡视观察",
+      "engineering_key": "lesson.classroom_flow.step.teacher_patrol_observation",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "teacher_moves",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "即时反馈动作",
+      "engineering_key": "lesson.classroom_flow.step.teacher_feedback_move",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "teacher_moves",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "学生观察",
+      "engineering_key": "lesson.classroom_flow.step.student_observation",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "student_moves",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "学生讨论",
+      "engineering_key": "lesson.classroom_flow.step.student_discussion",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "student_moves",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "学生尝试",
+      "engineering_key": "lesson.classroom_flow.step.student_try",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "student_moves",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "学生创作",
+      "engineering_key": "lesson.classroom_flow.step.student_creation",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "student_moves",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "学生记录",
+      "engineering_key": "lesson.classroom_flow.step.student_recording",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "student_moves",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "学生展示",
+      "engineering_key": "lesson.classroom_flow.step.student_display",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "student_moves",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "学生修订",
+      "engineering_key": "lesson.classroom_flow.step.student_revision",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "student_moves",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "观察对象",
+      "engineering_key": "lesson.classroom_flow.step.visual_object",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "art_learning_content",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "美术语言焦点",
+      "engineering_key": "lesson.classroom_flow.step.visual_language_focus",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "art_learning_content",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "技法要点",
+      "engineering_key": "lesson.classroom_flow.step.technique_focus",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "art_learning_content",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "材料使用",
+      "engineering_key": "lesson.classroom_flow.step.material_use",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "art_learning_content",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "造型/构图/色彩关注点",
+      "engineering_key": "lesson.classroom_flow.step.composition_or_color_focus",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "art_learning_content",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "作品或生活例证",
+      "engineering_key": "lesson.classroom_flow.step.artwork_or_life_example",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "art_learning_content",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "正反例",
+      "engineering_key": "lesson.classroom_flow.step.positive_negative_example",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "art_learning_content",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "情境支架",
+      "engineering_key": "lesson.classroom_flow.step.context_scaffold",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "scaffolds",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "任务支架",
+      "engineering_key": "lesson.classroom_flow.step.task_scaffold",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "scaffolds",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "语言支架",
+      "engineering_key": "lesson.classroom_flow.step.language_scaffold",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "scaffolds",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "材料支架",
+      "engineering_key": "lesson.classroom_flow.step.material_scaffold",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "scaffolds",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "同伴支架",
+      "engineering_key": "lesson.classroom_flow.step.peer_scaffold",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "scaffolds",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "差异化支架",
+      "engineering_key": "lesson.classroom_flow.step.differentiation_scaffold",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "scaffolds",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "过程证据",
+      "engineering_key": "lesson.classroom_flow.step.process_evidence",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "assessment_evidence",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "作品证据",
+      "engineering_key": "lesson.classroom_flow.step.work_evidence",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "assessment_evidence",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "表达证据",
+      "engineering_key": "lesson.classroom_flow.step.expression_evidence",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "assessment_evidence",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "同伴评价",
+      "engineering_key": "lesson.classroom_flow.step.peer_assessment",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "assessment_evidence",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "教师观察点",
+      "engineering_key": "lesson.classroom_flow.step.teacher_observation_point",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "assessment_evidence",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "成功标准",
+      "engineering_key": "lesson.classroom_flow.step.success_criteria",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "assessment_evidence",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "证据留存",
+      "engineering_key": "lesson.classroom_flow.step.evidence_storage",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "assessment_evidence",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "常见误区",
+      "engineering_key": "lesson.classroom_flow.step.common_misconception",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "risk_and_orchestration",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "时间风险",
+      "engineering_key": "lesson.classroom_flow.step.time_risk",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "risk_and_orchestration",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "材料风险",
+      "engineering_key": "lesson.classroom_flow.step.material_risk",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "risk_and_orchestration",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "课堂秩序风险",
+      "engineering_key": "lesson.classroom_flow.step.class_management_risk",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "risk_and_orchestration",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "补救策略",
+      "engineering_key": "lesson.classroom_flow.step.fallback_strategy",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "risk_and_orchestration",
+      "migration_status": "new_from_r88_step_contract"
+    },
+    {
+      "visible_label": "替代方案",
+      "engineering_key": "lesson.classroom_flow.step.alternative_plan",
+      "generation_phase": "field_internal",
+      "field_cluster": "classroom_flow_line_contract",
+      "group_id": "risk_and_orchestration",
+      "migration_status": "new_from_r88_step_contract"
+    }
+  ]
+}

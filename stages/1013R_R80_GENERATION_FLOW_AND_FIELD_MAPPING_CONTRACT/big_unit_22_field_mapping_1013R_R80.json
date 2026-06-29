@@ -1,0 +1,498 @@
+{
+  "schema_id": "big_unit_22_field_mapping_1013R_R80",
+  "stage": "1013R_R80_GENERATION_FLOW_AND_FIELD_MAPPING_CONTRACT",
+  "purpose": "Map GPT/R79A conceptual teaching-design fields back to the current R79C5 22 visible big-unit fields.",
+  "source_priority": [
+    "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R79C5_BIG_UNIT_FIELD_ID_CHIPS\\big_unit_field_id_chips_1013R_R79C5.json",
+    "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R79A_TEACHING_DESIGN_STRUCTURE_SOURCE_COMPARISON\\unit_design_schema_v2_1013R_R79A.json",
+    "current user correction: 22 visible fields are the big-unit page contract"
+  ],
+  "boundary_flags": {
+    "r21_page_modified": false,
+    "new_page_created": false,
+    "model_provider_runtime_connected": false,
+    "database_write": false,
+    "feishu_write": false,
+    "formal_apply_allowed": false,
+    "r79b_used_as_final_field_standard": false
+  },
+  "big_unit_fields": [
+    {
+      "order": 1,
+      "label": "单元信息",
+      "page_field_key": "unit_info",
+      "contract_key": "big_unit.unit_info",
+      "visual_contract_id": "R79C5-BU/unit_info",
+      "source_concept_fields": [
+        "unit_identity"
+      ],
+      "generation_role": "unit_identity_context",
+      "hidden_generation_dimensions": [],
+      "line_landing_policy": "identity facts only; no invented textbook data",
+      "required": true,
+      "candidate_allowed_later": true,
+      "write_policy": "preview_only_until_teacher_confirmed"
+    },
+    {
+      "order": 2,
+      "label": "单元主题",
+      "page_field_key": "unit_theme",
+      "contract_key": "big_unit.unit_theme",
+      "visual_contract_id": "R79C5-BU/unit_theme",
+      "source_concept_fields": [
+        "unit_theme"
+      ],
+      "generation_role": "name the unit learning territory",
+      "hidden_generation_dimensions": [
+        "visual_language.theme_signal"
+      ],
+      "line_landing_policy": "theme and learning scope may be separate lines",
+      "required": true,
+      "candidate_allowed_later": true,
+      "write_policy": "preview_only_until_teacher_confirmed"
+    },
+    {
+      "order": 3,
+      "label": "大观念",
+      "page_field_key": "big_idea",
+      "contract_key": "big_unit.big_idea",
+      "visual_contract_id": "R79C5-BU/big_idea",
+      "source_concept_fields": [
+        "big_idea",
+        "key_concepts"
+      ],
+      "generation_role": "transferable understanding, not activity summary",
+      "hidden_generation_dimensions": [
+        "visual_language.core_understanding"
+      ],
+      "line_landing_policy": "one core understanding line; avoid slogan-only phrasing",
+      "required": true,
+      "candidate_allowed_later": true,
+      "write_policy": "preview_only_until_teacher_confirmed"
+    },
+    {
+      "order": 4,
+      "label": "基本问题",
+      "page_field_key": "essential_question",
+      "contract_key": "big_unit.essential_question",
+      "visual_contract_id": "R79C5-BU/essential_question",
+      "source_concept_fields": [
+        "essential_question",
+        "big_idea"
+      ],
+      "generation_role": "drive inquiry across the unit",
+      "hidden_generation_dimensions": [
+        "visual_language.question_focus"
+      ],
+      "line_landing_policy": "driving question and transfer question can be separate lines",
+      "required": true,
+      "candidate_allowed_later": true,
+      "write_policy": "preview_only_until_teacher_confirmed"
+    },
+    {
+      "order": 5,
+      "label": "单元学习目标",
+      "page_field_key": "unit_learning_goals",
+      "contract_key": "big_unit.unit_learning_goals",
+      "visual_contract_id": "R79C5-BU/unit_learning_goals",
+      "source_concept_fields": [
+        "unit_learning_goals",
+        "core_literacy_targets",
+        "knowledge_and_skills"
+      ],
+      "generation_role": "convert unit spine into observable learning outcomes",
+      "hidden_generation_dimensions": [
+        "visual_language.learning_goal_dimension"
+      ],
+      "line_landing_policy": "each goal must name observable behavior and evidence direction",
+      "required": true,
+      "candidate_allowed_later": true,
+      "write_policy": "preview_only_until_teacher_confirmed"
+    },
+    {
+      "order": 6,
+      "label": "单元内容分析",
+      "page_field_key": "content_analysis",
+      "contract_key": "big_unit.content_analysis",
+      "visual_contract_id": "R79C5-BU/content_analysis",
+      "source_concept_fields": [
+        "content_analysis",
+        "key_concepts",
+        "visual_language"
+      ],
+      "generation_role": "explain content path and learning focus from textbook and references",
+      "hidden_generation_dimensions": [
+        "visual_language.content_reading"
+      ],
+      "line_landing_policy": "textbook reading and learning focus can be separate lines",
+      "required": true,
+      "candidate_allowed_later": true,
+      "write_policy": "preview_only_until_teacher_confirmed"
+    },
+    {
+      "order": 7,
+      "label": "学情分析",
+      "page_field_key": "student_context",
+      "contract_key": "big_unit.student_context",
+      "visual_contract_id": "R79C5-BU/student_context",
+      "source_concept_fields": [
+        "student_context"
+      ],
+      "generation_role": "describe prior experience, misconception, and accessible entry",
+      "hidden_generation_dimensions": [
+        "visual_language.student_access"
+      ],
+      "line_landing_policy": "prior experience and common gap should remain distinct",
+      "required": true,
+      "candidate_allowed_later": true,
+      "write_policy": "preview_only_until_teacher_confirmed"
+    },
+    {
+      "order": 8,
+      "label": "学习重难点",
+      "page_field_key": "key_difficult_points",
+      "contract_key": "big_unit.key_difficult_points",
+      "visual_contract_id": "R79C5-BU/key_difficult_points",
+      "source_concept_fields": [
+        "key_difficult_points",
+        "knowledge_and_skills"
+      ],
+      "generation_role": "distinguish learning focus and learning difficulty",
+      "hidden_generation_dimensions": [
+        "visual_language.difficulty_focus"
+      ],
+      "line_landing_policy": "focus and difficulty must not be collapsed into one vague sentence",
+      "required": true,
+      "candidate_allowed_later": true,
+      "write_policy": "preview_only_until_teacher_confirmed"
+    },
+    {
+      "order": 9,
+      "label": "表现性任务",
+      "page_field_key": "performance_task",
+      "contract_key": "big_unit.performance_task",
+      "visual_contract_id": "R79C5-BU/performance_task",
+      "source_concept_fields": [
+        "performance_task",
+        "assessment_scheme"
+      ],
+      "generation_role": "define final product and revision evidence",
+      "hidden_generation_dimensions": [
+        "visual_language.work_expression"
+      ],
+      "line_landing_policy": "task output and evidence requirement can be separate lines",
+      "required": true,
+      "candidate_allowed_later": true,
+      "write_policy": "preview_only_until_teacher_confirmed"
+    },
+    {
+      "order": 10,
+      "label": "任务评估要点",
+      "page_field_key": "task_assessment_points",
+      "contract_key": "big_unit.task_assessment_points",
+      "visual_contract_id": "R79C5-BU/task_assessment_points",
+      "source_concept_fields": [
+        "task_assessment_points",
+        "assessment_scheme",
+        "performance_task"
+      ],
+      "generation_role": "turn task into assessable evidence points",
+      "hidden_generation_dimensions": [
+        "visual_language.evidence_quality"
+      ],
+      "line_landing_policy": "criteria should point to observable work or explanation evidence",
+      "required": true,
+      "candidate_allowed_later": true,
+      "write_policy": "preview_only_until_teacher_confirmed"
+    },
+    {
+      "order": 11,
+      "label": "学习阶段",
+      "page_field_key": "learning_stage",
+      "contract_key": "big_unit.learning_stage",
+      "visual_contract_id": "R79C5-BU/learning_stage",
+      "source_concept_fields": [
+        "learning_progression.learning_stage"
+      ],
+      "generation_role": "name the progression stages",
+      "hidden_generation_dimensions": [
+        "visual_language.progression_axis"
+      ],
+      "line_landing_policy": "stage count is flexible; not fixed to three lines",
+      "required": true,
+      "candidate_allowed_later": true,
+      "write_policy": "preview_only_until_teacher_confirmed"
+    },
+    {
+      "order": 12,
+      "label": "学习任务",
+      "page_field_key": "learning_task",
+      "contract_key": "big_unit.learning_task",
+      "visual_contract_id": "R79C5-BU/learning_task",
+      "source_concept_fields": [
+        "learning_progression.learning_task"
+      ],
+      "generation_role": "assign work students actually do in each stage",
+      "hidden_generation_dimensions": [
+        "visual_language.task_materiality"
+      ],
+      "line_landing_policy": "task lines must align with learning_stage but may be 2 to 5 items",
+      "required": true,
+      "candidate_allowed_later": true,
+      "write_policy": "preview_only_until_teacher_confirmed"
+    },
+    {
+      "order": 13,
+      "label": "小问题",
+      "page_field_key": "guiding_question",
+      "contract_key": "big_unit.guiding_question",
+      "visual_contract_id": "R79C5-BU/guiding_question",
+      "source_concept_fields": [
+        "learning_progression.guiding_question",
+        "essential_question"
+      ],
+      "generation_role": "break essential question into stage-level prompts",
+      "hidden_generation_dimensions": [
+        "visual_language.question_ladder"
+      ],
+      "line_landing_policy": "each question must point to a visible observation or decision",
+      "required": true,
+      "candidate_allowed_later": true,
+      "write_policy": "preview_only_until_teacher_confirmed"
+    },
+    {
+      "order": 14,
+      "label": "学习活动",
+      "page_field_key": "learning_activity",
+      "contract_key": "big_unit.learning_activity",
+      "visual_contract_id": "R79C5-BU/learning_activity",
+      "source_concept_fields": [
+        "learning_progression.learning_activity"
+      ],
+      "generation_role": "convert stage task into classroom activity sequence",
+      "hidden_generation_dimensions": [
+        "visual_language.activity_operation"
+      ],
+      "line_landing_policy": "activities must stay grounded in material/action/evidence, not slogans",
+      "required": true,
+      "candidate_allowed_later": true,
+      "write_policy": "preview_only_until_teacher_confirmed"
+    },
+    {
+      "order": 15,
+      "label": "学习评价",
+      "page_field_key": "learning_assessment",
+      "contract_key": "big_unit.learning_assessment",
+      "visual_contract_id": "R79C5-BU/learning_assessment",
+      "source_concept_fields": [
+        "learning_progression.learning_assessment",
+        "assessment_scheme"
+      ],
+      "generation_role": "place assessment into the learning process",
+      "hidden_generation_dimensions": [
+        "visual_language.assessment_visibility"
+      ],
+      "line_landing_policy": "assessment must match stage task and evidence",
+      "required": true,
+      "candidate_allowed_later": true,
+      "write_policy": "preview_only_until_teacher_confirmed"
+    },
+    {
+      "order": 16,
+      "label": "情境支架",
+      "page_field_key": "context_scaffold",
+      "contract_key": "big_unit.context_scaffold",
+      "visual_contract_id": "R79C5-BU/context_scaffold",
+      "source_concept_fields": [
+        "scaffold_pack.context_scaffold"
+      ],
+      "generation_role": "make the learning situation understandable and motivating",
+      "hidden_generation_dimensions": [
+        "visual_language.context_bridge"
+      ],
+      "line_landing_policy": "context should support the task, not become a decorative story",
+      "required": false,
+      "candidate_allowed_later": true,
+      "write_policy": "preview_only_until_teacher_confirmed"
+    },
+    {
+      "order": 17,
+      "label": "任务支架",
+      "page_field_key": "task_scaffold",
+      "contract_key": "big_unit.task_scaffold",
+      "visual_contract_id": "R79C5-BU/task_scaffold",
+      "source_concept_fields": [
+        "scaffold_pack.task_scaffold"
+      ],
+      "generation_role": "break task into doable moves",
+      "hidden_generation_dimensions": [
+        "visual_language.task_steps"
+      ],
+      "line_landing_policy": "scaffold must lower task difficulty without replacing student thinking",
+      "required": false,
+      "candidate_allowed_later": true,
+      "write_policy": "preview_only_until_teacher_confirmed"
+    },
+    {
+      "order": 18,
+      "label": "资源支架",
+      "page_field_key": "resource_scaffold",
+      "contract_key": "big_unit.resource_scaffold",
+      "visual_contract_id": "R79C5-BU/resource_scaffold",
+      "source_concept_fields": [
+        "scaffold_pack.resource_scaffold",
+        "material_requests"
+      ],
+      "generation_role": "name resources needed to support perception, comparison, and creation",
+      "hidden_generation_dimensions": [
+        "visual_language.resource_need"
+      ],
+      "line_landing_policy": "resource gaps route to material_requests, not fabricated evidence",
+      "required": false,
+      "candidate_allowed_later": true,
+      "write_policy": "preview_only_until_teacher_confirmed"
+    },
+    {
+      "order": 19,
+      "label": "策略支架",
+      "page_field_key": "strategy_scaffold",
+      "contract_key": "big_unit.strategy_scaffold",
+      "visual_contract_id": "R79C5-BU/strategy_scaffold",
+      "source_concept_fields": [
+        "scaffold_pack.strategy_scaffold"
+      ],
+      "generation_role": "provide thinking, observation, comparison, and expression strategies",
+      "hidden_generation_dimensions": [
+        "visual_language.strategy_language"
+      ],
+      "line_landing_policy": "strategy can be teacher prompt, sentence frame, or observation route",
+      "required": false,
+      "candidate_allowed_later": true,
+      "write_policy": "preview_only_until_teacher_confirmed"
+    },
+    {
+      "order": 20,
+      "label": "学习单",
+      "page_field_key": "learning_sheet",
+      "contract_key": "big_unit.learning_sheet",
+      "visual_contract_id": "R79C5-BU/learning_sheet",
+      "source_concept_fields": [
+        "scaffold_pack.learning_sheet"
+      ],
+      "generation_role": "translate learning process into student-facing worksheet prompts",
+      "hidden_generation_dimensions": [
+        "visual_language.sheet_observation"
+      ],
+      "line_landing_policy": "worksheet item must correspond to activity and evidence",
+      "required": false,
+      "candidate_allowed_later": true,
+      "write_policy": "preview_only_until_teacher_confirmed"
+    },
+    {
+      "order": 21,
+      "label": "评价支架",
+      "page_field_key": "assessment_scaffold",
+      "contract_key": "big_unit.assessment_scaffold",
+      "visual_contract_id": "R79C5-BU/assessment_scaffold",
+      "source_concept_fields": [
+        "scaffold_pack.assessment_scaffold",
+        "assessment_scheme"
+      ],
+      "generation_role": "make criteria readable and usable by teacher and students",
+      "hidden_generation_dimensions": [
+        "visual_language.criteria_language"
+      ],
+      "line_landing_policy": "criteria language must connect to observable task evidence",
+      "required": false,
+      "candidate_allowed_later": true,
+      "write_policy": "preview_only_until_teacher_confirmed"
+    },
+    {
+      "order": 22,
+      "label": "资料补充",
+      "page_field_key": "material_requests",
+      "contract_key": "big_unit.material_requests",
+      "visual_contract_id": "R79C5-BU/material_requests",
+      "source_concept_fields": [
+        "material_requests"
+      ],
+      "generation_role": "surface missing sources and teacher actions",
+      "hidden_generation_dimensions": [
+        "visual_language.missing_reference_need"
+      ],
+      "line_landing_policy": "action prompt only; never writes formal lesson package content",
+      "required": false,
+      "candidate_allowed_later": false,
+      "write_policy": "action_prompt_only_no_formal_write"
+    }
+  ],
+  "concept_to_visible_field_mapping": {
+    "learning_progression": {
+      "page_field_keys": [
+        "learning_stage",
+        "learning_task",
+        "guiding_question",
+        "learning_activity",
+        "learning_assessment"
+      ],
+      "page_labels": [
+        "学习阶段",
+        "学习任务",
+        "小问题",
+        "学习活动",
+        "学习评价"
+      ],
+      "page_field_policy": "decompose_to_visible_fields; never render learning_progression as a page field"
+    },
+    "scaffold_pack": {
+      "page_field_keys": [
+        "context_scaffold",
+        "task_scaffold",
+        "resource_scaffold",
+        "strategy_scaffold",
+        "learning_sheet",
+        "assessment_scaffold"
+      ],
+      "page_labels": [
+        "情境支架",
+        "任务支架",
+        "资源支架",
+        "策略支架",
+        "学习单",
+        "评价支架"
+      ],
+      "page_field_policy": "decompose_to_visible_fields; never render scaffold_pack as a page field"
+    },
+    "assessment_scheme": {
+      "page_field_keys": [
+        "task_assessment_points",
+        "learning_assessment",
+        "assessment_scaffold"
+      ],
+      "page_labels": [
+        "任务评估要点",
+        "学习评价",
+        "评价支架"
+      ],
+      "page_field_policy": "split_between_task_criteria_process_assessment_and_assessment_scaffold"
+    },
+    "unit_identity": {
+      "page_field_keys": [
+        "unit_info"
+      ],
+      "page_labels": [
+        "单元信息"
+      ],
+      "page_field_policy": "rename_to_current_visible_unit_info_field"
+    },
+    "visual_language": {
+      "page_field_keys": [],
+      "page_labels": [],
+      "page_field_policy": "hidden_generation_dimension_only; no visible top-level page field"
+    }
+  },
+  "line_count_policy": {
+    "fixed_second_level_slots": false,
+    "notes": "A field may contain 2, 3, 4, or 5 generated lines. Order is stable inside a field, but the model must not assume field A owns global line numbers 1-3."
+  }
+}

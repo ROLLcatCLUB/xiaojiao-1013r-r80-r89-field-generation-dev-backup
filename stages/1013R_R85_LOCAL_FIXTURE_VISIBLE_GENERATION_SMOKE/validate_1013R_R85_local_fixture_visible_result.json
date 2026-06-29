@@ -1,0 +1,10 @@
+{
+  "stage": "1013R_R85_LOCAL_FIXTURE_VISIBLE_GENERATION_SMOKE",
+  "result": "PASS",
+  "candidate_source": "r82_valid_fixture_via_r83_normalizer",
+  "provider_runtime_connected": false,
+  "visible_candidate_count": 2,
+  "uses_existing_modal": true,
+  "formal_apply_allowed": false,
+  "r21_page_modified": false
+}

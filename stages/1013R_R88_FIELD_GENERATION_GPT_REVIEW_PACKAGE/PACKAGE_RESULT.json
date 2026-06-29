@@ -1,0 +1,14 @@
+{
+  "result": "PASS",
+  "package_dir": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R88_FIELD_GENERATION_GPT_REVIEW_PACKAGE",
+  "zip_path": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R88_FIELD_GENERATION_GPT_REVIEW_PACKAGE.zip",
+  "zip_sha256": "06f686f13e61145c743d69989deb1184440a13fc45c8f1d9f5bbe4e1897b206e",
+  "included_count": 12,
+  "missing_count": 0,
+  "validation_results": {
+    "r88": "PASS",
+    "r87": "PASS",
+    "r86": "PASS_WITH_FALLBACK",
+    "r83": "PASS"
+  }
+}

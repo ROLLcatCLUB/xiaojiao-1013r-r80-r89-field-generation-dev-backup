@@ -1,0 +1,10 @@
+{
+  "stage": "1013R_R84_EDIT_CARD_BRIDGE_VISIBLE_SMOKE",
+  "result": "PASS",
+  "bridge_count": 2,
+  "all_have_canonical_field_key": true,
+  "all_route_to_existing_edit_card": true,
+  "standalone_blue_card_created": false,
+  "formal_apply_allowed": false,
+  "r21_page_modified": false
+}

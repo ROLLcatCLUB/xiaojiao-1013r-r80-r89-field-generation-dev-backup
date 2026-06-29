@@ -1,0 +1,279 @@
+{
+  "schema_id": "lesson_14_field_mapping_1013R_R81",
+  "stage": "1013R_R81_LESSON_SCHEMA_FIELD_MAP_ADAPTER",
+  "purpose": "Turn the R79A lesson schema into the active single-lesson field map, using R80's adapter rule and the existing R21/R50/R60/R6P/R45-R47 foundation.",
+  "source_priority": [
+    "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R79A_TEACHING_DESIGN_STRUCTURE_SOURCE_COMPARISON\\lesson_design_schema_v2_1013R_R79A.json",
+    "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R80_GENERATION_FLOW_AND_FIELD_MAPPING_CONTRACT\\lesson_schema_mapping_1013R_R80.json",
+    "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R21_page_copy_binds_unified_package\\prep_room_page_copy_binds_unified_package_1013R_R21.html",
+    "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R79B_TEACHING_DESIGN_CONTRACT_VISUAL_PROTOTYPE\\teaching_design_contract_visual_map_1013R_R79B.json"
+  ],
+  "boundary_flags": {
+    "r21_page_modified": false,
+    "new_static_page_created": false,
+    "model_provider_runtime_connected": false,
+    "database_write": false,
+    "feishu_write": false,
+    "memory_write": false,
+    "formal_apply_allowed": false,
+    "r79b_old_field_map_is_active": false
+  },
+  "inheritance_rule": "single_lesson_must_inherit_unit_big_idea_and_essential_question_before_generation",
+  "structured_reasoning_order": [
+    "read_big_unit_spine",
+    "derive_lesson_logic",
+    "map_to_existing_sections",
+    "create_step_line_contracts",
+    "route_candidates_to_existing_edit_card"
+  ],
+  "existing_visible_sections": {
+    "basis": "本课依据",
+    "analysis": "学情分析",
+    "goals": "教学目标",
+    "keypoints": "教学重难点",
+    "preparation": "教学准备",
+    "teaching_process": "教学过程",
+    "assessment": "学习单与评价",
+    "reflection": "课堂后记"
+  },
+  "lesson_fields": [
+    {
+      "order": 1,
+      "schema_key": "lesson_identity",
+      "label": "课时身份",
+      "visible_section": "lesson_header",
+      "target_section_id": "lesson_header",
+      "target_selectors": [
+        ".nb-main-title",
+        ".nb-title",
+        "[data-r21-route-anchor='lesson_header']",
+        ".nb-state-row"
+      ],
+      "route_role": "header_identity",
+      "generation_role": "确认年级、单元、课题、课时、教材页码和课时序号。",
+      "candidate_policy": "preview_identity_only",
+      "line_contract_policy": "facts_only_no_invention",
+      "formal_apply_allowed": false
+    },
+    {
+      "order": 2,
+      "schema_key": "inherited_unit_context",
+      "label": "继承单元主线",
+      "visible_section": "本课依据",
+      "target_section_id": "basis",
+      "target_selectors": [
+        "#nb-section-basis",
+        "[data-edit-target^='section:basis']"
+      ],
+      "route_role": "unit_spine_inheritance",
+      "generation_role": "把单元主题、大观念、基本问题、表现性任务带入本课依据。",
+      "candidate_policy": "must_read_big_unit_before_lesson_candidate",
+      "line_contract_policy": "one_or_more_inheritance_lines",
+      "formal_apply_allowed": false
+    },
+    {
+      "order": 3,
+      "schema_key": "textbook_anchor",
+      "label": "教材锚点",
+      "visible_section": "本课依据",
+      "target_section_id": "basis",
+      "target_selectors": [
+        "#nb-section-basis",
+        ".nb-material-front-prompt",
+        "[data-r49-material-requests-prompt='true']"
+      ],
+      "route_role": "source_anchor_or_gap",
+      "generation_role": "定位教材页、图例、练习、材料来源；缺失时转入资料补充。",
+      "candidate_policy": "source_fact_or_material_request_only",
+      "line_contract_policy": "textbook_page_or_gap_line",
+      "formal_apply_allowed": false
+    },
+    {
+      "order": 4,
+      "schema_key": "lesson_concept_slice",
+      "label": "本课概念切片",
+      "visible_section": "本课依据",
+      "target_section_id": "basis",
+      "target_selectors": [
+        "#nb-section-basis",
+        "[data-edit-target^='section:basis']"
+      ],
+      "route_role": "lesson_slice_from_unit_big_idea",
+      "generation_role": "说明本课从单元大观念中切出哪一块可教、可观察的内容。",
+      "candidate_policy": "must_link_unit_big_idea_and_textbook_anchor",
+      "line_contract_policy": "concept_slice_line",
+      "formal_apply_allowed": false
+    },
+    {
+      "order": 5,
+      "schema_key": "lesson_focus_question",
+      "label": "本课驱动问题",
+      "visible_section": "本课依据",
+      "target_section_id": "basis",
+      "target_selectors": [
+        "#nb-section-basis",
+        "[data-edit-target^='section:basis']"
+      ],
+      "route_role": "lesson_question",
+      "generation_role": "把单元基本问题转成这一课能展开的驱动问题。",
+      "candidate_policy": "question_candidate_not_slogan",
+      "line_contract_policy": "driving_question_line",
+      "formal_apply_allowed": false
+    },
+    {
+      "order": 6,
+      "schema_key": "lesson_objectives",
+      "label": "课时目标",
+      "visible_section": "教学目标",
+      "target_section_id": "goals",
+      "target_selectors": [
+        "#nb-section-goals",
+        "[data-edit-target^='section:goals']"
+      ],
+      "route_role": "observable_objectives",
+      "generation_role": "把课标、单元学习目标和本课任务转成可观察目标。",
+      "candidate_policy": "objective_must_have_observable_behavior",
+      "line_contract_policy": "2_to_5_goal_lines_allowed",
+      "formal_apply_allowed": false
+    },
+    {
+      "order": 7,
+      "schema_key": "student_starting_point",
+      "label": "学生起点",
+      "visible_section": "学情分析",
+      "target_section_id": "analysis",
+      "target_selectors": [
+        "#nb-section-analysis",
+        "[data-edit-target^='section:analysis']"
+      ],
+      "route_role": "student_context",
+      "generation_role": "写清学生已有经验、常见困难和进入本课的可用支架。",
+      "candidate_policy": "do_not_fake_real_student_profile",
+      "line_contract_policy": "prior_experience_gap_support_lines",
+      "formal_apply_allowed": false
+    },
+    {
+      "order": 8,
+      "schema_key": "key_difficult_points",
+      "label": "重难点",
+      "visible_section": "教学重难点",
+      "target_section_id": "keypoints",
+      "target_selectors": [
+        "#nb-section-keypoints",
+        "[data-edit-target^='section:keypoints']"
+      ],
+      "route_role": "lesson_keypoints",
+      "generation_role": "区分本课学习重点和理解/表现难点。",
+      "candidate_policy": "focus_and_difficulty_separated",
+      "line_contract_policy": "focus_line_and_difficulty_line",
+      "formal_apply_allowed": false
+    },
+    {
+      "order": 9,
+      "schema_key": "lesson_task_evidence",
+      "label": "本课任务与证据",
+      "visible_section": "学习单与评价",
+      "target_section_id": "assessment",
+      "target_selectors": [
+        "#nb-section-assessment",
+        "[data-edit-target^='section:assessment']",
+        ".r32-derivative-panel"
+      ],
+      "route_role": "task_evidence_bridge",
+      "generation_role": "定义学生产出、说明、互评或课堂观察证据。",
+      "candidate_policy": "task_and_evidence_must_match",
+      "line_contract_policy": "task_output_evidence_criteria_lines",
+      "formal_apply_allowed": false
+    },
+    {
+      "order": 10,
+      "schema_key": "classroom_flow",
+      "label": "教学过程",
+      "visible_section": "教学过程",
+      "target_section_id": "teaching_process",
+      "target_selectors": [
+        "#nb-section-teaching-process",
+        "[id^='nb-step-']",
+        ".nb-readable-step"
+      ],
+      "route_role": "lesson_step_contract_host",
+      "generation_role": "生成步骤级教学过程，并拆成教师动作、学生活动、材料/屏幕、评价证据。",
+      "candidate_policy": "line_level_step_contract_required_before_patch",
+      "line_contract_policy": "step_contracts_first_then_local_patches",
+      "formal_apply_allowed": false
+    },
+    {
+      "order": 11,
+      "schema_key": "courseware_plan",
+      "label": "课件/大屏计划",
+      "visible_section": "右栏大屏/课件预览",
+      "target_section_id": "courseware_plan",
+      "target_selectors": [
+        "[data-r21-route-anchor='courseware_entry']",
+        "[data-r21-route-anchor='classroom_display_screen']",
+        ".courseware-rail",
+        ".courseware-screen-mini"
+      ],
+      "route_role": "derived_object_preview",
+      "generation_role": "从教学过程派生每个环节的大屏/课件屏幕意图。",
+      "candidate_policy": "derived_from_classroom_flow_only",
+      "line_contract_policy": "screen_by_step_lines",
+      "formal_apply_allowed": false
+    },
+    {
+      "order": 12,
+      "schema_key": "handout_plan",
+      "label": "学习单/学生任务单计划",
+      "visible_section": "学习单与评价 / 右栏学习单",
+      "target_section_id": "handout_plan",
+      "target_selectors": [
+        "#nb-section-assessment",
+        "[data-r32-derivative-id='worksheet']",
+        ".r32-derivative-panel"
+      ],
+      "route_role": "derived_handout_preview",
+      "generation_role": "从学习活动和证据要求派生轻量学习单。",
+      "candidate_policy": "handout_is_derived_not_main_text_dump",
+      "line_contract_policy": "handout_item_lines",
+      "formal_apply_allowed": false
+    },
+    {
+      "order": 13,
+      "schema_key": "assessment_plan",
+      "label": "评价计划",
+      "visible_section": "学习单与评价 / 右栏评价表",
+      "target_section_id": "assessment",
+      "target_selectors": [
+        "#nb-section-assessment",
+        "[data-r32-derivative-id='assessment_rubric']",
+        ".r32-derivative-panel"
+      ],
+      "route_role": "assessment_bridge",
+      "generation_role": "把本课任务证据转成过程评价、作品评价和反馈语言。",
+      "candidate_policy": "evaluation_must_have_evidence_basis",
+      "line_contract_policy": "criteria_evidence_feedback_lines",
+      "formal_apply_allowed": false
+    },
+    {
+      "order": 14,
+      "schema_key": "material_requests",
+      "label": "资料补充",
+      "visible_section": "资料补充提示位",
+      "target_section_id": "material_requests",
+      "target_selectors": [
+        ".nb-material-front-prompt",
+        "[data-r49-material-requests-prompt='true']",
+        "[data-canonical-field-key='material_requests']"
+      ],
+      "route_role": "missing_source_gate",
+      "generation_role": "缺教材、课时安排、示范图、学生作品、真实学情时只提示补资料。",
+      "candidate_policy": "action_prompt_only_no_formal_write",
+      "line_contract_policy": "missing_material_action_lines",
+      "formal_apply_allowed": false
+    }
+  ],
+  "line_count_policy": {
+    "fixed_slots": false,
+    "description": "Each visible section may receive 1 to 5 line contracts depending on lesson logic. The model must not assume a fixed global line order."
+  }
+}

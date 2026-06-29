@@ -1,0 +1,61 @@
+{
+  "schema_id": "lesson_generation_quality_gate_contract_1013R_R82",
+  "stage": "1013R_R82_LESSON_GENERATION_REQUEST_RESPONSE_CONTRACT",
+  "quality_gates": [
+    {
+      "gate_id": "source_gap_check",
+      "required": true,
+      "pass_condition": "missing textbook, image, student profile, or official reference is routed to material_requests"
+    },
+    {
+      "gate_id": "unit_spine_consistency_check",
+      "required": true,
+      "pass_condition": "lesson_logic_brief references big_unit_spine before local lesson changes"
+    },
+    {
+      "gate_id": "r81_schema_key_check",
+      "required": true,
+      "pass_condition": "every target_resolution and field_patch_candidate uses an allowed R81 schema_key"
+    },
+    {
+      "gate_id": "target_section_check",
+      "required": true,
+      "pass_condition": "every target_section matches R81 target_section_map"
+    },
+    {
+      "gate_id": "line_contract_check",
+      "required": true,
+      "pass_condition": "classroom_flow patches have target_line_contract_id and minimum step fields"
+    },
+    {
+      "gate_id": "visual_language_hidden_check",
+      "required": true,
+      "pass_condition": "visual_language is used only in lesson_logic_brief or reasoning basis, not as visible schema_key"
+    },
+    {
+      "gate_id": "teacher_gate_check",
+      "required": true,
+      "pass_condition": "all candidates remain preview_only and teacher_review_required"
+    },
+    {
+      "gate_id": "side_effect_check",
+      "required": true,
+      "pass_condition": "database, memory, feishu, export, archive, formal apply are false"
+    }
+  ],
+  "quality_levels": [
+    "blocked",
+    "basic_usable",
+    "ready_to_teach",
+    "refined",
+    "open_class_ready"
+  ],
+  "blocked_if": [
+    "no_big_unit_spine",
+    "missing_source_refs",
+    "unknown_schema_key",
+    "standalone_blue_card_destination",
+    "formal_apply_attempt",
+    "fake_textbook_or_student_profile"
+  ]
+}

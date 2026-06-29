@@ -1,0 +1,135 @@
+{
+  "response_stage": "1013R_R86_PROVIDER_SANDBOX_DRY_RUN",
+  "request_id": "r86_provider_sandbox_001",
+  "lesson_design_mode": "time_or_resource_constrained",
+  "intent_summary": "将三年级《色彩的渐变》30分钟课堂压缩为保留表达证据和评价证据的可见候选，仅供R86沙盒预览。",
+  "lesson_logic_brief": {
+    "inherited_unit_context_summary": "三年级上册色彩单元已学三原色与间色，本课衔接色相渐变感知。",
+    "core_learning_problem": "学生能看出两色之间有渐变，但说不出渐变如何被组织。",
+    "student_starting_point": "能辨认三原色和间色，但缺乏把渐变拆成色相节点的意识。",
+    "target_shift": "从直觉感受渐变转向用色相过渡节点描述和再现渐变。",
+    "lesson_focus_question": "两种颜色之间发生了什么，渐变是怎样一步步走过去的？",
+    "visual_language_use": "通过色块并置、节点标注和简短色彩词描述渐变路径。",
+    "teaching_route": [
+      "出示双色对比样例，唤起渐变感受",
+      "拆解中间色相节点，建立色相过渡意识",
+      "学生尝试用三至四个色块表达同一感受",
+      "小组互看并用一句色彩词描述对方渐变"
+    ],
+    "evidence_plan": [
+      "学生作品留有三至四个可辨认色块作为表达证据",
+      "同桌互评留下一句色彩词描述作为评价证据"
+    ],
+    "risk_points": [
+      "30分钟内只让画容易回到自由涂色，缺过渡节点",
+      "互评容易停留在好看或不好看，缺色彩词"
+    ],
+    "source_basis": [
+      "teacher_intent",
+      "current_process_steps"
+    ],
+    "material_gaps": []
+  },
+  "target_resolution": [
+    {
+      "schema_key": "classroom_flow",
+      "target_section": "teaching_process",
+      "target_step_id": "share",
+      "target_field": "success_criteria",
+      "reason": "压缩后需要把评价证据固定到分享环节的成功标准里。",
+      "source_refs": [
+        "teacher_intent",
+        "current_process_steps"
+      ]
+    }
+  ],
+  "step_reasoning_updates": [],
+  "field_patch_candidates": [
+    {
+      "field_patch_id": "r86_provider_candidate_01",
+      "schema_key": "classroom_flow",
+      "canonical_field_key": "classroom_flow",
+      "target_field_key": "classroom_flow",
+      "target_section": "teaching_process",
+      "target_step_id": "share",
+      "target_line_contract_id": "lesson_step.color_feeling.05.success_criteria",
+      "target_destination": "existing_edit_card_before_after_suggestion_panel",
+      "before_summary": "分享环节只要求展示作品，未写明评价证据。",
+      "after_candidate": "分享时每人留下一句色彩词描述对方渐变作为评价证据。",
+      "xiaojiao_suggestion": "在分享步骤的success_criteria里加入色彩词描述要求。",
+      "impact_scope": [
+        "teacher_action",
+        "student_activity",
+        "evidence_note"
+      ],
+      "source_refs": [
+        "teacher_intent",
+        "current_process_steps"
+      ],
+      "teacher_review_required": true,
+      "preview_only": true,
+      "formal_apply_allowed": false,
+      "applied": false,
+      "patch_type": "revise",
+      "reasoning_basis": [
+        "教学预设",
+        "教师输入"
+      ]
+    },
+    {
+      "field_patch_id": "r86_provider_candidate_02",
+      "schema_key": "lesson_task_evidence",
+      "canonical_field_key": "lesson_task_evidence",
+      "target_field_key": "lesson_task_evidence",
+      "target_section": "assessment",
+      "target_step_id": "task_evidence",
+      "target_line_contract_id": "lesson_task_evidence.color_gradient.express_evidence",
+      "target_destination": "existing_edit_card_before_after_suggestion_panel",
+      "before_summary": "任务证据未明确作品需保留多少色块才算渐变证据。",
+      "after_candidate": "作品需保留三至四个可辨色块，作为色彩渐变表达证据。",
+      "xiaojiao_suggestion": "在任务证据里写清最少色块数和辨识要求。",
+      "impact_scope": [
+        "teacher_action",
+        "evidence_note"
+      ],
+      "source_refs": [
+        "teacher_intent",
+        "current_process_steps"
+      ],
+      "teacher_review_required": true,
+      "preview_only": true,
+      "formal_apply_allowed": false,
+      "applied": false,
+      "patch_type": "revise",
+      "reasoning_basis": [
+        "教学预设",
+        "教师输入"
+      ]
+    }
+  ],
+  "quality_gate_update": {
+    "level": "basic_usable",
+    "passed_items": [],
+    "missing_items": [],
+    "risk_items": [
+      "压缩到30分钟可能削弱过渡讲解时间"
+    ],
+    "next_best_action": "等待教师在编辑卡中确认两类证据表述"
+  },
+  "material_requests": [],
+  "teacher_questions": [
+    "是否同意把色块数和色彩词描述作为必留证据"
+  ],
+  "ui_binding_hint": {
+    "should_enter_edit_mode": true,
+    "edit_target": "teaching_process/share",
+    "candidate_display_position": "existing_edit_card",
+    "right_tray_updates": [],
+    "view_mode_summary": "R86沙盒预览两个证据相关字段候选，等待教师确认"
+  },
+  "boundary_flags": {
+    "teacher_review_required": true,
+    "formal_apply_performed": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written

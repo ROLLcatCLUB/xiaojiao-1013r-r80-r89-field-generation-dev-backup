@@ -1,0 +1,85 @@
+{
+  "schema_id": "generation_to_field_adapter_contract_1013R_R80",
+  "stage": "1013R_R80_GENERATION_FLOW_AND_FIELD_MAPPING_CONTRACT",
+  "purpose": "Define how generated reasoning is normalized into current field candidates and edit-card patches.",
+  "input_sources": [
+    "teacher_intent",
+    "grade_subject_term",
+    "textbook_ocr_or_material_requests",
+    "official_teaching_design_reference",
+    "quality_big_unit_cases",
+    "R79A unit schema",
+    "R79A lesson schema",
+    "R79A lesson step contract schema"
+  ],
+  "reasoning_outputs": [
+    "unit_spine",
+    "lesson_logic",
+    "field_landing_plan",
+    "line_level_contracts",
+    "local_regeneration_candidates"
+  ],
+  "candidate_envelope_required_keys": [
+    "candidate_id",
+    "stage",
+    "source_reasoning_phase",
+    "canonical_field_key",
+    "target_field_key",
+    "explicit_alias_of",
+    "target_section",
+    "target_line_contract_id",
+    "before_text",
+    "after_text",
+    "xiaojiao_suggestion",
+    "impact_scope",
+    "work_object_patch",
+    "formal_apply_allowed",
+    "applied"
+  ],
+  "candidate_envelope_defaults": {
+    "stage": "1013R_R80_GENERATION_FLOW_AND_FIELD_MAPPING_CONTRACT",
+    "target_destination": "existing_edit_card_before_after_suggestion_panel",
+    "formal_apply_allowed": false,
+    "applied": false,
+    "preview_only": true
+  },
+  "normalize_rules": [
+    {
+      "rule": "reject_missing_canonical_field_key",
+      "description": "A candidate without canonical_field_key cannot enter the edit card bridge."
+    },
+    {
+      "rule": "reject_missing_target_field_key",
+      "description": "A candidate must name the visible page field it lands in."
+    },
+    {
+      "rule": "resolve_alias_before_routing",
+      "description": "Old field ids or R79B ids must resolve to the active R80 target field before preview."
+    },
+    {
+      "rule": "material_requests_action_prompt_only",
+      "description": "material_requests may request missing sources but cannot write formal lesson content."
+    },
+    {
+      "rule": "line_level_patch_after_field_landing",
+      "description": "Line patches are generated only after the parent field landing is known."
+    }
+  ],
+  "quality_gates": [
+    "source_gap_check",
+    "unit_spine_consistency_check",
+    "lesson_inheritance_check",
+    "field_target_check",
+    "line_contract_check",
+    "teacher_preview_gate"
+  ],
+  "forbidden_actions": {
+    "new_page_foundation": false,
+    "r21_rewire": false,
+    "provider_model_runtime_connection": false,
+    "database_write": false,
+    "feishu_write": false,
+    "memory_write": false,
+    "formal_apply": false
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schema_id": "r89_strict_vs_salvage_validator_boundary_1013R_R89",
+  "stage": "1013R_R89_FIELD_CONTRACT_CONVERGENCE_AND_CAUSAL_CHAIN_GATE",
+  "boundary_rule": "Strict provider raw validation and candidate salvage normalization must never share a single PASS field.",
+  "required_output_shape": {
+    "strict_provider_raw_validation": {
+      "result": "PASS | FAIL | NOT_RUN",
+      "json_parse_ok": "boolean",
+      "required_top_level_keys_ok": "boolean",
+      "candidate_required_keys_ok": "boolean",
+      "boundary_flags_ok": "boolean"
+    },
+    "candidate_salvage_normalization": {
+      "result": "PASS | FAIL | NOT_RUN",
+      "source": "provider_raw | fallback_fixture | repaired_json | static_fixture",
+      "degraded": "boolean",
+      "degradation_reason": "string|null"
+    },
+    "overall_runtime_generation_claim_allowed": false
+  },
+  "r86_current_snapshot": {
+    "source": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R86_PROVIDER_SANDBOX_DRY_RUN\\validate_1013R_R86_provider_sandbox_result.json",
+    "strict_provider_raw_validation": {
+      "result": "FAIL",
+      "json_parse_ok": false,
+      "required_top_level_keys_ok": false,
+      "candidate_required_keys_ok": false,
+      "boundary_flags_ok": true
+    },
+    "candidate_salvage_normalization": {
+      "result": "PASS",
+      "source": "fallback_fixture",
+      "degraded": true,
+      "degradation_reason": "Unterminated string starting at: line 135 column 5 (char 4169)"
+    },
+    "overall_runtime_generation_claim_allowed": false
+  }
+}

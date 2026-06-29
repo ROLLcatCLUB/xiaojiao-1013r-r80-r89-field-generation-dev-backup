@@ -1,0 +1,213 @@
+{
+  "schema_id": "provider_sandbox_normalized_1013R_R86",
+  "stage": "1013R_R86_PROVIDER_SANDBOX_DRY_RUN",
+  "source_label": "r82_fixture_fallback_after_provider_sandbox",
+  "request_id": "r82_smoke_001",
+  "lesson_design_mode": "time_or_resource_constrained",
+  "intent_summary": "30分钟内保留表达和评价证据。",
+  "lesson_logic_brief": {
+    "inherited_unit_context_summary": "继承单元大观念：色彩变化会影响感受与表达。",
+    "core_learning_problem": "时间缩短时仍要保留学生表达证据。",
+    "student_starting_point": "学生能说喜欢颜色，但理由容易停在好看。",
+    "target_shift": "从涂色完成转向能说明色彩感受。",
+    "lesson_focus_question": "怎样用有限时间让颜色感受说得出来？",
+    "visual_language_use": "冷暖、明暗和色彩情绪作为隐性推演维度。",
+    "teaching_route": [
+      "快速感知",
+      "重点表现",
+      "表达评价"
+    ],
+    "evidence_plan": [
+      "作品照片",
+      "一句话说明"
+    ],
+    "risk_points": [
+      "表现时间挤压表达"
+    ],
+    "source_basis": [
+      "教师输入",
+      "R81课堂流程",
+      "大单元大观念"
+    ],
+    "material_gaps": []
+  },
+  "target_resolution": [
+    {
+      "schema_key": "classroom_flow",
+      "target_section": "teaching_process",
+      "target_step_id": "share",
+      "target_field": "time_allocation",
+      "reason": "压缩后仍要保留表达证据。",
+      "source_refs": [
+        "teacher_intent",
+        "current_process_steps"
+      ]
+    },
+    {
+      "schema_key": "assessment_plan",
+      "target_section": "assessment",
+      "target_step_id": "share",
+      "target_field": "evidence_capture",
+      "reason": "评价要看学生说明是否成立。",
+      "source_refs": [
+        "lesson_task_evidence",
+        "teacher_intent"
+      ]
+    }
+  ],
+  "step_reasoning_updates": [
+    {
+      "target_line_contract_id": "lesson_step.color_feeling.05.success_criteria",
+      "step_id": "share",
+      "step_name": "交流展示",
+      "step_goal": "用一句话说明色彩选择和感受。",
+      "teacher_talk": "请说出你用了什么颜色，想表达什么感觉。",
+      "student_task": "展示作品并说一句选择理由。",
+      "success_criteria": "能把颜色、感受和理由连起来。",
+      "guiding_questions": "哪一个颜色最能说明你的感受？",
+      "source_refs": [
+        "teacher_intent",
+        "current_process_steps"
+      ],
+      "generation_slot": "preview_only"
+    }
+  ],
+  "field_patch_candidates": [
+    {
+      "field_patch_id": "r82_smoke_share_time",
+      "schema_key": "classroom_flow",
+      "canonical_field_key": "classroom_flow",
+      "target_field_key": "classroom_flow",
+      "target_section": "teaching_process",
+      "target_step_id": "share",
+      "target_line_contract_id": "lesson_step.color_feeling.05.success_criteria",
+      "target_destination": "existing_edit_card_before_after_suggestion_panel",
+      "before_summary": "交流展示时间短，证据容易被压缩。",
+      "after_candidate": "保留3分钟作品展示和一句话说明。",
+      "xiaojiao_suggestion": "先压缩导入和感知，不删表达证据。",
+      "impact_scope": [
+        "teacher_action",
+        "student_activity",
+        "evidence_note"
+      ],
+      "source_refs": [
+        "teacher_intent",
+        "current_process_steps"
+      ],
+      "teacher_review_required": true,
+      "preview_only": true,
+      "formal_apply_allowed": false,
+      "applied": false,
+      "patch_type": "revise",
+      "reasoning_basis": [
+        "教学预设",
+        "教师输入"
+      ],
+      "normalized_candidate_id": "r83_norm_01_classroom_flow",
+      "source_response_stage": "1013R_R86_PROVIDER_SANDBOX_DRY_RUN_FALLBACK",
+      "review_status": "pending_teacher_review",
+      "candidate_display_contract": {
+        "display_surface": "existing_edit_card",
+        "display_panel": "before_after_suggestion",
+        "show_before": true,
+        "show_after": true,
+        "show_xiaojiao_suggestion": true,
+        "standalone_blue_card_created": false
+      },
+      "boundary_flags": {
+        "preview_only": true,
+        "formal_apply_allowed": false,
+        "formal_apply_performed": false,
+        "database_written": false,
+        "feishu_written": false,
+        "memory_written": false
+      }
+    },
+    {
+      "field_patch_id": "r82_smoke_assessment_evidence",
+      "schema_key": "assessment_plan",
+      "canonical_field_key": "assessment_plan",
+      "target_field_key": "assessment_plan",
+      "target_section": "assessment",
+      "target_step_id": "share",
+      "target_line_contract_id": "lesson_field.assessment_plan.line_01",
+      "target_destination": "existing_edit_card_before_after_suggestion_panel",
+      "before_summary": "评价只看作品完成度。",
+      "after_candidate": "增加一句话说明作为评价证据。",
+      "xiaojiao_suggestion": "评价要看学生能否说出色彩选择理由。",
+      "impact_scope": [
+        "rubric",
+        "evidence_note"
+      ],
+      "source_refs": [
+        "lesson_task_evidence",
+        "teacher_intent"
+      ],
+      "teacher_review_required": true,
+      "preview_only": true,
+      "formal_apply_allowed": false,
+      "applied": false,
+      "patch_type": "enrich",
+      "reasoning_basis": [
+        "R81字段映射",
+        "教师输入"
+      ],
+      "normalized_candidate_id": "r83_norm_02_assessment_plan",
+      "source_response_stage": "1013R_R86_PROVIDER_SANDBOX_DRY_RUN_FALLBACK",
+      "review_status": "pending_teacher_review",
+      "candidate_display_contract": {
+        "display_surface": "existing_edit_card",
+        "display_panel": "before_after_suggestion",
+        "show_before": true,
+        "show_after": true,
+        "show_xiaojiao_suggestion": true,
+        "standalone_blue_card_created": false
+      },
+      "boundary_flags": {
+        "preview_only": true,
+        "formal_apply_allowed": false,
+        "formal_apply_performed": false,
+        "database_written": false,
+        "feishu_written": false,
+        "memory_written": false
+      }
+    }
+  ],
+  "quality_gate_update": {
+    "level": "basic_usable",
+    "passed_items": [
+      "保留表达证据",
+      "候选能落到R81字段"
+    ],
+    "missing_items": [
+      "表达卡样式待确认"
+    ],
+    "risk_items": [
+      "时间仍可能不足"
+    ],
+    "next_best_action": "让教师确认展示时长。"
+  },
+  "material_requests": [],
+  "teacher_questions": [],
+  "ui_binding_hint": {
+    "should_enter_edit_mode": true,
+    "edit_target": "teaching_process/share",
+    "candidate_display_position": "existing_edit_card",
+    "right_tray_updates": [
+      "评价证据提醒"
+    ],
+    "view_mode_summary": "30分钟压缩版预览"
+  },
+  "boundary_flags": {
+    "teacher_review_required": true,
+    "preview_only": true,
+    "formal_apply_allowed": false,
+    "formal_apply_performed": false,
+    "database_written": false,
+    "feishu_written": false,
+    "memory_written": false,
+    "formal_export_created": false,
+    "official_archive_created": false
+  },
+  "created_at_ms": 1782741776903
+}

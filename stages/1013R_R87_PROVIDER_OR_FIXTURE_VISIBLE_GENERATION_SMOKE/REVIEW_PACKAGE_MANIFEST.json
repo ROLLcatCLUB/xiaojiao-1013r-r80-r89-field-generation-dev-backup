@@ -1,0 +1,110 @@
+{
+  "package": "1013R_R83_R87_VISIBLE_GENERATION_CHAIN",
+  "created_by": "scripts/build_1013r_r83_r87_visible_generation_chain.py",
+  "main_r21_page_modified": false,
+  "copied_visible_smoke_page": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R87_PROVIDER_OR_FIXTURE_VISIBLE_GENERATION_SMOKE\\prep_room_r87_provider_or_fixture_visible_generation_smoke_1013R_R87.html",
+  "stages": [
+    {
+      "stage": "R83",
+      "name": "LESSON_GENERATION_NORMALIZER_DRY_RUN",
+      "dir": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R83_LESSON_GENERATION_NORMALIZER_DRY_RUN",
+      "validator": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R83_LESSON_GENERATION_NORMALIZER_DRY_RUN\\validate_1013R_R83_normalizer_result.json"
+    },
+    {
+      "stage": "R84",
+      "name": "EDIT_CARD_BRIDGE_VISIBLE_SMOKE",
+      "dir": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R84_EDIT_CARD_BRIDGE_VISIBLE_SMOKE",
+      "validator": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R84_EDIT_CARD_BRIDGE_VISIBLE_SMOKE\\validate_1013R_R84_edit_card_bridge_result.json"
+    },
+    {
+      "stage": "R85",
+      "name": "LOCAL_FIXTURE_VISIBLE_GENERATION_SMOKE",
+      "dir": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R85_LOCAL_FIXTURE_VISIBLE_GENERATION_SMOKE",
+      "validator": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R85_LOCAL_FIXTURE_VISIBLE_GENERATION_SMOKE\\validate_1013R_R85_local_fixture_visible_result.json"
+    },
+    {
+      "stage": "R86",
+      "name": "PROVIDER_SANDBOX_DRY_RUN",
+      "dir": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R86_PROVIDER_SANDBOX_DRY_RUN",
+      "validator": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R86_PROVIDER_SANDBOX_DRY_RUN\\validate_1013R_R86_provider_sandbox_result.json"
+    },
+    {
+      "stage": "R87",
+      "name": "PROVIDER_OR_FIXTURE_VISIBLE_GENERATION_SMOKE",
+      "dir": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R87_PROVIDER_OR_FIXTURE_VISIBLE_GENERATION_SMOKE",
+      "validator": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R87_PROVIDER_OR_FIXTURE_VISIBLE_GENERATION_SMOKE\\validate_1013R_R87_visible_generation_smoke_result.json"
+    }
+  ],
+  "validation_summary": {
+    "r83": {
+      "stage": "1013R_R83_LESSON_GENERATION_NORMALIZER_DRY_RUN",
+      "result": "PASS",
+      "source_fixture": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R82_LESSON_GENERATION_REQUEST_RESPONSE_CONTRACT\\lesson_generation_smoke_fixtures_1013R_R82.json",
+      "normalized_candidate_count": 2,
+      "allowed_schema_key_count": 14,
+      "required_candidate_key_count": 17,
+      "invalid_response_case_count": 5,
+      "invalid_response_rejected_count": 5,
+      "all_invalid_responses_rejected": true,
+      "formal_apply_allowed": false,
+      "r21_page_modified": false,
+      "standalone_blue_card_created": false
+    },
+    "r84": {
+      "stage": "1013R_R84_EDIT_CARD_BRIDGE_VISIBLE_SMOKE",
+      "result": "PASS",
+      "bridge_count": 2,
+      "all_have_canonical_field_key": true,
+      "all_route_to_existing_edit_card": true,
+      "standalone_blue_card_created": false,
+      "formal_apply_allowed": false,
+      "r21_page_modified": false
+    },
+    "r85": {
+      "stage": "1013R_R85_LOCAL_FIXTURE_VISIBLE_GENERATION_SMOKE",
+      "result": "PASS",
+      "candidate_source": "r82_valid_fixture_via_r83_normalizer",
+      "provider_runtime_connected": false,
+      "visible_candidate_count": 2,
+      "uses_existing_modal": true,
+      "formal_apply_allowed": false,
+      "r21_page_modified": false
+    },
+    "r86": {
+      "stage": "1013R_R86_PROVIDER_SANDBOX_DRY_RUN",
+      "result": "PASS_WITH_FALLBACK",
+      "provider_attempted": true,
+      "provider_success": false,
+      "fallback_used": true,
+      "normalized_candidate_count": 2,
+      "all_candidates_preview_only": true,
+      "all_candidates_block_formal_apply": true,
+      "formal_apply_allowed": false,
+      "r21_page_modified": false,
+      "error": "Unterminated string starting at: line 135 column 5 (char 4169)"
+    },
+    "r87": {
+      "stage": "1013R_R87_PROVIDER_OR_FIXTURE_VISIBLE_GENERATION_SMOKE",
+      "result": "PASS",
+      "html": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R87_PROVIDER_OR_FIXTURE_VISIBLE_GENERATION_SMOKE\\prep_room_r87_provider_or_fixture_visible_generation_smoke_1013R_R87.html",
+      "source_r21_html": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R21_page_copy_binds_unified_package\\prep_room_page_copy_binds_unified_package_1013R_R21.html",
+      "r21_page_modified": false,
+      "copied_page_created": true,
+      "provider_success": false,
+      "fallback_used": true,
+      "visible_candidate_count": 2,
+      "formal_apply_allowed": false,
+      "standalone_blue_card_created": false,
+      "html_checks": {
+        "html_exists": true,
+        "copied_from_r21": true,
+        "r21_source_unmodified_by_r87_marker": true,
+        "contains_r87_marker": true,
+        "contains_existing_modal_selector": true,
+        "contains_right_tool_entry_selector": true,
+        "contains_existing_edit_card_destination": true,
+        "contains_no_standalone_blue_card_marker": true
+      }
+    }
+  }
+}

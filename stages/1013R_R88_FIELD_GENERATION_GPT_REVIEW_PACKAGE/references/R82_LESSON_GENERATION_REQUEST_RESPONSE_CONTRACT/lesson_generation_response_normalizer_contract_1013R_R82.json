@@ -1,0 +1,90 @@
+{
+  "schema_id": "lesson_generation_response_normalizer_contract_1013R_R82",
+  "stage": "1013R_R82_LESSON_GENERATION_REQUEST_RESPONSE_CONTRACT",
+  "purpose": "Normalize future model JSON into R81 edit-card candidates or reject it.",
+  "parse_rules": [
+    "reject_non_json_text",
+    "reject_markdown_code_fence",
+    "reject_top_level_array",
+    "reject_missing_required_top_level_keys",
+    "reject_unknown_schema_key",
+    "reject_unknown_target_section",
+    "reject_standalone_blue_card_destination",
+    "reject_candidate_without_target_line_contract_id",
+    "reject_candidate_with_formal_apply_allowed_true",
+    "reject_candidate_with_applied_true",
+    "reject_material_requests_formal_content"
+  ],
+  "allowed_schema_keys": [
+    "lesson_identity",
+    "inherited_unit_context",
+    "textbook_anchor",
+    "lesson_concept_slice",
+    "lesson_focus_question",
+    "lesson_objectives",
+    "student_starting_point",
+    "key_difficult_points",
+    "lesson_task_evidence",
+    "classroom_flow",
+    "courseware_plan",
+    "handout_plan",
+    "assessment_plan",
+    "material_requests"
+  ],
+  "target_section_map": {
+    "lesson_identity": "lesson_header",
+    "inherited_unit_context": "basis",
+    "textbook_anchor": "basis",
+    "lesson_concept_slice": "basis",
+    "lesson_focus_question": "basis",
+    "lesson_objectives": "goals",
+    "student_starting_point": "analysis",
+    "key_difficult_points": "keypoints",
+    "lesson_task_evidence": "assessment",
+    "classroom_flow": "teaching_process",
+    "courseware_plan": "courseware_plan",
+    "handout_plan": "handout_plan",
+    "assessment_plan": "assessment",
+    "material_requests": "material_requests"
+  },
+  "required_candidate_keys": [
+    "field_patch_id",
+    "schema_key",
+    "canonical_field_key",
+    "target_field_key",
+    "target_section",
+    "target_step_id",
+    "target_line_contract_id",
+    "target_destination",
+    "before_summary",
+    "after_candidate",
+    "xiaojiao_suggestion",
+    "impact_scope",
+    "source_refs",
+    "teacher_review_required",
+    "preview_only",
+    "formal_apply_allowed",
+    "applied"
+  ],
+  "normalizer_output_shape": {
+    "normalized": "boolean",
+    "accepted_candidate_count": "integer",
+    "rejected_candidate_count": "integer",
+    "normalized_candidates": [
+      "R81 candidate envelope"
+    ],
+    "rejection_reasons": [
+      "string"
+    ],
+    "teacher_review_required": true,
+    "formal_apply_allowed": false,
+    "r21_write_allowed": false
+  },
+  "repair_policy": {
+    "auto_repair_minor_whitespace": true,
+    "auto_repair_code_fence": false,
+    "auto_map_chinese_section_label": false,
+    "auto_create_missing_schema_key": false,
+    "auto_create_missing_source_refs": false
+  }
+}

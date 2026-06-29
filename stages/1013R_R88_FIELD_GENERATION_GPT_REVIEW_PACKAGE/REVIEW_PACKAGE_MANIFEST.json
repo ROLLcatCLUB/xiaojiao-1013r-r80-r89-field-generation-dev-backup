@@ -1,0 +1,191 @@
+{
+  "package": "1013R_R88_FIELD_GENERATION_GPT_REVIEW_PACKAGE",
+  "created_at": "2026-06-29T23:35:35",
+  "purpose": "GPT review package for the field-generation foundation and the recent R83-R88 generation/visibility work.",
+  "boundaries": {
+    "main_r21_page_modified": false,
+    "provider_runtime_connected_by_r88": false,
+    "prompt_text_visible_in_r88_html": false,
+    "formal_apply_allowed": false,
+    "database_write": false,
+    "feishu_write": false,
+    "memory_write": false
+  },
+  "included_items": [
+    {
+      "source": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R88_FIELD_GENERATION_QUALITY_STATIC_LAB",
+      "target": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R88_FIELD_GENERATION_GPT_REVIEW_PACKAGE\\R88_FIELD_GENERATION_QUALITY_STATIC_LAB",
+      "exists": true,
+      "kind": "directory",
+      "copied": true,
+      "reason": "Current static lab for visible fields, engineering fields, generation placeholders, and 7-group/47-item classroom-flow line contract."
+    },
+    {
+      "source": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R83_LESSON_GENERATION_NORMALIZER_DRY_RUN",
+      "target": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R88_FIELD_GENERATION_GPT_REVIEW_PACKAGE\\R83_LESSON_GENERATION_NORMALIZER_DRY_RUN",
+      "exists": true,
+      "kind": "directory",
+      "copied": true,
+      "reason": "Recent normalizer evidence proving field_patch_candidates can be accepted or rejected by contract."
+    },
+    {
+      "source": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R84_EDIT_CARD_BRIDGE_VISIBLE_SMOKE",
+      "target": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R88_FIELD_GENERATION_GPT_REVIEW_PACKAGE\\R84_EDIT_CARD_BRIDGE_VISIBLE_SMOKE",
+      "exists": true,
+      "kind": "directory",
+      "copied": true,
+      "reason": "Recent edit-card bridge evidence: candidates route to existing before/after/suggestion slots."
+    },
+    {
+      "source": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R85_LOCAL_FIXTURE_VISIBLE_GENERATION_SMOKE",
+      "target": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R88_FIELD_GENERATION_GPT_REVIEW_PACKAGE\\R85_LOCAL_FIXTURE_VISIBLE_GENERATION_SMOKE",
+      "exists": true,
+      "kind": "directory",
+      "copied": true,
+      "reason": "Recent local fixture visible generation smoke."
+    },
+    {
+      "source": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R86_PROVIDER_SANDBOX_DRY_RUN",
+      "target": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R88_FIELD_GENERATION_GPT_REVIEW_PACKAGE\\R86_PROVIDER_SANDBOX_DRY_RUN",
+      "exists": true,
+      "kind": "directory",
+      "copied": true,
+      "reason": "Recent provider sandbox evidence, including provider/fallback status and normalized output."
+    },
+    {
+      "source": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R87_PROVIDER_OR_FIXTURE_VISIBLE_GENERATION_SMOKE",
+      "target": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R88_FIELD_GENERATION_GPT_REVIEW_PACKAGE\\R87_PROVIDER_OR_FIXTURE_VISIBLE_GENERATION_SMOKE",
+      "exists": true,
+      "kind": "directory",
+      "copied": true,
+      "reason": "Recent visible generation smoke copied page, not the main R21 page."
+    },
+    {
+      "source": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R80_GENERATION_FLOW_AND_FIELD_MAPPING_CONTRACT",
+      "target": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R88_FIELD_GENERATION_GPT_REVIEW_PACKAGE\\references\\R80_GENERATION_FLOW_AND_FIELD_MAPPING_CONTRACT",
+      "exists": true,
+      "kind": "directory",
+      "copied": true,
+      "reason": "Upstream generation flow and field mapping contract."
+    },
+    {
+      "source": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R81_LESSON_SCHEMA_FIELD_MAP_ADAPTER",
+      "target": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R88_FIELD_GENERATION_GPT_REVIEW_PACKAGE\\references\\R81_LESSON_SCHEMA_FIELD_MAP_ADAPTER",
+      "exists": true,
+      "kind": "directory",
+      "copied": true,
+      "reason": "Single-lesson 14-field adapter used by R88."
+    },
+    {
+      "source": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R82_LESSON_GENERATION_REQUEST_RESPONSE_CONTRACT",
+      "target": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R88_FIELD_GENERATION_GPT_REVIEW_PACKAGE\\references\\R82_LESSON_GENERATION_REQUEST_RESPONSE_CONTRACT",
+      "exists": true,
+      "kind": "directory",
+      "copied": true,
+      "reason": "Request/response contract used by R83-R87."
+    },
+    {
+      "source": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013I_R6N_R9A_field_label_disambiguation_before_runtime_schema",
+      "target": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R88_FIELD_GENERATION_GPT_REVIEW_PACKAGE\\references\\R6N_R9A_BIG_UNIT_CANONICAL_FIELD_LEDGER",
+      "exists": true,
+      "kind": "directory",
+      "copied": true,
+      "reason": "Canonical big-unit field source referenced by R88."
+    },
+    {
+      "source": "D:\\Documents\\SmartEdu\\xiaobei-core\\scripts\\build_1013r_r88_field_generation_quality_static_lab.py",
+      "target": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R88_FIELD_GENERATION_GPT_REVIEW_PACKAGE\\scripts\\build_1013r_r88_field_generation_quality_static_lab.py",
+      "exists": true,
+      "kind": "file",
+      "copied": true,
+      "reason": "Builder for the R88 static lab."
+    },
+    {
+      "source": "D:\\Documents\\SmartEdu\\xiaobei-core\\scripts\\build_1013r_r83_r87_visible_generation_chain.py",
+      "target": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R88_FIELD_GENERATION_GPT_REVIEW_PACKAGE\\scripts\\build_1013r_r83_r87_visible_generation_chain.py",
+      "exists": true,
+      "kind": "file",
+      "copied": true,
+      "reason": "Builder for the recent R83-R87 generation chain."
+    }
+  ],
+  "validation_snapshots": {
+    "r88": {
+      "stage": "1013R_R88_FIELD_GENERATION_QUALITY_STATIC_LAB",
+      "result": "PASS",
+      "html": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R88_FIELD_GENERATION_QUALITY_STATIC_LAB\\field_generation_quality_static_lab_1013R_R88.html",
+      "ledger": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R88_FIELD_GENERATION_QUALITY_STATIC_LAB\\field_generation_quality_static_lab_ledger_1013R_R88.json",
+      "big_unit_field_count": 22,
+      "lesson_field_count": 14,
+      "step_contract_group_count": 7,
+      "step_contract_field_count": 47,
+      "all_big_unit_fields_have_visible_engineering_and_placeholder": true,
+      "all_lesson_fields_have_visible_engineering_and_placeholder": true,
+      "all_step_fields_have_visible_engineering_and_placeholder": true,
+      "all_step_groups_have_fields": true,
+      "step_contract_depth_sufficient": true,
+      "prompt_text_visible": false,
+      "model_provider_runtime_connected": false,
+      "r21_page_modified": false,
+      "formal_apply_allowed": false
+    },
+    "r87": {
+      "stage": "1013R_R87_PROVIDER_OR_FIXTURE_VISIBLE_GENERATION_SMOKE",
+      "result": "PASS",
+      "html": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R87_PROVIDER_OR_FIXTURE_VISIBLE_GENERATION_SMOKE\\prep_room_r87_provider_or_fixture_visible_generation_smoke_1013R_R87.html",
+      "source_r21_html": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R21_page_copy_binds_unified_package\\prep_room_page_copy_binds_unified_package_1013R_R21.html",
+      "r21_page_modified": false,
+      "copied_page_created": true,
+      "provider_success": false,
+      "fallback_used": true,
+      "visible_candidate_count": 2,
+      "formal_apply_allowed": false,
+      "standalone_blue_card_created": false,
+      "html_checks": {
+        "html_exists": true,
+        "copied_from_r21": true,
+        "r21_source_unmodified_by_r87_marker": true,
+        "contains_r87_marker": true,
+        "contains_existing_modal_selector": true,
+        "contains_right_tool_entry_selector": true,
+        "contains_existing_edit_card_destination": true,
+        "contains_no_standalone_blue_card_marker": true
+      }
+    },
+    "r86": {
+      "stage": "1013R_R86_PROVIDER_SANDBOX_DRY_RUN",
+      "result": "PASS_WITH_FALLBACK",
+      "provider_attempted": true,
+      "provider_success": false,
+      "fallback_used": true,
+      "normalized_candidate_count": 2,
+      "all_candidates_preview_only": true,
+      "all_candidates_block_formal_apply": true,
+      "formal_apply_allowed": false,
+      "r21_page_modified": false,
+      "error": "Unterminated string starting at: line 135 column 5 (char 4169)"
+    },
+    "r83": {
+      "stage": "1013R_R83_LESSON_GENERATION_NORMALIZER_DRY_RUN",
+      "result": "PASS",
+      "source_fixture": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R82_LESSON_GENERATION_REQUEST_RESPONSE_CONTRACT\\lesson_generation_smoke_fixtures_1013R_R82.json",
+      "normalized_candidate_count": 2,
+      "allowed_schema_key_count": 14,
+      "required_candidate_key_count": 17,
+      "invalid_response_case_count": 5,
+      "invalid_response_rejected_count": 5,
+      "all_invalid_responses_rejected": true,
+      "formal_apply_allowed": false,
+      "r21_page_modified": false,
+      "standalone_blue_card_created": false
+    }
+  },
+  "recommended_review_order": [
+    "README.md",
+    "R88_FIELD_GENERATION_QUALITY_STATIC_LAB/field_generation_quality_static_lab_1013R_R88.html",
+    "R88_FIELD_GENERATION_QUALITY_STATIC_LAB/field_generation_quality_static_lab_ledger_1013R_R88.json",
+    "R88_FIELD_GENERATION_QUALITY_STATIC_LAB/GPT_REVIEW_PROMPT_1013R_R88_FIELD_GENERATION_QUALITY_STATIC_LAB.md",
+    "R87_PROVIDER_OR_FIXTURE_VISIBLE_GENERATION_SMOKE/README.md",
+    "references/R81_LESSON_SCHEMA_FIELD_MAP_ADAPTER/lesson_14_field_mapping_1013R_R81.json"
+  ]
+}

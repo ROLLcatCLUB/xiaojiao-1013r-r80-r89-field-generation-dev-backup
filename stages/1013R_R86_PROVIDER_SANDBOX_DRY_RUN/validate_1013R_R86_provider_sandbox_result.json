@@ -1,0 +1,13 @@
+{
+  "stage": "1013R_R86_PROVIDER_SANDBOX_DRY_RUN",
+  "result": "PASS_WITH_FALLBACK",
+  "provider_attempted": true,
+  "provider_success": false,
+  "fallback_used": true,
+  "normalized_candidate_count": 2,
+  "all_candidates_preview_only": true,
+  "all_candidates_block_formal_apply": true,
+  "formal_apply_allowed": false,
+  "r21_page_modified": false,
+  "error": "Unterminated string starting at: line 135 column 5 (char 4169)"
+}

@@ -1,0 +1,126 @@
+{
+  "schema_id": "lesson_step_line_contract_mapping_1013R_R81",
+  "stage": "1013R_R81_LESSON_SCHEMA_FIELD_MAP_ADAPTER",
+  "source_schema": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R79A_TEACHING_DESIGN_STRUCTURE_SOURCE_COMPARISON\\lesson_step_contract_schema_v1_1013R_R79A.json",
+  "target_parent_schema_key": "classroom_flow",
+  "target_parent_section_id": "teaching_process",
+  "target_selectors": [
+    "#nb-section-teaching-process",
+    "[id^='nb-step-']",
+    ".nb-readable-step"
+  ],
+  "step_id_policy": {
+    "known_static_step_ids": [
+      "intro",
+      "sense",
+      "explore",
+      "make",
+      "share"
+    ],
+    "allow_dynamic_step_ids": true,
+    "contract_id_pattern": "lesson_step.{lesson_id}.{step_order}.{field_key}"
+  },
+  "step_fields": [
+    {
+      "key": "step_id",
+      "required": false
+    },
+    {
+      "key": "step_order",
+      "required": false
+    },
+    {
+      "key": "step_name",
+      "required": false
+    },
+    {
+      "key": "duration",
+      "required": false
+    },
+    {
+      "key": "step_goal",
+      "required": true
+    },
+    {
+      "key": "teacher_talk",
+      "required": true
+    },
+    {
+      "key": "student_task",
+      "required": true
+    },
+    {
+      "key": "material_requirements",
+      "required": false
+    },
+    {
+      "key": "tech_support",
+      "required": false
+    },
+    {
+      "key": "success_criteria",
+      "required": true
+    },
+    {
+      "key": "guiding_questions",
+      "required": true
+    },
+    {
+      "key": "feedback_points",
+      "required": false
+    },
+    {
+      "key": "ppt_page_note",
+      "required": false
+    },
+    {
+      "key": "design_intent",
+      "required": false
+    },
+    {
+      "key": "evidence_capture",
+      "required": false
+    },
+    {
+      "key": "source_refs",
+      "required": true
+    },
+    {
+      "key": "generation_slot",
+      "required": true
+    }
+  ],
+  "minimum_generation_contract": [
+    "step_goal",
+    "teacher_talk",
+    "student_task",
+    "success_criteria",
+    "guiding_questions",
+    "source_refs",
+    "generation_slot"
+  ],
+  "candidate_slot_policy": {
+    "target_destination": "existing_edit_card_before_after_suggestion_panel",
+    "standalone_blue_card_allowed": false,
+    "inline_body_write_allowed": false,
+    "preview_only": true,
+    "formal_apply_allowed": false,
+    "applied": false
+  },
+  "field_patch_candidate_required_keys": [
+    "field_patch_id",
+    "canonical_field_key",
+    "target_field_key",
+    "target_section",
+    "target_step_id",
+    "target_line_contract_id",
+    "target_field",
+    "before_summary",
+    "after_candidate",
+    "xiaojiao_suggestion",
+    "impact_scope",
+    "teacher_review_required",
+    "formal_apply_allowed",
+    "applied"
+  ]
+}

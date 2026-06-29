@@ -1,0 +1,354 @@
+{
+  "schema_id": "r89_big_unit_key_alias_map_1013R_R89",
+  "stage": "1013R_R89_FIELD_CONTRACT_CONVERGENCE_AND_CAUSAL_CHAIN_GATE",
+  "source_refs": {
+    "r80": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R80_GENERATION_FLOW_AND_FIELD_MAPPING_CONTRACT\\big_unit_22_field_mapping_1013R_R80.json",
+    "r88": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R88_FIELD_GENERATION_QUALITY_STATIC_LAB\\field_generation_quality_static_lab_ledger_1013R_R88.json"
+  },
+  "compatibility_policy_default": "read_legacy_write_active",
+  "field_count": 22,
+  "rows": [
+    {
+      "order": 1,
+      "visible_label": "单元信息",
+      "r80_contract_key": "big_unit.unit_info",
+      "r88_engineering_key": "big_unit.unit_basic_info",
+      "canonical_ref": "unit_basic_info",
+      "active_write_key": "big_unit.unit_basic_info",
+      "aliases": [
+        "big_unit.unit_info",
+        "page_field_key:unit_info"
+      ],
+      "migration_status": "renamed",
+      "compatibility_policy": "read_legacy_write_active",
+      "notes": "Legacy keys may be read for compatibility; new writes use active_write_key only.",
+      "mapped": true
+    },
+    {
+      "order": 2,
+      "visible_label": "单元主题",
+      "r80_contract_key": "big_unit.unit_theme",
+      "r88_engineering_key": "big_unit.unit_theme",
+      "canonical_ref": "unit_theme",
+      "active_write_key": "big_unit.unit_theme",
+      "aliases": [
+        "page_field_key:unit_theme"
+      ],
+      "migration_status": "same_key",
+      "compatibility_policy": "read_legacy_write_active",
+      "notes": "Legacy keys may be read for compatibility; new writes use active_write_key only.",
+      "mapped": true
+    },
+    {
+      "order": 3,
+      "visible_label": "大观念",
+      "r80_contract_key": "big_unit.big_idea",
+      "r88_engineering_key": "big_unit.big_idea",
+      "canonical_ref": "big_idea",
+      "active_write_key": "big_unit.big_idea",
+      "aliases": [
+        "page_field_key:big_idea"
+      ],
+      "migration_status": "same_key",
+      "compatibility_policy": "read_legacy_write_active",
+      "notes": "Legacy keys may be read for compatibility; new writes use active_write_key only.",
+      "mapped": true
+    },
+    {
+      "order": 4,
+      "visible_label": "基本问题",
+      "r80_contract_key": "big_unit.essential_question",
+      "r88_engineering_key": "big_unit.essential_question",
+      "canonical_ref": "unit_questions",
+      "active_write_key": "big_unit.essential_question",
+      "aliases": [
+        "page_field_key:essential_question"
+      ],
+      "migration_status": "same_key",
+      "compatibility_policy": "read_legacy_write_active",
+      "notes": "Legacy keys may be read for compatibility; new writes use active_write_key only.",
+      "mapped": true
+    },
+    {
+      "order": 5,
+      "visible_label": "单元学习目标",
+      "r80_contract_key": "big_unit.unit_learning_goals",
+      "r88_engineering_key": "big_unit.learning_goals",
+      "canonical_ref": "core_literacy_goals",
+      "active_write_key": "big_unit.learning_goals",
+      "aliases": [
+        "big_unit.unit_learning_goals",
+        "page_field_key:unit_learning_goals"
+      ],
+      "migration_status": "renamed",
+      "compatibility_policy": "read_legacy_write_active",
+      "notes": "Legacy keys may be read for compatibility; new writes use active_write_key only.",
+      "mapped": true
+    },
+    {
+      "order": 6,
+      "visible_label": "单元内容分析",
+      "r80_contract_key": "big_unit.content_analysis",
+      "r88_engineering_key": "big_unit.content_analysis",
+      "canonical_ref": "knowledge_and_skills",
+      "active_write_key": "big_unit.content_analysis",
+      "aliases": [
+        "page_field_key:content_analysis"
+      ],
+      "migration_status": "same_key",
+      "compatibility_policy": "read_legacy_write_active",
+      "notes": "Legacy keys may be read for compatibility; new writes use active_write_key only.",
+      "mapped": true
+    },
+    {
+      "order": 7,
+      "visible_label": "学情分析",
+      "r80_contract_key": "big_unit.student_context",
+      "r88_engineering_key": "big_unit.student_context",
+      "canonical_ref": "student_starting_point",
+      "active_write_key": "big_unit.student_context",
+      "aliases": [
+        "page_field_key:student_context"
+      ],
+      "migration_status": "same_key",
+      "compatibility_policy": "read_legacy_write_active",
+      "notes": "Legacy keys may be read for compatibility; new writes use active_write_key only.",
+      "mapped": true
+    },
+    {
+      "order": 8,
+      "visible_label": "学习重难点",
+      "r80_contract_key": "big_unit.key_difficult_points",
+      "r88_engineering_key": "big_unit.key_difficult_points",
+      "canonical_ref": "knowledge_and_skills",
+      "active_write_key": "big_unit.key_difficult_points",
+      "aliases": [
+        "page_field_key:key_difficult_points"
+      ],
+      "migration_status": "same_key",
+      "compatibility_policy": "read_legacy_write_active",
+      "notes": "Legacy keys may be read for compatibility; new writes use active_write_key only.",
+      "mapped": true
+    },
+    {
+      "order": 9,
+      "visible_label": "表现性任务",
+      "r80_contract_key": "big_unit.performance_task",
+      "r88_engineering_key": "big_unit.performance_task",
+      "canonical_ref": "performance_task",
+      "active_write_key": "big_unit.performance_task",
+      "aliases": [
+        "page_field_key:performance_task"
+      ],
+      "migration_status": "same_key",
+      "compatibility_policy": "read_legacy_write_active",
+      "notes": "Legacy keys may be read for compatibility; new writes use active_write_key only.",
+      "mapped": true
+    },
+    {
+      "order": 10,
+      "visible_label": "任务评估要点",
+      "r80_contract_key": "big_unit.task_assessment_points",
+      "r88_engineering_key": "big_unit.task_assessment_points",
+      "canonical_ref": "assessment_evidence",
+      "active_write_key": "big_unit.task_assessment_points",
+      "aliases": [
+        "page_field_key:task_assessment_points"
+      ],
+      "migration_status": "same_key",
+      "compatibility_policy": "read_legacy_write_active",
+      "notes": "Legacy keys may be read for compatibility; new writes use active_write_key only.",
+      "mapped": true
+    },
+    {
+      "order": 11,
+      "visible_label": "学习阶段",
+      "r80_contract_key": "big_unit.learning_stage",
+      "r88_engineering_key": "big_unit.learning_stages",
+      "canonical_ref": "learning_progression",
+      "active_write_key": "big_unit.learning_stages",
+      "aliases": [
+        "big_unit.learning_stage",
+        "page_field_key:learning_stage"
+      ],
+      "migration_status": "renamed",
+      "compatibility_policy": "read_legacy_write_active",
+      "notes": "Legacy keys may be read for compatibility; new writes use active_write_key only.",
+      "mapped": true
+    },
+    {
+      "order": 12,
+      "visible_label": "学习任务",
+      "r80_contract_key": "big_unit.learning_task",
+      "r88_engineering_key": "big_unit.learning_tasks",
+      "canonical_ref": "lesson_task_chain",
+      "active_write_key": "big_unit.learning_tasks",
+      "aliases": [
+        "big_unit.learning_task",
+        "page_field_key:learning_task"
+      ],
+      "migration_status": "renamed",
+      "compatibility_policy": "read_legacy_write_active",
+      "notes": "Legacy keys may be read for compatibility; new writes use active_write_key only.",
+      "mapped": true
+    },
+    {
+      "order": 13,
+      "visible_label": "小问题",
+      "r80_contract_key": "big_unit.guiding_question",
+      "r88_engineering_key": "big_unit.micro_questions",
+      "canonical_ref": "unit_questions",
+      "active_write_key": "big_unit.micro_questions",
+      "aliases": [
+        "big_unit.guiding_question",
+        "page_field_key:guiding_question"
+      ],
+      "migration_status": "renamed",
+      "compatibility_policy": "read_legacy_write_active",
+      "notes": "Legacy keys may be read for compatibility; new writes use active_write_key only.",
+      "mapped": true
+    },
+    {
+      "order": 14,
+      "visible_label": "学习活动",
+      "r80_contract_key": "big_unit.learning_activity",
+      "r88_engineering_key": "big_unit.learning_activities",
+      "canonical_ref": "lesson_task_chain",
+      "active_write_key": "big_unit.learning_activities",
+      "aliases": [
+        "big_unit.learning_activity",
+        "page_field_key:learning_activity"
+      ],
+      "migration_status": "renamed",
+      "compatibility_policy": "read_legacy_write_active",
+      "notes": "Legacy keys may be read for compatibility; new writes use active_write_key only.",
+      "mapped": true
+    },
+    {
+      "order": 15,
+      "visible_label": "学习评价",
+      "r80_contract_key": "big_unit.learning_assessment",
+      "r88_engineering_key": "big_unit.learning_assessment",
+      "canonical_ref": "assessment_evidence",
+      "active_write_key": "big_unit.learning_assessment",
+      "aliases": [
+        "page_field_key:learning_assessment"
+      ],
+      "migration_status": "same_key",
+      "compatibility_policy": "read_legacy_write_active",
+      "notes": "Legacy keys may be read for compatibility; new writes use active_write_key only.",
+      "mapped": true
+    },
+    {
+      "order": 16,
+      "visible_label": "情境支架",
+      "r80_contract_key": "big_unit.context_scaffold",
+      "r88_engineering_key": "big_unit.scaffold.context",
+      "canonical_ref": "skills_materials_scaffolds",
+      "active_write_key": "big_unit.scaffold.context",
+      "aliases": [
+        "big_unit.context_scaffold",
+        "page_field_key:context_scaffold"
+      ],
+      "migration_status": "renamed",
+      "compatibility_policy": "read_legacy_write_active",
+      "notes": "Legacy keys may be read for compatibility; new writes use active_write_key only.",
+      "mapped": true
+    },
+    {
+      "order": 17,
+      "visible_label": "任务支架",
+      "r80_contract_key": "big_unit.task_scaffold",
+      "r88_engineering_key": "big_unit.scaffold.task",
+      "canonical_ref": "skills_materials_scaffolds",
+      "active_write_key": "big_unit.scaffold.task",
+      "aliases": [
+        "big_unit.task_scaffold",
+        "page_field_key:task_scaffold"
+      ],
+      "migration_status": "renamed",
+      "compatibility_policy": "read_legacy_write_active",
+      "notes": "Legacy keys may be read for compatibility; new writes use active_write_key only.",
+      "mapped": true
+    },
+    {
+      "order": 18,
+      "visible_label": "资源支架",
+      "r80_contract_key": "big_unit.resource_scaffold",
+      "r88_engineering_key": "big_unit.scaffold.resource",
+      "canonical_ref": "skills_materials_scaffolds",
+      "active_write_key": "big_unit.scaffold.resource",
+      "aliases": [
+        "big_unit.resource_scaffold",
+        "page_field_key:resource_scaffold"
+      ],
+      "migration_status": "renamed",
+      "compatibility_policy": "read_legacy_write_active",
+      "notes": "Legacy keys may be read for compatibility; new writes use active_write_key only.",
+      "mapped": true
+    },
+    {
+      "order": 19,
+      "visible_label": "策略支架",
+      "r80_contract_key": "big_unit.strategy_scaffold",
+      "r88_engineering_key": "big_unit.scaffold.strategy",
+      "canonical_ref": "skills_materials_scaffolds",
+      "active_write_key": "big_unit.scaffold.strategy",
+      "aliases": [
+        "big_unit.strategy_scaffold",
+        "page_field_key:strategy_scaffold"
+      ],
+      "migration_status": "renamed",
+      "compatibility_policy": "read_legacy_write_active",
+      "notes": "Legacy keys may be read for compatibility; new writes use active_write_key only.",
+      "mapped": true
+    },
+    {
+      "order": 20,
+      "visible_label": "学习单",
+      "r80_contract_key": "big_unit.learning_sheet",
+      "r88_engineering_key": "big_unit.handout_plan",
+      "canonical_ref": "skills_materials_scaffolds",
+      "active_write_key": "big_unit.handout_plan",
+      "aliases": [
+        "big_unit.learning_sheet",
+        "page_field_key:learning_sheet"
+      ],
+      "migration_status": "renamed",
+      "compatibility_policy": "read_legacy_write_active",
+      "notes": "Legacy keys may be read for compatibility; new writes use active_write_key only.",
+      "mapped": true
+    },
+    {
+      "order": 21,
+      "visible_label": "评价支架",
+      "r80_contract_key": "big_unit.assessment_scaffold",
+      "r88_engineering_key": "big_unit.assessment_scaffold",
+      "canonical_ref": "assessment_evidence",
+      "active_write_key": "big_unit.assessment_scaffold",
+      "aliases": [
+        "page_field_key:assessment_scaffold"
+      ],
+      "migration_status": "same_key",
+      "compatibility_policy": "read_legacy_write_active",
+      "notes": "Legacy keys may be read for compatibility; new writes use active_write_key only.",
+      "mapped": true
+    },
+    {
+      "order": 22,
+      "visible_label": "资料补充",
+      "r80_contract_key": "big_unit.material_requests",
+      "r88_engineering_key": "big_unit.material_requests",
+      "canonical_ref": "material_requests",
+      "active_write_key": "big_unit.material_requests",
+      "aliases": [
+        "page_field_key:material_requests"
+      ],
+      "migration_status": "same_key",
+      "compatibility_policy": "read_legacy_write_active",
+      "notes": "Legacy keys may be read for compatibility; new writes use active_write_key only.",
+      "mapped": true
+    }
+  ],
+  "missing_in_r80_by_label": []
+}

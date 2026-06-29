@@ -1,0 +1,41 @@
+{
+  "schema_id": "lesson_candidate_envelope_contract_1013R_R81",
+  "stage": "1013R_R81_LESSON_SCHEMA_FIELD_MAP_ADAPTER",
+  "purpose": "Define the minimum patch envelope for later model candidates after R81.",
+  "required_keys": [
+    "field_patch_id",
+    "schema_key",
+    "canonical_field_key",
+    "target_field_key",
+    "target_section",
+    "target_step_id",
+    "target_line_contract_id",
+    "target_destination",
+    "before_summary",
+    "after_candidate",
+    "xiaojiao_suggestion",
+    "impact_scope",
+    "source_refs",
+    "teacher_review_required",
+    "preview_only",
+    "formal_apply_allowed",
+    "applied"
+  ],
+  "defaults": {
+    "target_destination": "existing_edit_card_before_after_suggestion_panel",
+    "teacher_review_required": true,
+    "preview_only": true,
+    "formal_apply_allowed": false,
+    "applied": false
+  },
+  "reject_if": [
+    "missing_schema_key",
+    "missing_canonical_field_key",
+    "missing_target_field_key",
+    "target_destination_is_standalone_blue_card",
+    "formal_apply_allowed_true",
+    "applied_true_before_teacher_confirmation",
+    "material_requests_generates_formal_content",
+    "classroom_flow_patch_without_target_line_contract_id"
+  ]
+}

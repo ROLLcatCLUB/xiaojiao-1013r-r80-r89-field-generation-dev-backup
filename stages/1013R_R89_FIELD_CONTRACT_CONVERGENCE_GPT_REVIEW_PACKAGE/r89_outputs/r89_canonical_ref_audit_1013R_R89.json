@@ -1,0 +1,184 @@
+{
+  "schema_id": "r89_canonical_ref_audit_1013R_R89",
+  "stage": "1013R_R89_FIELD_CONTRACT_CONVERGENCE_AND_CAUSAL_CHAIN_GATE",
+  "canonical_source": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013I_R6N_R9A_field_label_disambiguation_before_runtime_schema\\big_unit_teacher_visible_field_model_1013I_R6N_R9A.json",
+  "rows": [
+    {
+      "visible_label": "单元信息",
+      "engineering_key": "big_unit.unit_basic_info",
+      "canonical_ref": "unit_basic_info",
+      "canonical_identity": "canonical_hit",
+      "resolution_policy": "use_r6n_canonical"
+    },
+    {
+      "visible_label": "单元主题",
+      "engineering_key": "big_unit.unit_theme",
+      "canonical_ref": "unit_theme",
+      "canonical_identity": "extended_field",
+      "resolution_policy": "do_not_claim_r6n_canonical; retain as R88 extended field"
+    },
+    {
+      "visible_label": "大观念",
+      "engineering_key": "big_unit.big_idea",
+      "canonical_ref": "big_idea",
+      "canonical_identity": "extended_field",
+      "resolution_policy": "do_not_claim_r6n_canonical; retain as R88 extended field"
+    },
+    {
+      "visible_label": "基本问题",
+      "engineering_key": "big_unit.essential_question",
+      "canonical_ref": "unit_questions",
+      "canonical_identity": "canonical_hit",
+      "resolution_policy": "use_r6n_canonical"
+    },
+    {
+      "visible_label": "单元学习目标",
+      "engineering_key": "big_unit.learning_goals",
+      "canonical_ref": "core_literacy_goals",
+      "canonical_identity": "canonical_hit",
+      "resolution_policy": "use_r6n_canonical"
+    },
+    {
+      "visible_label": "单元内容分析",
+      "engineering_key": "big_unit.content_analysis",
+      "canonical_ref": "knowledge_and_skills",
+      "canonical_identity": "canonical_hit",
+      "resolution_policy": "use_r6n_canonical"
+    },
+    {
+      "visible_label": "学情分析",
+      "engineering_key": "big_unit.student_context",
+      "canonical_ref": "student_starting_point",
+      "canonical_identity": "canonical_hit",
+      "resolution_policy": "use_r6n_canonical"
+    },
+    {
+      "visible_label": "学习重难点",
+      "engineering_key": "big_unit.key_difficult_points",
+      "canonical_ref": "knowledge_and_skills",
+      "canonical_identity": "canonical_hit",
+      "resolution_policy": "use_r6n_canonical"
+    },
+    {
+      "visible_label": "表现性任务",
+      "engineering_key": "big_unit.performance_task",
+      "canonical_ref": "performance_task",
+      "canonical_identity": "canonical_hit",
+      "resolution_policy": "use_r6n_canonical"
+    },
+    {
+      "visible_label": "任务评估要点",
+      "engineering_key": "big_unit.task_assessment_points",
+      "canonical_ref": "assessment_evidence",
+      "canonical_identity": "canonical_hit",
+      "resolution_policy": "use_r6n_canonical"
+    },
+    {
+      "visible_label": "学习阶段",
+      "engineering_key": "big_unit.learning_stages",
+      "canonical_ref": "learning_progression",
+      "canonical_identity": "canonical_hit",
+      "resolution_policy": "use_r6n_canonical"
+    },
+    {
+      "visible_label": "学习任务",
+      "engineering_key": "big_unit.learning_tasks",
+      "canonical_ref": "lesson_task_chain",
+      "canonical_identity": "canonical_hit",
+      "resolution_policy": "use_r6n_canonical"
+    },
+    {
+      "visible_label": "小问题",
+      "engineering_key": "big_unit.micro_questions",
+      "canonical_ref": "unit_questions",
+      "canonical_identity": "canonical_hit",
+      "resolution_policy": "use_r6n_canonical"
+    },
+    {
+      "visible_label": "学习活动",
+      "engineering_key": "big_unit.learning_activities",
+      "canonical_ref": "lesson_task_chain",
+      "canonical_identity": "canonical_hit",
+      "resolution_policy": "use_r6n_canonical"
+    },
+    {
+      "visible_label": "学习评价",
+      "engineering_key": "big_unit.learning_assessment",
+      "canonical_ref": "assessment_evidence",
+      "canonical_identity": "canonical_hit",
+      "resolution_policy": "use_r6n_canonical"
+    },
+    {
+      "visible_label": "情境支架",
+      "engineering_key": "big_unit.scaffold.context",
+      "canonical_ref": "skills_materials_scaffolds",
+      "canonical_identity": "canonical_hit",
+      "resolution_policy": "use_r6n_canonical"
+    },
+    {
+      "visible_label": "任务支架",
+      "engineering_key": "big_unit.scaffold.task",
+      "canonical_ref": "skills_materials_scaffolds",
+      "canonical_identity": "canonical_hit",
+      "resolution_policy": "use_r6n_canonical"
+    },
+    {
+      "visible_label": "资源支架",
+      "engineering_key": "big_unit.scaffold.resource",
+      "canonical_ref": "skills_materials_scaffolds",
+      "canonical_identity": "canonical_hit",
+      "resolution_policy": "use_r6n_canonical"
+    },
+    {
+      "visible_label": "策略支架",
+      "engineering_key": "big_unit.scaffold.strategy",
+      "canonical_ref": "skills_materials_scaffolds",
+      "canonical_identity": "canonical_hit",
+      "resolution_policy": "use_r6n_canonical"
+    },
+    {
+      "visible_label": "学习单",
+      "engineering_key": "big_unit.handout_plan",
+      "canonical_ref": "skills_materials_scaffolds",
+      "canonical_identity": "canonical_hit",
+      "resolution_policy": "use_r6n_canonical"
+    },
+    {
+      "visible_label": "评价支架",
+      "engineering_key": "big_unit.assessment_scaffold",
+      "canonical_ref": "assessment_evidence",
+      "canonical_identity": "canonical_hit",
+      "resolution_policy": "use_r6n_canonical"
+    },
+    {
+      "visible_label": "资料补充",
+      "engineering_key": "big_unit.material_requests",
+      "canonical_ref": "material_requests",
+      "canonical_identity": "canonical_hit",
+      "resolution_policy": "use_r6n_canonical"
+    }
+  ],
+  "hidden_source_refs": [
+    {
+      "canonical_ref": "curriculum_basis",
+      "canonical_identity": "hidden_source_ref",
+      "frontstage_visible": false,
+      "must_feed_targets": [
+        "big_unit.learning_goals",
+        "lesson.inherited_unit_context",
+        "lesson.lesson_objectives",
+        "lesson.assessment_plan"
+      ],
+      "resolution_policy": "hidden source reference for curriculum standard traceability"
+    }
+  ],
+  "unused_canonical_keys": [
+    "curriculum_basis"
+  ],
+  "summary": {
+    "canonical_hit_count": 20,
+    "extended_field_count": 2,
+    "hidden_source_ref_count": 1,
+    "unresolved_gap_count": 0
+  }
+}

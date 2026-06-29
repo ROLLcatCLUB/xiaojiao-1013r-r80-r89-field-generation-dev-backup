@@ -1,0 +1,140 @@
+{
+  "schema_id": "lesson_generation_request_envelope_1013R_R82",
+  "stage": "1013R_R82_LESSON_GENERATION_REQUEST_RESPONSE_CONTRACT",
+  "purpose": "Define the request object for future model calls. R82 itself does not call a model.",
+  "request_types": [
+    "initial_lesson_preview",
+    "local_field_regeneration",
+    "step_contract_regeneration",
+    "derived_preview_generation"
+  ],
+  "required_input_keys": [
+    "request_id",
+    "request_type",
+    "lesson_design_mode",
+    "teacher_intent",
+    "grade_subject_term",
+    "big_unit_spine",
+    "lesson_context",
+    "material_state",
+    "allowed_schema_keys",
+    "target_section_map",
+    "step_contract_fields",
+    "output_limits",
+    "source_policy",
+    "boundary_flags",
+    "hard_rules"
+  ],
+  "allowed_schema_keys": [
+    "lesson_identity",
+    "inherited_unit_context",
+    "textbook_anchor",
+    "lesson_concept_slice",
+    "lesson_focus_question",
+    "lesson_objectives",
+    "student_starting_point",
+    "key_difficult_points",
+    "lesson_task_evidence",
+    "classroom_flow",
+    "courseware_plan",
+    "handout_plan",
+    "assessment_plan",
+    "material_requests"
+  ],
+  "target_section_map": {
+    "lesson_identity": "lesson_header",
+    "inherited_unit_context": "basis",
+    "textbook_anchor": "basis",
+    "lesson_concept_slice": "basis",
+    "lesson_focus_question": "basis",
+    "lesson_objectives": "goals",
+    "student_starting_point": "analysis",
+    "key_difficult_points": "keypoints",
+    "lesson_task_evidence": "assessment",
+    "classroom_flow": "teaching_process",
+    "courseware_plan": "courseware_plan",
+    "handout_plan": "handout_plan",
+    "assessment_plan": "assessment",
+    "material_requests": "material_requests"
+  },
+  "step_contract_fields": [
+    "step_id",
+    "step_order",
+    "step_name",
+    "duration",
+    "step_goal",
+    "teacher_talk",
+    "student_task",
+    "material_requirements",
+    "tech_support",
+    "success_criteria",
+    "guiding_questions",
+    "feedback_points",
+    "ppt_page_note",
+    "design_intent",
+    "evidence_capture",
+    "source_refs",
+    "generation_slot"
+  ],
+  "minimum_step_fields": [
+    "step_goal",
+    "teacher_talk",
+    "student_task",
+    "success_criteria",
+    "guiding_questions",
+    "source_refs",
+    "generation_slot"
+  ],
+  "input_context_contract": {
+    "big_unit_spine": [
+      "unit_theme",
+      "big_idea",
+      "essential_question",
+      "performance_task",
+      "task_assessment_points",
+      "visual_language_atoms"
+    ],
+    "lesson_context": [
+      "lesson_identity",
+      "current_visible_sections",
+      "current_process_steps",
+      "active_teacher_focus",
+      "r81_mapping_ref"
+    ],
+    "material_state": [
+      "textbook_ocr_available",
+      "textbook_page_refs",
+      "official_reference_available",
+      "quality_case_available",
+      "student_profile_available",
+      "missing_materials"
+    ]
+  },
+  "output_limits_defaults": {
+    "target_resolution_count_min": 1,
+    "target_resolution_count_max": 6,
+    "step_reasoning_updates_count_min": 0,
+    "step_reasoning_updates_count_max": 5,
+    "field_patch_candidates_count_min": 1,
+    "field_patch_candidates_count_max": 8,
+    "impact_scope_count_max": 5,
+    "teacher_questions_count_max": 2,
+    "string_max_chars_default": 80,
+    "array_item_max_count_default": 5
+  },
+  "source_policy": {
+    "must_mark_source_refs": true,
+    "no_fake_textbook": true,
+    "no_fake_student_profile": true,
+    "missing_source_routes_to_material_requests": true,
+    "visual_language_hidden_dimension_only": true
+  },
+  "boundary_flags_required_false": [
+    "database_written",
+    "feishu_written",
+    "memory_written",
+    "formal_export_created",
+    "official_archive_created",
+    "formal_apply_performed"
+  ]
+}

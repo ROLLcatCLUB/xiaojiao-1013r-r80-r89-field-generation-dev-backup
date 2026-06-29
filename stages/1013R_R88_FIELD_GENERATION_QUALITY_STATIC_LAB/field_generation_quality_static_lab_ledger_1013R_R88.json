@@ -1,0 +1,2284 @@
+{
+  "schema_id": "field_generation_quality_static_lab_ledger_1013R_R88",
+  "stage": "1013R_R88_FIELD_GENERATION_QUALITY_STATIC_LAB",
+  "purpose": "Static field and generation-placeholder lab for validating layered teaching-design generation quality. Prompt text is intentionally omitted.",
+  "source_refs": {
+    "big_unit_canonical_ledger": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013I_R6N_R9A_field_label_disambiguation_before_runtime_schema\\big_unit_teacher_visible_field_model_1013I_R6N_R9A.json",
+    "lesson_field_map": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R81_LESSON_SCHEMA_FIELD_MAP_ADAPTER\\lesson_14_field_mapping_1013R_R81.json"
+  },
+  "boundary_flags": {
+    "static_page_only": true,
+    "r21_page_modified": false,
+    "model_provider_runtime_connected": false,
+    "prompt_text_visible": false,
+    "database_write": false,
+    "feishu_write": false,
+    "memory_write": false,
+    "formal_apply_allowed": false
+  },
+  "generation_layers": [
+    {
+      "layer_id": "unit_spine",
+      "label": "大单元主线",
+      "description": "先确定单元主题、大观念、基本问题和任务证据，不直接从空白写单课。"
+    },
+    {
+      "layer_id": "lesson_slice",
+      "label": "单课切片",
+      "description": "把大单元主线切到当前课时，形成本课依据、目标、任务和证据。"
+    },
+    {
+      "layer_id": "field_internal",
+      "label": "字段内部结构",
+      "description": "每个字段内部继续拆成可观察、可上课、可评价的子结构。"
+    },
+    {
+      "layer_id": "derived_objects",
+      "label": "派生物",
+      "description": "大屏、学习单、评价表只从已确认的教学过程和证据派生。"
+    }
+  ],
+  "big_unit_fields": [
+    {
+      "order": 1,
+      "visible_label": "单元信息",
+      "engineering_key": "big_unit.unit_basic_info",
+      "canonical_ref": "unit_basic_info",
+      "generation_layer": "unit_spine",
+      "generation_slot_id": "R88-GEN/big_unit.unit_basic_info",
+      "quality_focus": [
+        "事实锚定",
+        "年级教材清楚",
+        "课时范围清楚"
+      ],
+      "canonical_teacher_label": "单元信息",
+      "write_policy": "preview_only_contract_archive",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/big_unit.unit_basic_info/candidate_text",
+        "quality_note_slot": "R88-GEN/big_unit.unit_basic_info/quality_note",
+        "teacher_action_slot": "R88-GEN/big_unit.unit_basic_info/teacher_action"
+      }
+    },
+    {
+      "order": 2,
+      "visible_label": "单元主题",
+      "engineering_key": "big_unit.unit_theme",
+      "canonical_ref": "unit_theme",
+      "generation_layer": "unit_spine",
+      "generation_slot_id": "R88-GEN/big_unit.unit_theme",
+      "quality_focus": [
+        "主题可统领",
+        "不是口号",
+        "能连到作品表达"
+      ],
+      "canonical_teacher_label": "",
+      "write_policy": "preview_then_teacher_confirm",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/big_unit.unit_theme/candidate_text",
+        "quality_note_slot": "R88-GEN/big_unit.unit_theme/quality_note",
+        "teacher_action_slot": "R88-GEN/big_unit.unit_theme/teacher_action"
+      }
+    },
+    {
+      "order": 3,
+      "visible_label": "大观念",
+      "engineering_key": "big_unit.big_idea",
+      "canonical_ref": "big_idea",
+      "generation_layer": "unit_spine",
+      "generation_slot_id": "R88-GEN/big_unit.big_idea",
+      "quality_focus": [
+        "可迁移理解",
+        "不写成步骤",
+        "能统领单课"
+      ],
+      "canonical_teacher_label": "",
+      "write_policy": "preview_then_teacher_confirm",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/big_unit.big_idea/candidate_text",
+        "quality_note_slot": "R88-GEN/big_unit.big_idea/quality_note",
+        "teacher_action_slot": "R88-GEN/big_unit.big_idea/teacher_action"
+      }
+    },
+    {
+      "order": 4,
+      "visible_label": "基本问题",
+      "engineering_key": "big_unit.essential_question",
+      "canonical_ref": "unit_questions",
+      "generation_layer": "unit_spine",
+      "generation_slot_id": "R88-GEN/big_unit.essential_question",
+      "quality_focus": [
+        "可持续追问",
+        "贴近儿童",
+        "能落到课堂活动"
+      ],
+      "canonical_teacher_label": "单元问题",
+      "write_policy": "preview_only_contract_archive",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/big_unit.essential_question/candidate_text",
+        "quality_note_slot": "R88-GEN/big_unit.essential_question/quality_note",
+        "teacher_action_slot": "R88-GEN/big_unit.essential_question/teacher_action"
+      }
+    },
+    {
+      "order": 5,
+      "visible_label": "单元学习目标",
+      "engineering_key": "big_unit.learning_goals",
+      "canonical_ref": "core_literacy_goals",
+      "generation_layer": "unit_goals",
+      "generation_slot_id": "R88-GEN/big_unit.learning_goals",
+      "quality_focus": [
+        "可观察行为",
+        "学科语言适度",
+        "目标不过满"
+      ],
+      "canonical_teacher_label": "核心素养",
+      "write_policy": "preview_only_contract_archive",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/big_unit.learning_goals/candidate_text",
+        "quality_note_slot": "R88-GEN/big_unit.learning_goals/quality_note",
+        "teacher_action_slot": "R88-GEN/big_unit.learning_goals/teacher_action"
+      }
+    },
+    {
+      "order": 6,
+      "visible_label": "单元内容分析",
+      "engineering_key": "big_unit.content_analysis",
+      "canonical_ref": "knowledge_and_skills",
+      "generation_layer": "unit_goals",
+      "generation_slot_id": "R88-GEN/big_unit.content_analysis",
+      "quality_focus": [
+        "教材线索",
+        "美术语言隐性支撑",
+        "活动关系清楚"
+      ],
+      "canonical_teacher_label": "知识与技能",
+      "write_policy": "new_candidate_field_contract_archive",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/big_unit.content_analysis/candidate_text",
+        "quality_note_slot": "R88-GEN/big_unit.content_analysis/quality_note",
+        "teacher_action_slot": "R88-GEN/big_unit.content_analysis/teacher_action"
+      }
+    },
+    {
+      "order": 7,
+      "visible_label": "学情分析",
+      "engineering_key": "big_unit.student_context",
+      "canonical_ref": "student_starting_point",
+      "generation_layer": "student_context",
+      "generation_slot_id": "R88-GEN/big_unit.student_context",
+      "quality_focus": [
+        "不伪造班情",
+        "儿童经验具体",
+        "困难可转支架"
+      ],
+      "canonical_teacher_label": "学生起点",
+      "write_policy": "preview_only_sensitive_student_data_blocked_until_policy",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/big_unit.student_context/candidate_text",
+        "quality_note_slot": "R88-GEN/big_unit.student_context/quality_note",
+        "teacher_action_slot": "R88-GEN/big_unit.student_context/teacher_action"
+      }
+    },
+    {
+      "order": 8,
+      "visible_label": "学习重难点",
+      "engineering_key": "big_unit.key_difficult_points",
+      "canonical_ref": "knowledge_and_skills",
+      "generation_layer": "unit_goals",
+      "generation_slot_id": "R88-GEN/big_unit.key_difficult_points",
+      "quality_focus": [
+        "重点难点分开",
+        "不重复目标",
+        "能指导活动"
+      ],
+      "canonical_teacher_label": "知识与技能",
+      "write_policy": "new_candidate_field_contract_archive",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/big_unit.key_difficult_points/candidate_text",
+        "quality_note_slot": "R88-GEN/big_unit.key_difficult_points/quality_note",
+        "teacher_action_slot": "R88-GEN/big_unit.key_difficult_points/teacher_action"
+      }
+    },
+    {
+      "order": 9,
+      "visible_label": "表现性任务",
+      "engineering_key": "big_unit.performance_task",
+      "canonical_ref": "performance_task",
+      "generation_layer": "task_evidence",
+      "generation_slot_id": "R88-GEN/big_unit.performance_task",
+      "quality_focus": [
+        "学生产出明确",
+        "证据可见",
+        "不空泛"
+      ],
+      "canonical_teacher_label": "表现任务",
+      "write_policy": "preview_only_contract_archive",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/big_unit.performance_task/candidate_text",
+        "quality_note_slot": "R88-GEN/big_unit.performance_task/quality_note",
+        "teacher_action_slot": "R88-GEN/big_unit.performance_task/teacher_action"
+      }
+    },
+    {
+      "order": 10,
+      "visible_label": "任务评估要点",
+      "engineering_key": "big_unit.task_assessment_points",
+      "canonical_ref": "assessment_evidence",
+      "generation_layer": "task_evidence",
+      "generation_slot_id": "R88-GEN/big_unit.task_assessment_points",
+      "quality_focus": [
+        "和任务对应",
+        "标准可判断",
+        "不只看好看"
+      ],
+      "canonical_teacher_label": "评价证据",
+      "write_policy": "preview_only_contract_archive",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/big_unit.task_assessment_points/candidate_text",
+        "quality_note_slot": "R88-GEN/big_unit.task_assessment_points/quality_note",
+        "teacher_action_slot": "R88-GEN/big_unit.task_assessment_points/teacher_action"
+      }
+    },
+    {
+      "order": 11,
+      "visible_label": "学习阶段",
+      "engineering_key": "big_unit.learning_stages",
+      "canonical_ref": "learning_progression",
+      "generation_layer": "progression",
+      "generation_slot_id": "R88-GEN/big_unit.learning_stages",
+      "quality_focus": [
+        "阶段递进",
+        "不是课时流水账",
+        "承接大观念"
+      ],
+      "canonical_teacher_label": "学习推进",
+      "write_policy": "preview_only_contract_archive",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/big_unit.learning_stages/candidate_text",
+        "quality_note_slot": "R88-GEN/big_unit.learning_stages/quality_note",
+        "teacher_action_slot": "R88-GEN/big_unit.learning_stages/teacher_action"
+      }
+    },
+    {
+      "order": 12,
+      "visible_label": "学习任务",
+      "engineering_key": "big_unit.learning_tasks",
+      "canonical_ref": "lesson_task_chain",
+      "generation_layer": "progression",
+      "generation_slot_id": "R88-GEN/big_unit.learning_tasks",
+      "quality_focus": [
+        "任务链清楚",
+        "每课有责任",
+        "能切到单课"
+      ],
+      "canonical_teacher_label": "课时任务链",
+      "write_policy": "preview_only_contract_archive",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/big_unit.learning_tasks/candidate_text",
+        "quality_note_slot": "R88-GEN/big_unit.learning_tasks/quality_note",
+        "teacher_action_slot": "R88-GEN/big_unit.learning_tasks/teacher_action"
+      }
+    },
+    {
+      "order": 13,
+      "visible_label": "小问题",
+      "engineering_key": "big_unit.micro_questions",
+      "canonical_ref": "unit_questions",
+      "generation_layer": "progression",
+      "generation_slot_id": "R88-GEN/big_unit.micro_questions",
+      "quality_focus": [
+        "问题能驱动活动",
+        "儿童能回答",
+        "层级不乱"
+      ],
+      "canonical_teacher_label": "单元问题",
+      "write_policy": "preview_only_contract_archive",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/big_unit.micro_questions/candidate_text",
+        "quality_note_slot": "R88-GEN/big_unit.micro_questions/quality_note",
+        "teacher_action_slot": "R88-GEN/big_unit.micro_questions/teacher_action"
+      }
+    },
+    {
+      "order": 14,
+      "visible_label": "学习活动",
+      "engineering_key": "big_unit.learning_activities",
+      "canonical_ref": "lesson_task_chain",
+      "generation_layer": "progression",
+      "generation_slot_id": "R88-GEN/big_unit.learning_activities",
+      "quality_focus": [
+        "活动服务任务",
+        "可上课",
+        "有观察点"
+      ],
+      "canonical_teacher_label": "课时任务链",
+      "write_policy": "preview_only_contract_archive",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/big_unit.learning_activities/candidate_text",
+        "quality_note_slot": "R88-GEN/big_unit.learning_activities/quality_note",
+        "teacher_action_slot": "R88-GEN/big_unit.learning_activities/teacher_action"
+      }
+    },
+    {
+      "order": 15,
+      "visible_label": "学习评价",
+      "engineering_key": "big_unit.learning_assessment",
+      "canonical_ref": "assessment_evidence",
+      "generation_layer": "task_evidence",
+      "generation_slot_id": "R88-GEN/big_unit.learning_assessment",
+      "quality_focus": [
+        "过程证据",
+        "作品证据",
+        "表达证据"
+      ],
+      "canonical_teacher_label": "评价证据",
+      "write_policy": "preview_only_contract_archive",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/big_unit.learning_assessment/candidate_text",
+        "quality_note_slot": "R88-GEN/big_unit.learning_assessment/quality_note",
+        "teacher_action_slot": "R88-GEN/big_unit.learning_assessment/teacher_action"
+      }
+    },
+    {
+      "order": 16,
+      "visible_label": "情境支架",
+      "engineering_key": "big_unit.scaffold.context",
+      "canonical_ref": "skills_materials_scaffolds",
+      "generation_layer": "scaffolds",
+      "generation_slot_id": "R88-GEN/big_unit.scaffold.context",
+      "quality_focus": [
+        "情境贴近儿童",
+        "不喧宾夺主",
+        "能引出任务"
+      ],
+      "canonical_teacher_label": "材料与支架",
+      "write_policy": "new_candidate_field_contract_archive",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/big_unit.scaffold.context/candidate_text",
+        "quality_note_slot": "R88-GEN/big_unit.scaffold.context/quality_note",
+        "teacher_action_slot": "R88-GEN/big_unit.scaffold.context/teacher_action"
+      }
+    },
+    {
+      "order": 17,
+      "visible_label": "任务支架",
+      "engineering_key": "big_unit.scaffold.task",
+      "canonical_ref": "skills_materials_scaffolds",
+      "generation_layer": "scaffolds",
+      "generation_slot_id": "R88-GEN/big_unit.scaffold.task",
+      "quality_focus": [
+        "步骤清楚",
+        "降低难度",
+        "不替学生完成"
+      ],
+      "canonical_teacher_label": "材料与支架",
+      "write_policy": "new_candidate_field_contract_archive",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/big_unit.scaffold.task/candidate_text",
+        "quality_note_slot": "R88-GEN/big_unit.scaffold.task/quality_note",
+        "teacher_action_slot": "R88-GEN/big_unit.scaffold.task/teacher_action"
+      }
+    },
+    {
+      "order": 18,
+      "visible_label": "资源支架",
+      "engineering_key": "big_unit.scaffold.resource",
+      "canonical_ref": "skills_materials_scaffolds",
+      "generation_layer": "scaffolds",
+      "generation_slot_id": "R88-GEN/big_unit.scaffold.resource",
+      "quality_focus": [
+        "材料真实",
+        "来源可补",
+        "不虚构教材图"
+      ],
+      "canonical_teacher_label": "材料与支架",
+      "write_policy": "new_candidate_field_contract_archive",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/big_unit.scaffold.resource/candidate_text",
+        "quality_note_slot": "R88-GEN/big_unit.scaffold.resource/quality_note",
+        "teacher_action_slot": "R88-GEN/big_unit.scaffold.resource/teacher_action"
+      }
+    },
+    {
+      "order": 19,
+      "visible_label": "策略支架",
+      "engineering_key": "big_unit.scaffold.strategy",
+      "canonical_ref": "skills_materials_scaffolds",
+      "generation_layer": "scaffolds",
+      "generation_slot_id": "R88-GEN/big_unit.scaffold.strategy",
+      "quality_focus": [
+        "方法可操作",
+        "语言可教",
+        "能迁移到单课"
+      ],
+      "canonical_teacher_label": "材料与支架",
+      "write_policy": "new_candidate_field_contract_archive",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/big_unit.scaffold.strategy/candidate_text",
+        "quality_note_slot": "R88-GEN/big_unit.scaffold.strategy/quality_note",
+        "teacher_action_slot": "R88-GEN/big_unit.scaffold.strategy/teacher_action"
+      }
+    },
+    {
+      "order": 20,
+      "visible_label": "学习单",
+      "engineering_key": "big_unit.handout_plan",
+      "canonical_ref": "skills_materials_scaffolds",
+      "generation_layer": "derived_objects",
+      "generation_slot_id": "R88-GEN/big_unit.handout_plan",
+      "quality_focus": [
+        "不堆文字",
+        "任务辅助",
+        "能记录证据"
+      ],
+      "canonical_teacher_label": "材料与支架",
+      "write_policy": "new_candidate_field_contract_archive",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/big_unit.handout_plan/candidate_text",
+        "quality_note_slot": "R88-GEN/big_unit.handout_plan/quality_note",
+        "teacher_action_slot": "R88-GEN/big_unit.handout_plan/teacher_action"
+      }
+    },
+    {
+      "order": 21,
+      "visible_label": "评价支架",
+      "engineering_key": "big_unit.assessment_scaffold",
+      "canonical_ref": "assessment_evidence",
+      "generation_layer": "derived_objects",
+      "generation_slot_id": "R88-GEN/big_unit.assessment_scaffold",
+      "quality_focus": [
+        "评价语言儿童化",
+        "标准可判断",
+        "能反馈改进"
+      ],
+      "canonical_teacher_label": "评价证据",
+      "write_policy": "preview_only_contract_archive",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/big_unit.assessment_scaffold/candidate_text",
+        "quality_note_slot": "R88-GEN/big_unit.assessment_scaffold/quality_note",
+        "teacher_action_slot": "R88-GEN/big_unit.assessment_scaffold/teacher_action"
+      }
+    },
+    {
+      "order": 22,
+      "visible_label": "资料补充",
+      "engineering_key": "big_unit.material_requests",
+      "canonical_ref": "material_requests",
+      "generation_layer": "source_gap",
+      "generation_slot_id": "R88-GEN/big_unit.material_requests",
+      "quality_focus": [
+        "只提示补资料",
+        "不写正式课包",
+        "来源缺口清楚"
+      ],
+      "canonical_teacher_label": "资料补充",
+      "write_policy": "action_prompt_only_no_write",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/big_unit.material_requests/candidate_text",
+        "quality_note_slot": "R88-GEN/big_unit.material_requests/quality_note",
+        "teacher_action_slot": "R88-GEN/big_unit.material_requests/teacher_action"
+      }
+    }
+  ],
+  "lesson_fields": [
+    {
+      "order": 1,
+      "visible_label": "课时身份",
+      "engineering_key": "lesson.lesson_identity",
+      "schema_key": "lesson_identity",
+      "target_section": "lesson_header",
+      "visible_section": "lesson_header",
+      "generation_role": "确认年级、单元、课题、课时、教材页码和课时序号。",
+      "candidate_policy": "preview_identity_only",
+      "line_contract_policy": "facts_only_no_invention",
+      "inherit_from": [
+        "big_unit.unit_basic_info",
+        "big_unit.learning_tasks"
+      ],
+      "generation_slot_id": "R88-GEN/lesson.lesson_identity",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.lesson_identity/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.lesson_identity/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.lesson_identity/teacher_action"
+      }
+    },
+    {
+      "order": 2,
+      "visible_label": "继承单元主线",
+      "engineering_key": "lesson.inherited_unit_context",
+      "schema_key": "inherited_unit_context",
+      "target_section": "basis",
+      "visible_section": "本课依据",
+      "generation_role": "把单元主题、大观念、基本问题、表现性任务带入本课依据。",
+      "candidate_policy": "must_read_big_unit_before_lesson_candidate",
+      "line_contract_policy": "one_or_more_inheritance_lines",
+      "inherit_from": [
+        "big_unit.unit_theme",
+        "big_unit.big_idea",
+        "big_unit.essential_question"
+      ],
+      "generation_slot_id": "R88-GEN/lesson.inherited_unit_context",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.inherited_unit_context/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.inherited_unit_context/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.inherited_unit_context/teacher_action"
+      }
+    },
+    {
+      "order": 3,
+      "visible_label": "教材锚点",
+      "engineering_key": "lesson.textbook_anchor",
+      "schema_key": "textbook_anchor",
+      "target_section": "basis",
+      "visible_section": "本课依据",
+      "generation_role": "定位教材页、图例、练习、材料来源；缺失时转入资料补充。",
+      "candidate_policy": "source_fact_or_material_request_only",
+      "line_contract_policy": "textbook_page_or_gap_line",
+      "inherit_from": [
+        "big_unit.material_requests",
+        "big_unit.content_analysis"
+      ],
+      "generation_slot_id": "R88-GEN/lesson.textbook_anchor",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.textbook_anchor/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.textbook_anchor/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.textbook_anchor/teacher_action"
+      }
+    },
+    {
+      "order": 4,
+      "visible_label": "本课概念切片",
+      "engineering_key": "lesson.lesson_concept_slice",
+      "schema_key": "lesson_concept_slice",
+      "target_section": "basis",
+      "visible_section": "本课依据",
+      "generation_role": "说明本课从单元大观念中切出哪一块可教、可观察的内容。",
+      "candidate_policy": "must_link_unit_big_idea_and_textbook_anchor",
+      "line_contract_policy": "concept_slice_line",
+      "inherit_from": [
+        "big_unit.big_idea",
+        "big_unit.learning_stages"
+      ],
+      "generation_slot_id": "R88-GEN/lesson.lesson_concept_slice",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.lesson_concept_slice/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.lesson_concept_slice/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.lesson_concept_slice/teacher_action"
+      }
+    },
+    {
+      "order": 5,
+      "visible_label": "本课驱动问题",
+      "engineering_key": "lesson.lesson_focus_question",
+      "schema_key": "lesson_focus_question",
+      "target_section": "basis",
+      "visible_section": "本课依据",
+      "generation_role": "把单元基本问题转成这一课能展开的驱动问题。",
+      "candidate_policy": "question_candidate_not_slogan",
+      "line_contract_policy": "driving_question_line",
+      "inherit_from": [
+        "big_unit.essential_question",
+        "big_unit.micro_questions"
+      ],
+      "generation_slot_id": "R88-GEN/lesson.lesson_focus_question",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.lesson_focus_question/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.lesson_focus_question/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.lesson_focus_question/teacher_action"
+      }
+    },
+    {
+      "order": 6,
+      "visible_label": "课时目标",
+      "engineering_key": "lesson.lesson_objectives",
+      "schema_key": "lesson_objectives",
+      "target_section": "goals",
+      "visible_section": "教学目标",
+      "generation_role": "把课标、单元学习目标和本课任务转成可观察目标。",
+      "candidate_policy": "objective_must_have_observable_behavior",
+      "line_contract_policy": "2_to_5_goal_lines_allowed",
+      "inherit_from": [
+        "big_unit.learning_goals",
+        "big_unit.task_assessment_points"
+      ],
+      "generation_slot_id": "R88-GEN/lesson.lesson_objectives",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.lesson_objectives/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.lesson_objectives/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.lesson_objectives/teacher_action"
+      }
+    },
+    {
+      "order": 7,
+      "visible_label": "学生起点",
+      "engineering_key": "lesson.student_starting_point",
+      "schema_key": "student_starting_point",
+      "target_section": "analysis",
+      "visible_section": "学情分析",
+      "generation_role": "写清学生已有经验、常见困难和进入本课的可用支架。",
+      "candidate_policy": "do_not_fake_real_student_profile",
+      "line_contract_policy": "prior_experience_gap_support_lines",
+      "inherit_from": [
+        "big_unit.student_context"
+      ],
+      "generation_slot_id": "R88-GEN/lesson.student_starting_point",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.student_starting_point/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.student_starting_point/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.student_starting_point/teacher_action"
+      }
+    },
+    {
+      "order": 8,
+      "visible_label": "重难点",
+      "engineering_key": "lesson.key_difficult_points",
+      "schema_key": "key_difficult_points",
+      "target_section": "keypoints",
+      "visible_section": "教学重难点",
+      "generation_role": "区分本课学习重点和理解/表现难点。",
+      "candidate_policy": "focus_and_difficulty_separated",
+      "line_contract_policy": "focus_line_and_difficulty_line",
+      "inherit_from": [
+        "big_unit.key_difficult_points",
+        "big_unit.content_analysis"
+      ],
+      "generation_slot_id": "R88-GEN/lesson.key_difficult_points",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.key_difficult_points/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.key_difficult_points/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.key_difficult_points/teacher_action"
+      }
+    },
+    {
+      "order": 9,
+      "visible_label": "本课任务与证据",
+      "engineering_key": "lesson.lesson_task_evidence",
+      "schema_key": "lesson_task_evidence",
+      "target_section": "assessment",
+      "visible_section": "学习单与评价",
+      "generation_role": "定义学生产出、说明、互评或课堂观察证据。",
+      "candidate_policy": "task_and_evidence_must_match",
+      "line_contract_policy": "task_output_evidence_criteria_lines",
+      "inherit_from": [
+        "big_unit.performance_task",
+        "big_unit.learning_assessment"
+      ],
+      "generation_slot_id": "R88-GEN/lesson.lesson_task_evidence",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.lesson_task_evidence/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.lesson_task_evidence/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.lesson_task_evidence/teacher_action"
+      }
+    },
+    {
+      "order": 10,
+      "visible_label": "教学过程",
+      "engineering_key": "lesson.classroom_flow",
+      "schema_key": "classroom_flow",
+      "target_section": "teaching_process",
+      "visible_section": "教学过程",
+      "generation_role": "生成步骤级教学过程，并拆成教师动作、学生活动、材料/屏幕、评价证据。",
+      "candidate_policy": "line_level_step_contract_required_before_patch",
+      "line_contract_policy": "step_contracts_first_then_local_patches",
+      "inherit_from": [
+        "big_unit.learning_activities",
+        "big_unit.scaffold.strategy"
+      ],
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow/teacher_action"
+      }
+    },
+    {
+      "order": 11,
+      "visible_label": "课件/大屏计划",
+      "engineering_key": "lesson.courseware_plan",
+      "schema_key": "courseware_plan",
+      "target_section": "courseware_plan",
+      "visible_section": "右栏大屏/课件预览",
+      "generation_role": "从教学过程派生每个环节的大屏/课件屏幕意图。",
+      "candidate_policy": "derived_from_classroom_flow_only",
+      "line_contract_policy": "screen_by_step_lines",
+      "inherit_from": [
+        "big_unit.scaffold.resource",
+        "big_unit.learning_activities"
+      ],
+      "generation_slot_id": "R88-GEN/lesson.courseware_plan",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.courseware_plan/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.courseware_plan/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.courseware_plan/teacher_action"
+      }
+    },
+    {
+      "order": 12,
+      "visible_label": "学习单/学生任务单计划",
+      "engineering_key": "lesson.handout_plan",
+      "schema_key": "handout_plan",
+      "target_section": "handout_plan",
+      "visible_section": "学习单与评价 / 右栏学习单",
+      "generation_role": "从学习活动和证据要求派生轻量学习单。",
+      "candidate_policy": "handout_is_derived_not_main_text_dump",
+      "line_contract_policy": "handout_item_lines",
+      "inherit_from": [
+        "big_unit.handout_plan",
+        "big_unit.learning_assessment"
+      ],
+      "generation_slot_id": "R88-GEN/lesson.handout_plan",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.handout_plan/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.handout_plan/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.handout_plan/teacher_action"
+      }
+    },
+    {
+      "order": 13,
+      "visible_label": "评价计划",
+      "engineering_key": "lesson.assessment_plan",
+      "schema_key": "assessment_plan",
+      "target_section": "assessment",
+      "visible_section": "学习单与评价 / 右栏评价表",
+      "generation_role": "把本课任务证据转成过程评价、作品评价和反馈语言。",
+      "candidate_policy": "evaluation_must_have_evidence_basis",
+      "line_contract_policy": "criteria_evidence_feedback_lines",
+      "inherit_from": [
+        "big_unit.assessment_scaffold",
+        "big_unit.task_assessment_points"
+      ],
+      "generation_slot_id": "R88-GEN/lesson.assessment_plan",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.assessment_plan/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.assessment_plan/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.assessment_plan/teacher_action"
+      }
+    },
+    {
+      "order": 14,
+      "visible_label": "资料补充",
+      "engineering_key": "lesson.material_requests",
+      "schema_key": "material_requests",
+      "target_section": "material_requests",
+      "visible_section": "资料补充提示位",
+      "generation_role": "缺教材、课时安排、示范图、学生作品、真实学情时只提示补资料。",
+      "candidate_policy": "action_prompt_only_no_formal_write",
+      "line_contract_policy": "missing_material_action_lines",
+      "inherit_from": [
+        "big_unit.material_requests"
+      ],
+      "generation_slot_id": "R88-GEN/lesson.material_requests",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.material_requests/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.material_requests/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.material_requests/teacher_action"
+      }
+    }
+  ],
+  "step_contract_groups": [
+    {
+      "group_id": "step_frame",
+      "label": "环节骨架",
+      "role": "确定这一环节在整堂课中的位置、时长和推进责任。",
+      "field_count": 7,
+      "fields": [
+        {
+          "order": 1,
+          "group_id": "step_frame",
+          "group_label": "环节骨架",
+          "engineering_key": "lesson.classroom_flow.step.step_id",
+          "visible_label": "环节ID",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.step_id",
+          "quality_focus": "稳定定位环节，便于局部重生和追踪。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.step_id/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.step_id/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.step_id/teacher_action"
+          }
+        },
+        {
+          "order": 2,
+          "group_id": "step_frame",
+          "group_label": "环节骨架",
+          "engineering_key": "lesson.classroom_flow.step.step_order",
+          "visible_label": "环节顺序",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.step_order",
+          "quality_focus": "明确课堂推进先后，避免候选串位。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.step_order/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.step_order/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.step_order/teacher_action"
+          }
+        },
+        {
+          "order": 3,
+          "group_id": "step_frame",
+          "group_label": "环节骨架",
+          "engineering_key": "lesson.classroom_flow.step.step_name",
+          "visible_label": "环节名称",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.step_name",
+          "quality_focus": "教师能一眼识别当前环节任务。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.step_name/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.step_name/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.step_name/teacher_action"
+          }
+        },
+        {
+          "order": 4,
+          "group_id": "step_frame",
+          "group_label": "环节骨架",
+          "engineering_key": "lesson.classroom_flow.step.duration",
+          "visible_label": "时间分配",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.duration",
+          "quality_focus": "控制课堂节奏，暴露时间风险。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.duration/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.duration/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.duration/teacher_action"
+          }
+        },
+        {
+          "order": 5,
+          "group_id": "step_frame",
+          "group_label": "环节骨架",
+          "engineering_key": "lesson.classroom_flow.step.phase_role",
+          "visible_label": "环节功能",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.phase_role",
+          "quality_focus": "说明本环节是导入、探究、创作、展示还是评价。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.phase_role/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.phase_role/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.phase_role/teacher_action"
+          }
+        },
+        {
+          "order": 6,
+          "group_id": "step_frame",
+          "group_label": "环节骨架",
+          "engineering_key": "lesson.classroom_flow.step.prior_connection",
+          "visible_label": "承接上一环节",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.prior_connection",
+          "quality_focus": "说明学生从哪里来，不做断裂活动。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.prior_connection/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.prior_connection/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.prior_connection/teacher_action"
+          }
+        },
+        {
+          "order": 7,
+          "group_id": "step_frame",
+          "group_label": "环节骨架",
+          "engineering_key": "lesson.classroom_flow.step.next_connection",
+          "visible_label": "引出下一环节",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.next_connection",
+          "quality_focus": "说明本环节如何推动后续任务。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.next_connection/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.next_connection/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.next_connection/teacher_action"
+          }
+        }
+      ]
+    },
+    {
+      "group_id": "teacher_moves",
+      "label": "教师行为",
+      "role": "把教师在课堂中的语言、示范、巡视和反馈拆开生成。",
+      "field_count": 7,
+      "fields": [
+        {
+          "order": 8,
+          "group_id": "teacher_moves",
+          "group_label": "教师行为",
+          "engineering_key": "lesson.classroom_flow.step.teacher_instruction",
+          "visible_label": "教师指令",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.teacher_instruction",
+          "quality_focus": "学生听完知道马上要做什么。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.teacher_instruction/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.teacher_instruction/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.teacher_instruction/teacher_action"
+          }
+        },
+        {
+          "order": 9,
+          "group_id": "teacher_moves",
+          "group_label": "教师行为",
+          "engineering_key": "lesson.classroom_flow.step.teacher_core_question",
+          "visible_label": "核心提问",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.teacher_core_question",
+          "quality_focus": "推动观察、比较、表达或判断。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.teacher_core_question/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.teacher_core_question/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.teacher_core_question/teacher_action"
+          }
+        },
+        {
+          "order": 10,
+          "group_id": "teacher_moves",
+          "group_label": "教师行为",
+          "engineering_key": "lesson.classroom_flow.step.teacher_probe_question",
+          "visible_label": "追问",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.teacher_probe_question",
+          "quality_focus": "当学生回答浅时继续推进思考。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.teacher_probe_question/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.teacher_probe_question/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.teacher_probe_question/teacher_action"
+          }
+        },
+        {
+          "order": 11,
+          "group_id": "teacher_moves",
+          "group_label": "教师行为",
+          "engineering_key": "lesson.classroom_flow.step.teacher_demo",
+          "visible_label": "教师示范",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.teacher_demo",
+          "quality_focus": "示范材料、技法、观察或表达方式。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.teacher_demo/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.teacher_demo/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.teacher_demo/teacher_action"
+          }
+        },
+        {
+          "order": 12,
+          "group_id": "teacher_moves",
+          "group_label": "教师行为",
+          "engineering_key": "lesson.classroom_flow.step.teacher_modeling_language",
+          "visible_label": "教师示范语言",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.teacher_modeling_language",
+          "quality_focus": "给教师可直接说出口的课堂话术。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.teacher_modeling_language/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.teacher_modeling_language/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.teacher_modeling_language/teacher_action"
+          }
+        },
+        {
+          "order": 13,
+          "group_id": "teacher_moves",
+          "group_label": "教师行为",
+          "engineering_key": "lesson.classroom_flow.step.teacher_patrol_observation",
+          "visible_label": "巡视观察",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.teacher_patrol_observation",
+          "quality_focus": "教师走动时看什么、记什么、提醒什么。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.teacher_patrol_observation/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.teacher_patrol_observation/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.teacher_patrol_observation/teacher_action"
+          }
+        },
+        {
+          "order": 14,
+          "group_id": "teacher_moves",
+          "group_label": "教师行为",
+          "engineering_key": "lesson.classroom_flow.step.teacher_feedback_move",
+          "visible_label": "即时反馈动作",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.teacher_feedback_move",
+          "quality_focus": "教师如何肯定、纠偏、追问或调整。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.teacher_feedback_move/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.teacher_feedback_move/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.teacher_feedback_move/teacher_action"
+          }
+        }
+      ]
+    },
+    {
+      "group_id": "student_moves",
+      "label": "学生行为",
+      "role": "明确学生在每个环节的真实学习动作和可见产出。",
+      "field_count": 7,
+      "fields": [
+        {
+          "order": 15,
+          "group_id": "student_moves",
+          "group_label": "学生行为",
+          "engineering_key": "lesson.classroom_flow.step.student_observation",
+          "visible_label": "学生观察",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.student_observation",
+          "quality_focus": "学生观察什么对象、特征或差异。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.student_observation/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.student_observation/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.student_observation/teacher_action"
+          }
+        },
+        {
+          "order": 16,
+          "group_id": "student_moves",
+          "group_label": "学生行为",
+          "engineering_key": "lesson.classroom_flow.step.student_discussion",
+          "visible_label": "学生讨论",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.student_discussion",
+          "quality_focus": "学生和同伴交流什么问题或判断。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.student_discussion/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.student_discussion/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.student_discussion/teacher_action"
+          }
+        },
+        {
+          "order": 17,
+          "group_id": "student_moves",
+          "group_label": "学生行为",
+          "engineering_key": "lesson.classroom_flow.step.student_try",
+          "visible_label": "学生尝试",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.student_try",
+          "quality_focus": "学生短时试验什么方法或材料。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.student_try/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.student_try/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.student_try/teacher_action"
+          }
+        },
+        {
+          "order": 18,
+          "group_id": "student_moves",
+          "group_label": "学生行为",
+          "engineering_key": "lesson.classroom_flow.step.student_creation",
+          "visible_label": "学生创作",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.student_creation",
+          "quality_focus": "学生正式完成什么作品或局部任务。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.student_creation/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.student_creation/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.student_creation/teacher_action"
+          }
+        },
+        {
+          "order": 19,
+          "group_id": "student_moves",
+          "group_label": "学生行为",
+          "engineering_key": "lesson.classroom_flow.step.student_recording",
+          "visible_label": "学生记录",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.student_recording",
+          "quality_focus": "学生留下词语、选择、草图或学习单记录。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.student_recording/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.student_recording/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.student_recording/teacher_action"
+          }
+        },
+        {
+          "order": 20,
+          "group_id": "student_moves",
+          "group_label": "学生行为",
+          "engineering_key": "lesson.classroom_flow.step.student_display",
+          "visible_label": "学生展示",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.student_display",
+          "quality_focus": "学生展示什么、以何种方式展示。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.student_display/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.student_display/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.student_display/teacher_action"
+          }
+        },
+        {
+          "order": 21,
+          "group_id": "student_moves",
+          "group_label": "学生行为",
+          "engineering_key": "lesson.classroom_flow.step.student_revision",
+          "visible_label": "学生修订",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.student_revision",
+          "quality_focus": "学生基于反馈做什么调整。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.student_revision/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.student_revision/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.student_revision/teacher_action"
+          }
+        }
+      ]
+    },
+    {
+      "group_id": "art_learning_content",
+      "label": "美术学习内容",
+      "role": "保证教学过程不是泛泛活动，而是有美术学科判断和材料经验。",
+      "field_count": 7,
+      "fields": [
+        {
+          "order": 22,
+          "group_id": "art_learning_content",
+          "group_label": "美术学习内容",
+          "engineering_key": "lesson.classroom_flow.step.visual_object",
+          "visible_label": "观察对象",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.visual_object",
+          "quality_focus": "教材图、生活图、作品图或学生作品样例。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.visual_object/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.visual_object/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.visual_object/teacher_action"
+          }
+        },
+        {
+          "order": 23,
+          "group_id": "art_learning_content",
+          "group_label": "美术学习内容",
+          "engineering_key": "lesson.classroom_flow.step.visual_language_focus",
+          "visible_label": "美术语言焦点",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.visual_language_focus",
+          "quality_focus": "色彩、线条、形状、构图等隐性支撑点。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.visual_language_focus/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.visual_language_focus/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.visual_language_focus/teacher_action"
+          }
+        },
+        {
+          "order": 24,
+          "group_id": "art_learning_content",
+          "group_label": "美术学习内容",
+          "engineering_key": "lesson.classroom_flow.step.technique_focus",
+          "visible_label": "技法要点",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.technique_focus",
+          "quality_focus": "学生需要掌握或体验的操作方法。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.technique_focus/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.technique_focus/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.technique_focus/teacher_action"
+          }
+        },
+        {
+          "order": 25,
+          "group_id": "art_learning_content",
+          "group_label": "美术学习内容",
+          "engineering_key": "lesson.classroom_flow.step.material_use",
+          "visible_label": "材料使用",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.material_use",
+          "quality_focus": "纸、笔、颜料、色卡、剪贴等材料怎么用。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.material_use/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.material_use/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.material_use/teacher_action"
+          }
+        },
+        {
+          "order": 26,
+          "group_id": "art_learning_content",
+          "group_label": "美术学习内容",
+          "engineering_key": "lesson.classroom_flow.step.composition_or_color_focus",
+          "visible_label": "造型/构图/色彩关注点",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.composition_or_color_focus",
+          "quality_focus": "这一环节主要看的视觉关系。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.composition_or_color_focus/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.composition_or_color_focus/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.composition_or_color_focus/teacher_action"
+          }
+        },
+        {
+          "order": 27,
+          "group_id": "art_learning_content",
+          "group_label": "美术学习内容",
+          "engineering_key": "lesson.classroom_flow.step.artwork_or_life_example",
+          "visible_label": "作品或生活例证",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.artwork_or_life_example",
+          "quality_focus": "支撑理解的图像或生活经验来源。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.artwork_or_life_example/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.artwork_or_life_example/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.artwork_or_life_example/teacher_action"
+          }
+        },
+        {
+          "order": 28,
+          "group_id": "art_learning_content",
+          "group_label": "美术学习内容",
+          "engineering_key": "lesson.classroom_flow.step.positive_negative_example",
+          "visible_label": "正反例",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.positive_negative_example",
+          "quality_focus": "帮助学生分辨有效与无效表现。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.positive_negative_example/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.positive_negative_example/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.positive_negative_example/teacher_action"
+          }
+        }
+      ]
+    },
+    {
+      "group_id": "scaffolds",
+      "label": "学习支架",
+      "role": "把学生做得出来所需要的支架拆清楚，避免教师替学生完成。",
+      "field_count": 6,
+      "fields": [
+        {
+          "order": 29,
+          "group_id": "scaffolds",
+          "group_label": "学习支架",
+          "engineering_key": "lesson.classroom_flow.step.context_scaffold",
+          "visible_label": "情境支架",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.context_scaffold",
+          "quality_focus": "用什么情境让学生愿意进入任务。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.context_scaffold/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.context_scaffold/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.context_scaffold/teacher_action"
+          }
+        },
+        {
+          "order": 30,
+          "group_id": "scaffolds",
+          "group_label": "学习支架",
+          "engineering_key": "lesson.classroom_flow.step.task_scaffold",
+          "visible_label": "任务支架",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.task_scaffold",
+          "quality_focus": "把复杂任务拆成学生可执行步骤。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.task_scaffold/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.task_scaffold/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.task_scaffold/teacher_action"
+          }
+        },
+        {
+          "order": 31,
+          "group_id": "scaffolds",
+          "group_label": "学习支架",
+          "engineering_key": "lesson.classroom_flow.step.language_scaffold",
+          "visible_label": "语言支架",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.language_scaffold",
+          "quality_focus": "给学生观察、表达、互评的句式或词语。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.language_scaffold/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.language_scaffold/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.language_scaffold/teacher_action"
+          }
+        },
+        {
+          "order": 32,
+          "group_id": "scaffolds",
+          "group_label": "学习支架",
+          "engineering_key": "lesson.classroom_flow.step.material_scaffold",
+          "visible_label": "材料支架",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.material_scaffold",
+          "quality_focus": "通过材料或模板降低操作门槛。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.material_scaffold/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.material_scaffold/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.material_scaffold/teacher_action"
+          }
+        },
+        {
+          "order": 33,
+          "group_id": "scaffolds",
+          "group_label": "学习支架",
+          "engineering_key": "lesson.classroom_flow.step.peer_scaffold",
+          "visible_label": "同伴支架",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.peer_scaffold",
+          "quality_focus": "安排同桌互看、互说、互评或合作。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.peer_scaffold/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.peer_scaffold/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.peer_scaffold/teacher_action"
+          }
+        },
+        {
+          "order": 34,
+          "group_id": "scaffolds",
+          "group_label": "学习支架",
+          "engineering_key": "lesson.classroom_flow.step.differentiation_scaffold",
+          "visible_label": "差异化支架",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.differentiation_scaffold",
+          "quality_focus": "给不同速度和能力学生不同入口。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.differentiation_scaffold/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.differentiation_scaffold/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.differentiation_scaffold/teacher_action"
+          }
+        }
+      ]
+    },
+    {
+      "group_id": "assessment_evidence",
+      "label": "评价与证据",
+      "role": "让课堂不是只完成作品，而是留下能判断学习发生的证据。",
+      "field_count": 7,
+      "fields": [
+        {
+          "order": 35,
+          "group_id": "assessment_evidence",
+          "group_label": "评价与证据",
+          "engineering_key": "lesson.classroom_flow.step.process_evidence",
+          "visible_label": "过程证据",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.process_evidence",
+          "quality_focus": "学生观察、试验、讨论或修订过程的证据。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.process_evidence/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.process_evidence/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.process_evidence/teacher_action"
+          }
+        },
+        {
+          "order": 36,
+          "group_id": "assessment_evidence",
+          "group_label": "评价与证据",
+          "engineering_key": "lesson.classroom_flow.step.work_evidence",
+          "visible_label": "作品证据",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.work_evidence",
+          "quality_focus": "作品中哪些部分能证明学习目标。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.work_evidence/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.work_evidence/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.work_evidence/teacher_action"
+          }
+        },
+        {
+          "order": 37,
+          "group_id": "assessment_evidence",
+          "group_label": "评价与证据",
+          "engineering_key": "lesson.classroom_flow.step.expression_evidence",
+          "visible_label": "表达证据",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.expression_evidence",
+          "quality_focus": "学生用语言说明选择、感受或理由。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.expression_evidence/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.expression_evidence/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.expression_evidence/teacher_action"
+          }
+        },
+        {
+          "order": 38,
+          "group_id": "assessment_evidence",
+          "group_label": "评价与证据",
+          "engineering_key": "lesson.classroom_flow.step.peer_assessment",
+          "visible_label": "同伴评价",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.peer_assessment",
+          "quality_focus": "同伴如何给出可用反馈。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.peer_assessment/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.peer_assessment/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.peer_assessment/teacher_action"
+          }
+        },
+        {
+          "order": 39,
+          "group_id": "assessment_evidence",
+          "group_label": "评价与证据",
+          "engineering_key": "lesson.classroom_flow.step.teacher_observation_point",
+          "visible_label": "教师观察点",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.teacher_observation_point",
+          "quality_focus": "教师重点记录哪些学生表现。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.teacher_observation_point/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.teacher_observation_point/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.teacher_observation_point/teacher_action"
+          }
+        },
+        {
+          "order": 40,
+          "group_id": "assessment_evidence",
+          "group_label": "评价与证据",
+          "engineering_key": "lesson.classroom_flow.step.success_criteria",
+          "visible_label": "成功标准",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.success_criteria",
+          "quality_focus": "学生怎样知道自己完成得有效。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.success_criteria/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.success_criteria/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.success_criteria/teacher_action"
+          }
+        },
+        {
+          "order": 41,
+          "group_id": "assessment_evidence",
+          "group_label": "评价与证据",
+          "engineering_key": "lesson.classroom_flow.step.evidence_storage",
+          "visible_label": "证据留存",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.evidence_storage",
+          "quality_focus": "照片、学习单、板贴、评价卡如何保存。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.evidence_storage/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.evidence_storage/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.evidence_storage/teacher_action"
+          }
+        }
+      ]
+    },
+    {
+      "group_id": "risk_and_orchestration",
+      "label": "风险与调度",
+      "role": "提前暴露课堂风险，给出可替换、可补救的调度方案。",
+      "field_count": 6,
+      "fields": [
+        {
+          "order": 42,
+          "group_id": "risk_and_orchestration",
+          "group_label": "风险与调度",
+          "engineering_key": "lesson.classroom_flow.step.common_misconception",
+          "visible_label": "常见误区",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.common_misconception",
+          "quality_focus": "学生最可能误解或做偏的地方。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.common_misconception/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.common_misconception/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.common_misconception/teacher_action"
+          }
+        },
+        {
+          "order": 43,
+          "group_id": "risk_and_orchestration",
+          "group_label": "风险与调度",
+          "engineering_key": "lesson.classroom_flow.step.time_risk",
+          "visible_label": "时间风险",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.time_risk",
+          "quality_focus": "本环节可能超时或被压缩的点。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.time_risk/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.time_risk/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.time_risk/teacher_action"
+          }
+        },
+        {
+          "order": 44,
+          "group_id": "risk_and_orchestration",
+          "group_label": "风险与调度",
+          "engineering_key": "lesson.classroom_flow.step.material_risk",
+          "visible_label": "材料风险",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.material_risk",
+          "quality_focus": "材料不足、弄脏、难操作时怎么办。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.material_risk/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.material_risk/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.material_risk/teacher_action"
+          }
+        },
+        {
+          "order": 45,
+          "group_id": "risk_and_orchestration",
+          "group_label": "风险与调度",
+          "engineering_key": "lesson.classroom_flow.step.class_management_risk",
+          "visible_label": "课堂秩序风险",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.class_management_risk",
+          "quality_focus": "活动组织可能失控的点。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.class_management_risk/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.class_management_risk/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.class_management_risk/teacher_action"
+          }
+        },
+        {
+          "order": 46,
+          "group_id": "risk_and_orchestration",
+          "group_label": "风险与调度",
+          "engineering_key": "lesson.classroom_flow.step.fallback_strategy",
+          "visible_label": "补救策略",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.fallback_strategy",
+          "quality_focus": "出现问题时教师如何快速补救。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.fallback_strategy/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.fallback_strategy/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.fallback_strategy/teacher_action"
+          }
+        },
+        {
+          "order": 47,
+          "group_id": "risk_and_orchestration",
+          "group_label": "风险与调度",
+          "engineering_key": "lesson.classroom_flow.step.alternative_plan",
+          "visible_label": "替代方案",
+          "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.alternative_plan",
+          "quality_focus": "没有某些材料或时间不足时如何替换。",
+          "generation_placeholder": {
+            "candidate_state": "empty",
+            "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.alternative_plan/candidate_text",
+            "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.alternative_plan/quality_note",
+            "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.alternative_plan/teacher_action"
+          }
+        }
+      ]
+    }
+  ],
+  "step_contract_fields": [
+    {
+      "order": 1,
+      "group_id": "step_frame",
+      "group_label": "环节骨架",
+      "engineering_key": "lesson.classroom_flow.step.step_id",
+      "visible_label": "环节ID",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.step_id",
+      "quality_focus": "稳定定位环节，便于局部重生和追踪。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.step_id/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.step_id/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.step_id/teacher_action"
+      }
+    },
+    {
+      "order": 2,
+      "group_id": "step_frame",
+      "group_label": "环节骨架",
+      "engineering_key": "lesson.classroom_flow.step.step_order",
+      "visible_label": "环节顺序",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.step_order",
+      "quality_focus": "明确课堂推进先后，避免候选串位。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.step_order/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.step_order/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.step_order/teacher_action"
+      }
+    },
+    {
+      "order": 3,
+      "group_id": "step_frame",
+      "group_label": "环节骨架",
+      "engineering_key": "lesson.classroom_flow.step.step_name",
+      "visible_label": "环节名称",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.step_name",
+      "quality_focus": "教师能一眼识别当前环节任务。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.step_name/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.step_name/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.step_name/teacher_action"
+      }
+    },
+    {
+      "order": 4,
+      "group_id": "step_frame",
+      "group_label": "环节骨架",
+      "engineering_key": "lesson.classroom_flow.step.duration",
+      "visible_label": "时间分配",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.duration",
+      "quality_focus": "控制课堂节奏，暴露时间风险。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.duration/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.duration/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.duration/teacher_action"
+      }
+    },
+    {
+      "order": 5,
+      "group_id": "step_frame",
+      "group_label": "环节骨架",
+      "engineering_key": "lesson.classroom_flow.step.phase_role",
+      "visible_label": "环节功能",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.phase_role",
+      "quality_focus": "说明本环节是导入、探究、创作、展示还是评价。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.phase_role/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.phase_role/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.phase_role/teacher_action"
+      }
+    },
+    {
+      "order": 6,
+      "group_id": "step_frame",
+      "group_label": "环节骨架",
+      "engineering_key": "lesson.classroom_flow.step.prior_connection",
+      "visible_label": "承接上一环节",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.prior_connection",
+      "quality_focus": "说明学生从哪里来，不做断裂活动。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.prior_connection/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.prior_connection/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.prior_connection/teacher_action"
+      }
+    },
+    {
+      "order": 7,
+      "group_id": "step_frame",
+      "group_label": "环节骨架",
+      "engineering_key": "lesson.classroom_flow.step.next_connection",
+      "visible_label": "引出下一环节",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.next_connection",
+      "quality_focus": "说明本环节如何推动后续任务。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.next_connection/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.next_connection/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.next_connection/teacher_action"
+      }
+    },
+    {
+      "order": 8,
+      "group_id": "teacher_moves",
+      "group_label": "教师行为",
+      "engineering_key": "lesson.classroom_flow.step.teacher_instruction",
+      "visible_label": "教师指令",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.teacher_instruction",
+      "quality_focus": "学生听完知道马上要做什么。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.teacher_instruction/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.teacher_instruction/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.teacher_instruction/teacher_action"
+      }
+    },
+    {
+      "order": 9,
+      "group_id": "teacher_moves",
+      "group_label": "教师行为",
+      "engineering_key": "lesson.classroom_flow.step.teacher_core_question",
+      "visible_label": "核心提问",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.teacher_core_question",
+      "quality_focus": "推动观察、比较、表达或判断。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.teacher_core_question/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.teacher_core_question/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.teacher_core_question/teacher_action"
+      }
+    },
+    {
+      "order": 10,
+      "group_id": "teacher_moves",
+      "group_label": "教师行为",
+      "engineering_key": "lesson.classroom_flow.step.teacher_probe_question",
+      "visible_label": "追问",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.teacher_probe_question",
+      "quality_focus": "当学生回答浅时继续推进思考。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.teacher_probe_question/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.teacher_probe_question/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.teacher_probe_question/teacher_action"
+      }
+    },
+    {
+      "order": 11,
+      "group_id": "teacher_moves",
+      "group_label": "教师行为",
+      "engineering_key": "lesson.classroom_flow.step.teacher_demo",
+      "visible_label": "教师示范",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.teacher_demo",
+      "quality_focus": "示范材料、技法、观察或表达方式。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.teacher_demo/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.teacher_demo/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.teacher_demo/teacher_action"
+      }
+    },
+    {
+      "order": 12,
+      "group_id": "teacher_moves",
+      "group_label": "教师行为",
+      "engineering_key": "lesson.classroom_flow.step.teacher_modeling_language",
+      "visible_label": "教师示范语言",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.teacher_modeling_language",
+      "quality_focus": "给教师可直接说出口的课堂话术。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.teacher_modeling_language/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.teacher_modeling_language/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.teacher_modeling_language/teacher_action"
+      }
+    },
+    {
+      "order": 13,
+      "group_id": "teacher_moves",
+      "group_label": "教师行为",
+      "engineering_key": "lesson.classroom_flow.step.teacher_patrol_observation",
+      "visible_label": "巡视观察",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.teacher_patrol_observation",
+      "quality_focus": "教师走动时看什么、记什么、提醒什么。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.teacher_patrol_observation/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.teacher_patrol_observation/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.teacher_patrol_observation/teacher_action"
+      }
+    },
+    {
+      "order": 14,
+      "group_id": "teacher_moves",
+      "group_label": "教师行为",
+      "engineering_key": "lesson.classroom_flow.step.teacher_feedback_move",
+      "visible_label": "即时反馈动作",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.teacher_feedback_move",
+      "quality_focus": "教师如何肯定、纠偏、追问或调整。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.teacher_feedback_move/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.teacher_feedback_move/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.teacher_feedback_move/teacher_action"
+      }
+    },
+    {
+      "order": 15,
+      "group_id": "student_moves",
+      "group_label": "学生行为",
+      "engineering_key": "lesson.classroom_flow.step.student_observation",
+      "visible_label": "学生观察",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.student_observation",
+      "quality_focus": "学生观察什么对象、特征或差异。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.student_observation/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.student_observation/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.student_observation/teacher_action"
+      }
+    },
+    {
+      "order": 16,
+      "group_id": "student_moves",
+      "group_label": "学生行为",
+      "engineering_key": "lesson.classroom_flow.step.student_discussion",
+      "visible_label": "学生讨论",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.student_discussion",
+      "quality_focus": "学生和同伴交流什么问题或判断。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.student_discussion/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.student_discussion/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.student_discussion/teacher_action"
+      }
+    },
+    {
+      "order": 17,
+      "group_id": "student_moves",
+      "group_label": "学生行为",
+      "engineering_key": "lesson.classroom_flow.step.student_try",
+      "visible_label": "学生尝试",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.student_try",
+      "quality_focus": "学生短时试验什么方法或材料。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.student_try/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.student_try/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.student_try/teacher_action"
+      }
+    },
+    {
+      "order": 18,
+      "group_id": "student_moves",
+      "group_label": "学生行为",
+      "engineering_key": "lesson.classroom_flow.step.student_creation",
+      "visible_label": "学生创作",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.student_creation",
+      "quality_focus": "学生正式完成什么作品或局部任务。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.student_creation/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.student_creation/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.student_creation/teacher_action"
+      }
+    },
+    {
+      "order": 19,
+      "group_id": "student_moves",
+      "group_label": "学生行为",
+      "engineering_key": "lesson.classroom_flow.step.student_recording",
+      "visible_label": "学生记录",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.student_recording",
+      "quality_focus": "学生留下词语、选择、草图或学习单记录。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.student_recording/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.student_recording/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.student_recording/teacher_action"
+      }
+    },
+    {
+      "order": 20,
+      "group_id": "student_moves",
+      "group_label": "学生行为",
+      "engineering_key": "lesson.classroom_flow.step.student_display",
+      "visible_label": "学生展示",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.student_display",
+      "quality_focus": "学生展示什么、以何种方式展示。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.student_display/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.student_display/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.student_display/teacher_action"
+      }
+    },
+    {
+      "order": 21,
+      "group_id": "student_moves",
+      "group_label": "学生行为",
+      "engineering_key": "lesson.classroom_flow.step.student_revision",
+      "visible_label": "学生修订",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.student_revision",
+      "quality_focus": "学生基于反馈做什么调整。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.student_revision/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.student_revision/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.student_revision/teacher_action"
+      }
+    },
+    {
+      "order": 22,
+      "group_id": "art_learning_content",
+      "group_label": "美术学习内容",
+      "engineering_key": "lesson.classroom_flow.step.visual_object",
+      "visible_label": "观察对象",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.visual_object",
+      "quality_focus": "教材图、生活图、作品图或学生作品样例。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.visual_object/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.visual_object/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.visual_object/teacher_action"
+      }
+    },
+    {
+      "order": 23,
+      "group_id": "art_learning_content",
+      "group_label": "美术学习内容",
+      "engineering_key": "lesson.classroom_flow.step.visual_language_focus",
+      "visible_label": "美术语言焦点",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.visual_language_focus",
+      "quality_focus": "色彩、线条、形状、构图等隐性支撑点。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.visual_language_focus/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.visual_language_focus/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.visual_language_focus/teacher_action"
+      }
+    },
+    {
+      "order": 24,
+      "group_id": "art_learning_content",
+      "group_label": "美术学习内容",
+      "engineering_key": "lesson.classroom_flow.step.technique_focus",
+      "visible_label": "技法要点",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.technique_focus",
+      "quality_focus": "学生需要掌握或体验的操作方法。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.technique_focus/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.technique_focus/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.technique_focus/teacher_action"
+      }
+    },
+    {
+      "order": 25,
+      "group_id": "art_learning_content",
+      "group_label": "美术学习内容",
+      "engineering_key": "lesson.classroom_flow.step.material_use",
+      "visible_label": "材料使用",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.material_use",
+      "quality_focus": "纸、笔、颜料、色卡、剪贴等材料怎么用。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.material_use/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.material_use/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.material_use/teacher_action"
+      }
+    },
+    {
+      "order": 26,
+      "group_id": "art_learning_content",
+      "group_label": "美术学习内容",
+      "engineering_key": "lesson.classroom_flow.step.composition_or_color_focus",
+      "visible_label": "造型/构图/色彩关注点",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.composition_or_color_focus",
+      "quality_focus": "这一环节主要看的视觉关系。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.composition_or_color_focus/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.composition_or_color_focus/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.composition_or_color_focus/teacher_action"
+      }
+    },
+    {
+      "order": 27,
+      "group_id": "art_learning_content",
+      "group_label": "美术学习内容",
+      "engineering_key": "lesson.classroom_flow.step.artwork_or_life_example",
+      "visible_label": "作品或生活例证",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.artwork_or_life_example",
+      "quality_focus": "支撑理解的图像或生活经验来源。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.artwork_or_life_example/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.artwork_or_life_example/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.artwork_or_life_example/teacher_action"
+      }
+    },
+    {
+      "order": 28,
+      "group_id": "art_learning_content",
+      "group_label": "美术学习内容",
+      "engineering_key": "lesson.classroom_flow.step.positive_negative_example",
+      "visible_label": "正反例",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.positive_negative_example",
+      "quality_focus": "帮助学生分辨有效与无效表现。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.positive_negative_example/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.positive_negative_example/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.positive_negative_example/teacher_action"
+      }
+    },
+    {
+      "order": 29,
+      "group_id": "scaffolds",
+      "group_label": "学习支架",
+      "engineering_key": "lesson.classroom_flow.step.context_scaffold",
+      "visible_label": "情境支架",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.context_scaffold",
+      "quality_focus": "用什么情境让学生愿意进入任务。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.context_scaffold/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.context_scaffold/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.context_scaffold/teacher_action"
+      }
+    },
+    {
+      "order": 30,
+      "group_id": "scaffolds",
+      "group_label": "学习支架",
+      "engineering_key": "lesson.classroom_flow.step.task_scaffold",
+      "visible_label": "任务支架",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.task_scaffold",
+      "quality_focus": "把复杂任务拆成学生可执行步骤。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.task_scaffold/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.task_scaffold/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.task_scaffold/teacher_action"
+      }
+    },
+    {
+      "order": 31,
+      "group_id": "scaffolds",
+      "group_label": "学习支架",
+      "engineering_key": "lesson.classroom_flow.step.language_scaffold",
+      "visible_label": "语言支架",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.language_scaffold",
+      "quality_focus": "给学生观察、表达、互评的句式或词语。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.language_scaffold/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.language_scaffold/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.language_scaffold/teacher_action"
+      }
+    },
+    {
+      "order": 32,
+      "group_id": "scaffolds",
+      "group_label": "学习支架",
+      "engineering_key": "lesson.classroom_flow.step.material_scaffold",
+      "visible_label": "材料支架",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.material_scaffold",
+      "quality_focus": "通过材料或模板降低操作门槛。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.material_scaffold/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.material_scaffold/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.material_scaffold/teacher_action"
+      }
+    },
+    {
+      "order": 33,
+      "group_id": "scaffolds",
+      "group_label": "学习支架",
+      "engineering_key": "lesson.classroom_flow.step.peer_scaffold",
+      "visible_label": "同伴支架",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.peer_scaffold",
+      "quality_focus": "安排同桌互看、互说、互评或合作。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.peer_scaffold/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.peer_scaffold/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.peer_scaffold/teacher_action"
+      }
+    },
+    {
+      "order": 34,
+      "group_id": "scaffolds",
+      "group_label": "学习支架",
+      "engineering_key": "lesson.classroom_flow.step.differentiation_scaffold",
+      "visible_label": "差异化支架",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.differentiation_scaffold",
+      "quality_focus": "给不同速度和能力学生不同入口。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.differentiation_scaffold/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.differentiation_scaffold/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.differentiation_scaffold/teacher_action"
+      }
+    },
+    {
+      "order": 35,
+      "group_id": "assessment_evidence",
+      "group_label": "评价与证据",
+      "engineering_key": "lesson.classroom_flow.step.process_evidence",
+      "visible_label": "过程证据",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.process_evidence",
+      "quality_focus": "学生观察、试验、讨论或修订过程的证据。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.process_evidence/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.process_evidence/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.process_evidence/teacher_action"
+      }
+    },
+    {
+      "order": 36,
+      "group_id": "assessment_evidence",
+      "group_label": "评价与证据",
+      "engineering_key": "lesson.classroom_flow.step.work_evidence",
+      "visible_label": "作品证据",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.work_evidence",
+      "quality_focus": "作品中哪些部分能证明学习目标。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.work_evidence/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.work_evidence/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.work_evidence/teacher_action"
+      }
+    },
+    {
+      "order": 37,
+      "group_id": "assessment_evidence",
+      "group_label": "评价与证据",
+      "engineering_key": "lesson.classroom_flow.step.expression_evidence",
+      "visible_label": "表达证据",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.expression_evidence",
+      "quality_focus": "学生用语言说明选择、感受或理由。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.expression_evidence/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.expression_evidence/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.expression_evidence/teacher_action"
+      }
+    },
+    {
+      "order": 38,
+      "group_id": "assessment_evidence",
+      "group_label": "评价与证据",
+      "engineering_key": "lesson.classroom_flow.step.peer_assessment",
+      "visible_label": "同伴评价",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.peer_assessment",
+      "quality_focus": "同伴如何给出可用反馈。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.peer_assessment/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.peer_assessment/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.peer_assessment/teacher_action"
+      }
+    },
+    {
+      "order": 39,
+      "group_id": "assessment_evidence",
+      "group_label": "评价与证据",
+      "engineering_key": "lesson.classroom_flow.step.teacher_observation_point",
+      "visible_label": "教师观察点",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.teacher_observation_point",
+      "quality_focus": "教师重点记录哪些学生表现。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.teacher_observation_point/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.teacher_observation_point/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.teacher_observation_point/teacher_action"
+      }
+    },
+    {
+      "order": 40,
+      "group_id": "assessment_evidence",
+      "group_label": "评价与证据",
+      "engineering_key": "lesson.classroom_flow.step.success_criteria",
+      "visible_label": "成功标准",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.success_criteria",
+      "quality_focus": "学生怎样知道自己完成得有效。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.success_criteria/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.success_criteria/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.success_criteria/teacher_action"
+      }
+    },
+    {
+      "order": 41,
+      "group_id": "assessment_evidence",
+      "group_label": "评价与证据",
+      "engineering_key": "lesson.classroom_flow.step.evidence_storage",
+      "visible_label": "证据留存",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.evidence_storage",
+      "quality_focus": "照片、学习单、板贴、评价卡如何保存。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.evidence_storage/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.evidence_storage/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.evidence_storage/teacher_action"
+      }
+    },
+    {
+      "order": 42,
+      "group_id": "risk_and_orchestration",
+      "group_label": "风险与调度",
+      "engineering_key": "lesson.classroom_flow.step.common_misconception",
+      "visible_label": "常见误区",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.common_misconception",
+      "quality_focus": "学生最可能误解或做偏的地方。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.common_misconception/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.common_misconception/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.common_misconception/teacher_action"
+      }
+    },
+    {
+      "order": 43,
+      "group_id": "risk_and_orchestration",
+      "group_label": "风险与调度",
+      "engineering_key": "lesson.classroom_flow.step.time_risk",
+      "visible_label": "时间风险",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.time_risk",
+      "quality_focus": "本环节可能超时或被压缩的点。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.time_risk/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.time_risk/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.time_risk/teacher_action"
+      }
+    },
+    {
+      "order": 44,
+      "group_id": "risk_and_orchestration",
+      "group_label": "风险与调度",
+      "engineering_key": "lesson.classroom_flow.step.material_risk",
+      "visible_label": "材料风险",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.material_risk",
+      "quality_focus": "材料不足、弄脏、难操作时怎么办。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.material_risk/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.material_risk/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.material_risk/teacher_action"
+      }
+    },
+    {
+      "order": 45,
+      "group_id": "risk_and_orchestration",
+      "group_label": "风险与调度",
+      "engineering_key": "lesson.classroom_flow.step.class_management_risk",
+      "visible_label": "课堂秩序风险",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.class_management_risk",
+      "quality_focus": "活动组织可能失控的点。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.class_management_risk/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.class_management_risk/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.class_management_risk/teacher_action"
+      }
+    },
+    {
+      "order": 46,
+      "group_id": "risk_and_orchestration",
+      "group_label": "风险与调度",
+      "engineering_key": "lesson.classroom_flow.step.fallback_strategy",
+      "visible_label": "补救策略",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.fallback_strategy",
+      "quality_focus": "出现问题时教师如何快速补救。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.fallback_strategy/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.fallback_strategy/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.fallback_strategy/teacher_action"
+      }
+    },
+    {
+      "order": 47,
+      "group_id": "risk_and_orchestration",
+      "group_label": "风险与调度",
+      "engineering_key": "lesson.classroom_flow.step.alternative_plan",
+      "visible_label": "替代方案",
+      "generation_slot_id": "R88-GEN/lesson.classroom_flow.step.alternative_plan",
+      "quality_focus": "没有某些材料或时间不足时如何替换。",
+      "generation_placeholder": {
+        "candidate_state": "empty",
+        "candidate_text_slot": "R88-GEN/lesson.classroom_flow.step.alternative_plan/candidate_text",
+        "quality_note_slot": "R88-GEN/lesson.classroom_flow.step.alternative_plan/quality_note",
+        "teacher_action_slot": "R88-GEN/lesson.classroom_flow.step.alternative_plan/teacher_action"
+      }
+    }
+  ]
+}

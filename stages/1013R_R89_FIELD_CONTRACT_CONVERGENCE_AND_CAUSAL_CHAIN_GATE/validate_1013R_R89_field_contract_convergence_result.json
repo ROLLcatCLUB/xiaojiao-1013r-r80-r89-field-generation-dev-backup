@@ -1,0 +1,62 @@
+{
+  "round": "1013R_R89_FIELD_CONTRACT_CONVERGENCE_AND_CAUSAL_CHAIN_GATE",
+  "result": "PASS",
+  "created_at": "2026-06-30T00:45:35",
+  "runtime_connected": false,
+  "r21_modified": false,
+  "formal_apply_allowed": false,
+  "field_system_extended": false,
+  "checks": {
+    "r80_r88_big_unit_alias_map": {
+      "result": "PASS",
+      "field_count": 22
+    },
+    "generation_phase_field_cluster_registry": {
+      "result": "PASS",
+      "field_rows": 83
+    },
+    "canonical_ref_audit": {
+      "result": "PASS",
+      "summary": {
+        "canonical_hit_count": 20,
+        "extended_field_count": 2,
+        "hidden_source_ref_count": 1,
+        "unresolved_gap_count": 0
+      }
+    },
+    "r81_r88_step_adapter": {
+      "result": "PASS",
+      "summary": {
+        "r81_step_field_count": 17,
+        "r88_step_field_count": 47,
+        "mapped_count": 17,
+        "unmapped_count": 0,
+        "activation_step_type_count": 9,
+        "invalid_activation_field_count": 0,
+        "invalid_activation_fields": []
+      }
+    },
+    "candidate_required_keys_single_source": {
+      "result": "PASS",
+      "summary": {
+        "single_source_key_count": 19,
+        "sources_checked": 4,
+        "sources_matching_now": 1,
+        "sources_with_declared_drift": 3
+      }
+    },
+    "strict_vs_salvage_boundary": {
+      "result": "PASS"
+    },
+    "causal_chain_gate": {
+      "result": "PASS"
+    }
+  },
+  "claim_allowed": {
+    "contract_convergence_ready": true,
+    "true_generation_quality_ready": false,
+    "runtime_provider_success": false,
+    "formal_apply_safe": false
+  },
+  "next_recommended_round": "1013R_R90_TRUE_GENERATION_QUALITY_SMOKE"
+}
